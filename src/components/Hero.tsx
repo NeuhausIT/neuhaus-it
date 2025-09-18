@@ -17,7 +17,7 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-snug">
               Digitalisierung für
               <span className="text-primary block">kleine und mittlere Unternehmen</span>
             </h1>
