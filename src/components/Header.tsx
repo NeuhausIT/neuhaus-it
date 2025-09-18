@@ -21,6 +21,9 @@ const Header = () => {
           <a href="#services" className="text-foreground hover:text-primary transition-colors">
             Leistungen
           </a>
+          <a href="/terminbuchungen-preise" className="text-foreground hover:text-primary transition-colors">
+            Terminbuchungen & Preise
+          </a>
           <a href="#contact" className="text-foreground hover:text-primary transition-colors">
             Kontakt
           </a>
