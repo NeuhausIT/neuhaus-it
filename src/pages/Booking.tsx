@@ -1,10 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Home, Monitor } from "lucide-react";
-
 const Booking = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -18,7 +16,7 @@ const Booking = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Unsere Angebote</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6">Meine Angebote</h2>
               <div className="space-y-4">
                 <Card>
                   <CardHeader className="pb-3">
@@ -42,9 +40,7 @@ const Booking = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription>
-                      Direkter Service bei Ihnen zu Hause oder im Büro
-                    </CardDescription>
+                    <CardDescription>Direkter Service bei Ihnen zu Hause oder in Ihrem Büro</CardDescription>
                   </CardContent>
                 </Card>
 
@@ -56,9 +52,7 @@ const Booking = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription>
-                      Besuchen Sie uns in unseren Räumlichkeiten
-                    </CardDescription>
+                    <CardDescription>Besuchen Sie mich in meinem Büro (Erinstr. 7, 44575 Castrop-Rauxel)</CardDescription>
                   </CardContent>
                 </Card>
 
@@ -138,8 +132,6 @@ const Booking = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Booking;
