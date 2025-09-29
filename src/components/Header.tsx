@@ -10,8 +10,8 @@ const Header = () => {
           </div>
           <div className="flex flex-col">
             <h1 className="text-xl font-bold">
-              <span className="text-primary">Computerhilfe</span>{" "}
-              <span className="text-accent">Castrop-Rauxel</span>
+              <span className="text-primary">Neuhaus</span>
+              <span className="text-accent">-IT</span>
             </h1>
             <p className="text-xs text-muted-foreground">Inh. Till Neuhaus</p>
           </div>
