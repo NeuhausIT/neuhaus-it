@@ -16,7 +16,7 @@ const Booking = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Meine Angebote</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Meine Angebote</h2>
               <div className="space-y-4">
                 <Card>
                   <CardHeader className="pb-3">
@@ -73,7 +73,7 @@ const Booking = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Preisstruktur</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Preisstruktur</h2>
               <Card>
                 <CardHeader>
                   <CardTitle>Transparente Abrechnung</CardTitle>
