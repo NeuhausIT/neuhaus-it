@@ -29,11 +29,7 @@ const Hero = () => {
           
           {/* Haupttitel - exakt wie auf der originalen Website */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            <span className="text-primary">Computer</span>
-            <span className="text-accent">hilfe</span>
-            <br />
-            <span className="text-primary">Castrop-</span>
-            <span className="text-accent">Rauxel</span>
+            Neuhaus-IT
           </h1>
           
           {/* Untertitel */}
