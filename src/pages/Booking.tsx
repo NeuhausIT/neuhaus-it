@@ -105,6 +105,12 @@ const Booking = () => {
                       </div>
                     </div>
                   </div>
+                  
+                  <div className="pt-4 border-t">
+                    <p className="text-sm text-muted-foreground italic text-center">
+                      Alle Preise netto zzgl. gesetzlicher Umsatzsteuer
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
