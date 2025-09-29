@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Shield, Zap, Users, Calendar } from "lucide-react";
+import { Shield, Zap, Calendar } from "lucide-react";
+import tillNeuhausPortrait from "@/assets/till-neuhaus-portrait.png";
 
 const About = () => {
   return (
@@ -18,18 +19,14 @@ const About = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Portrait Placeholder */}
+            {/* Portrait */}
             <div className="relative">
               <div className="w-full max-w-md mx-auto aspect-square bg-gradient-subtle rounded-2xl shadow-strong overflow-hidden">
-                <div className="w-full h-full bg-muted flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <Users className="h-12 w-12 text-primary-foreground" />
-                    </div>
-                    <p className="text-muted-foreground">Till Neuhaus</p>
-                    <p className="text-sm text-muted-foreground">IT-Berater & Geschäftsführer</p>
-                  </div>
-                </div>
+                <img 
+                  src={tillNeuhausPortrait} 
+                  alt="Till Neuhaus - IT-Berater und Geschäftsführer von Neuhaus-IT"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
