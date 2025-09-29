@@ -92,19 +92,19 @@ const Booking = () => {
                     <div className="text-xl font-bold text-foreground">20,- €</div>
                   </div>
 
-                  <div className="pt-4 border-t">
-                    <h3 className="font-semibold text-foreground mb-3">Reisekosten</h3>
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-muted-foreground">Bis 15 km Radius:</span>
-                        <span className="font-semibold">pauschal 30,- €</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-muted-foreground">Ab 15 km Radius:</span>
-                        <span className="font-semibold">1,- € je Kilometer (Hin- und Rückfahrt)</span>
+                    <div className="pt-4 border-t">
+                      <h3 className="font-semibold text-foreground mb-3">Reisekosten</h3>
+                      <div className="space-y-2">
+                        <div className="flex">
+                          <span className="text-muted-foreground text-left flex-1">Bis 15 km Radius:</span>
+                          <span className="font-semibold text-right">pauschal 30,- €</span>
+                        </div>
+                        <div className="flex">
+                          <span className="text-muted-foreground text-left flex-1">Ab 15 km Radius:</span>
+                          <span className="font-semibold text-right">1,- € je Kilometer (Hin- und Rückfahrt)</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
                   
                   <div className="pt-4 border-t">
                     <p className="text-sm text-muted-foreground italic text-center">
