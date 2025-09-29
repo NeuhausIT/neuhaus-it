@@ -40,17 +40,19 @@ const Hero = () => {
 
           {/* Two Main Service Cards */}
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="p-8 bg-card/50 backdrop-blur-sm hover:shadow-strong transition-all duration-300 group">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="h-8 w-8 text-primary-foreground" />
+            <Card className="p-8 bg-card/50 backdrop-blur-sm hover:shadow-strong transition-all duration-300 group flex">
+              <div className="text-center flex flex-col justify-between w-full">
+                <div>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="h-8 w-8 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">
+                    Für Privathaushalte
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Computerhilfe und IT-Support für Privatpersonen und Haushalte im Raum Castrop-Rauxel.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Für Privathaushalte
-                </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Computerhilfe und IT-Support für Privatpersonen und Haushalte im Raum Castrop-Rauxel.
-                </p>
                 <Button 
                   variant="outline" 
                   className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
@@ -62,17 +64,19 @@ const Hero = () => {
               </div>
             </Card>
 
-            <Card className="p-8 bg-card/50 backdrop-blur-sm hover:shadow-strong transition-all duration-300 group">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Building2 className="h-8 w-8 text-primary-foreground" />
+            <Card className="p-8 bg-card/50 backdrop-blur-sm hover:shadow-strong transition-all duration-300 group flex">
+              <div className="text-center flex flex-col justify-between w-full">
+                <div>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Building2 className="h-8 w-8 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">
+                    Für Unternehmen
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    IT-Service, Beratung und Managed Services für Unternehmen und Institutionen.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Für Unternehmen
-                </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  IT-Service, Beratung und Managed Services für Unternehmen und Institutionen.
-                </p>
                 <Button 
                   variant="outline" 
                   className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
