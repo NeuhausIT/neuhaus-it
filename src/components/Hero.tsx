@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Users, Building2 } from "lucide-react";
+import { ArrowRight, Users, Building2, Phone, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -11,30 +11,38 @@ const Hero = () => {
         <div className="max-w-6xl mx-auto">
           {/* Main Hero Content */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-accent rounded-full mb-6">
-              <span className="text-accent-foreground font-medium">
-                IT-Beratung & IT-Service seit 2017
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
+              <span className="text-primary font-medium">
+                IT-Dienstleistungen seit 2017
               </span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-snug">
-              Digitalisierung für
-              <span className="text-primary block">kleine und mittlere Unternehmen</span>
+              <span className="text-primary">Computer</span>
+              <span className="text-accent">hilfe</span>{" "}
+              <span className="text-primary">Castrop-</span>
+              <span className="text-accent">Rauxel</span>
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-              Als Ihr IT-Systempartner aus Castrop-Rauxel unterstütze ich Sie mit verständlicher Beratung 
-              und exzellentem Service bei der digitalen Transformation Ihres Unternehmens.
+              Ihr zuverlässiger Partner für IT-Dienstleistungen in Castrop-Rauxel, Dortmund, Bochum und Umgebung. 
+              Professionelle Beratung, Handel und Service für Privathaushalte.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
-                Kostenlose Beratung
-                <ArrowRight className="ml-2 h-5 w-5" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Button size="lg" className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-3">
+                <Phone className="mr-2 h-5 w-5" />
+                Jetzt anrufen
               </Button>
-              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Mehr erfahren
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3">
+                <Mail className="mr-2 h-5 w-5" />
+                Kontakt aufnehmen
               </Button>
+            </div>
+
+            <div className="text-center text-muted-foreground mb-12">
+              <p className="text-sm mb-2">📍 Castrop-Rauxel, Dortmund, Bochum & Umgebung</p>
+              <p className="text-sm font-medium">Schnell • Zuverlässig • Kompetent</p>
             </div>
           </div>
 

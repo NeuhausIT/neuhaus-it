@@ -9,7 +9,10 @@ const Header = () => {
             <div className="w-6 h-6 bg-primary-foreground rounded-sm"></div>
           </div>
           <div className="flex flex-col">
-            <h1 className="text-xl font-bold text-foreground">Neuhaus-IT</h1>
+            <h1 className="text-xl font-bold">
+              <span className="text-primary">Computerhilfe</span>{" "}
+              <span className="text-accent">Castrop-Rauxel</span>
+            </h1>
             <p className="text-xs text-muted-foreground">Inh. Till Neuhaus</p>
           </div>
         </div>
@@ -29,7 +32,7 @@ const Header = () => {
           </a>
         </nav>
 
-        <Button variant="outline" className="hidden md:flex">
+        <Button variant="outline" className="hidden md:flex border-primary text-primary hover:bg-primary hover:text-primary-foreground">
           Termin buchen
         </Button>
       </div>
