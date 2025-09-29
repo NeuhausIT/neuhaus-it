@@ -20,14 +20,8 @@ const Header = () => {
           <a href="/terminbuchungen-preise" className="text-foreground hover:text-primary transition-colors">
             Terminbuchungen & Preise
           </a>
-          <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-            Kontakt
-          </a>
-          <a href="/impressum" className="text-foreground hover:text-primary transition-colors">
-            Impressum
-          </a>
-          <a href="/datenschutz" className="text-foreground hover:text-primary transition-colors">
-            Datenschutz
+          <a href="/kontakt-impressum" className="text-foreground hover:text-primary transition-colors">
+            Kontakt & Impressum
           </a>
         </nav>
 
