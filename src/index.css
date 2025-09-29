@@ -2,47 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Computerhilfe Castrop-Rauxel Design System - Tech Blue/Cyan Theme
-All colors MUST be HSL. Based on original website design.
-*/
+/* Computerhilfe Castrop-Rauxel Design System
+Exakte Farbwerte basierend auf der originalen Website */
 
 @layer base {
   :root {
-    --background: 220 20% 98%;
-    --foreground: 220 15% 25%;
+    /* Light theme - wie auf der originalen Website */
+    --background: 225 25% 95%;  /* Sehr helles gräuliches Blau */
+    --foreground: 225 15% 35%;  /* Dunkles Grau für Text */
 
-    --card: 220 20% 98%;
-    --card-foreground: 220 15% 25%;
+    --card: 225 25% 96%;
+    --card-foreground: 225 15% 35%;
 
-    --popover: 220 20% 98%;
-    --popover-foreground: 220 15% 25%;
+    --popover: 225 25% 96%;
+    --popover-foreground: 225 15% 35%;
 
-    /* Computerhilfe Brand Colors - Blue/Cyan/Teal Theme */
-    --primary: 195 100% 65%;  /* Light blue from "Computerhilfe" */
+    /* Exakte Farben von der Website */
+    --primary: 199 89% 64%;     /* Helles Blau für "Computerhilfe" */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 195 100% 75%;
-    --primary-dark: 195 100% 55%;
+    --primary-light: 199 89% 74%;
+    --primary-dark: 199 89% 54%;
 
-    --secondary: 220 15% 95%;
-    --secondary-foreground: 220 15% 25%;
+    --secondary: 225 20% 92%;   /* Sehr helles Grau */
+    --secondary-foreground: 225 15% 35%;
 
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 8% 55%;
+    --muted: 225 20% 88%;
+    --muted-foreground: 225 8% 55%;
 
-    --accent: 175 85% 45%;  /* Teal from "Castrop-Rauxel" */
+    --accent: 158 64% 52%;      /* Türkis/Teal für "Castrop-Rauxel" */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 95%;
-    --ring: 195 100% 65%;
+    --border: 225 15% 85%;
+    --input: 225 15% 92%;
+    --ring: 199 89% 64%;
 
-    /* Tech-inspired gradients */
+    /* Subtile tech-inspirierte Hintergründe */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--accent) / 0.8));
+    --gradient-hero: linear-gradient(135deg, hsl(225 25% 95% / 0.95), hsl(225 25% 92% / 0.9));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
+
+    /* Sehr subtile Schatten */
+    --shadow-soft: 0 2px 10px hsl(225 25% 50% / 0.08);
+    --shadow-strong: 0 4px 20px hsl(225 25% 50% / 0.12);
+    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.15);
 
     /* Tech-inspired shadows */
     --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.12);
@@ -69,43 +74,43 @@ All colors MUST be HSL. Based on original website design.
   }
 
   .dark {
-    --background: 220 25% 15%;
-    --foreground: 220 20% 98%;
+    --background: 225 25% 12%;
+    --foreground: 225 20% 95%;
 
-    --card: 220 25% 17%;
-    --card-foreground: 220 20% 98%;
+    --card: 225 25% 15%;
+    --card-foreground: 225 20% 95%;
 
-    --popover: 220 25% 17%;
-    --popover-foreground: 220 20% 98%;
+    --popover: 225 25% 15%;
+    --popover-foreground: 225 20% 95%;
 
-    --primary: 195 100% 70%;  /* Brighter in dark mode */
-    --primary-foreground: 220 25% 15%;
-    --primary-light: 195 100% 80%;
-    --primary-dark: 195 100% 60%;
+    --primary: 199 89% 70%;
+    --primary-foreground: 225 25% 12%;
+    --primary-light: 199 89% 80%;
+    --primary-dark: 199 89% 60%;
 
-    --secondary: 220 20% 22%;
-    --secondary-foreground: 220 20% 98%;
+    --secondary: 225 20% 18%;
+    --secondary-foreground: 225 20% 95%;
 
-    --muted: 220 20% 22%;
-    --muted-foreground: 220 8% 55%;
+    --muted: 225 20% 18%;
+    --muted-foreground: 225 8% 60%;
 
-    --accent: 175 85% 55%;  /* Brighter teal in dark mode */
-    --accent-foreground: 220 25% 15%;
+    --accent: 158 64% 60%;
+    --accent-foreground: 225 25% 12%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 220 20% 98%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 225 20% 95%;
 
-    --border: 220 20% 22%;
-    --input: 220 20% 22%;
-    --ring: 195 100% 70%;
+    --border: 225 20% 20%;
+    --input: 225 20% 18%;
+    --ring: 199 89% 70%;
 
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--accent) / 0.7));
+    --gradient-hero: linear-gradient(135deg, hsl(225 25% 12% / 0.9), hsl(225 25% 15% / 0.8));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
 
-    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.25);
-    --shadow-strong: 0 10px 40px hsl(0 0% 0% / 0.35);
-    --shadow-glow: 0 0 30px hsl(var(--accent) / 0.4);
+    --shadow-soft: 0 2px 10px hsl(0 0% 0% / 0.2);
+    --shadow-strong: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.3);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

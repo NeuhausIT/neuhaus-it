@@ -1,100 +1,78 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ArrowRight, Users, Building2, Phone, Mail } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
+import heroBackground from "@/assets/hero-tech-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle">
-      <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
+    <section 
+      className="relative min-h-screen flex items-center justify-center"
+      style={{
+        backgroundImage: `url(${heroBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay für bessere Lesbarkeit */}
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-[1px]"></div>
       
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Main Hero Content */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
-              <span className="text-primary font-medium">
-                IT-Dienstleistungen seit 2017
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-snug">
-              <span className="text-primary">Computer</span>
-              <span className="text-accent">hilfe</span>{" "}
-              <span className="text-primary">Castrop-</span>
-              <span className="text-accent">Rauxel</span>
-            </h1>
-            
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-              Ihr zuverlässiger Partner für IT-Dienstleistungen in Castrop-Rauxel, Dortmund, Bochum und Umgebung. 
-              Professionelle Beratung, Handel und Service für Privathaushalte.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button size="lg" className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-3">
-                <Phone className="mr-2 h-5 w-5" />
-                Jetzt anrufen
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3">
-                <Mail className="mr-2 h-5 w-5" />
-                Kontakt aufnehmen
-              </Button>
-            </div>
-
-            <div className="text-center text-muted-foreground mb-12">
-              <p className="text-sm mb-2">📍 Castrop-Rauxel, Dortmund, Bochum & Umgebung</p>
-              <p className="text-sm font-medium">Schnell • Zuverlässig • Kompetent</p>
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Logo Bereich (falls verfügbar) */}
+          <div className="mb-12">
+            <div className="w-16 h-16 mx-auto mb-8 opacity-60">
+              <div className="w-full h-full bg-primary rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-primary-foreground rounded opacity-80"></div>
+              </div>
             </div>
           </div>
-
-          {/* Two Main Service Cards */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="p-8 bg-card/50 backdrop-blur-sm hover:shadow-strong transition-all duration-300 group flex">
-              <div className="text-center flex flex-col justify-between w-full">
-                <div>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="h-8 w-8 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    Für Privathaushalte
-                  </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Computerhilfe und IT-Support für Privatpersonen und Haushalte im Raum Castrop-Rauxel.
-                  </p>
-                </div>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  onClick={() => window.open('https://computerhilfe-castrop-rauxel.de', '_blank')}
-                >
-                  Zu Computerhilfe-Castrop-Rauxel.de
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </Card>
-
-            <Card className="p-8 bg-card/50 backdrop-blur-sm hover:shadow-strong transition-all duration-300 group flex">
-              <div className="text-center flex flex-col justify-between w-full">
-                <div>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Building2 className="h-8 w-8 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    Für Unternehmen
-                  </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    IT-Service, Beratung und Managed Services für Unternehmen und Institutionen.
-                  </p>
-                </div>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  onClick={() => window.open('https://it-service-castrop-rauxel.de', '_blank')}
-                >
-                  Zu IT-Service-Castrop-Rauxel.de
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </Card>
+          
+          {/* Haupttitel - exakt wie auf der originalen Website */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            <span className="text-primary">Computer</span>
+            <span className="text-accent">hilfe</span>
+            <br />
+            <span className="text-primary">Castrop-</span>
+            <span className="text-accent">Rauxel</span>
+          </h1>
+          
+          {/* Untertitel */}
+          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+            Ihr zuverlässiger Partner für IT-Dienstleistungen in<br />
+            Castrop-Rauxel, Dortmund, Bochum und Umgebung.<br />
+            Professionelle Beratung, Handel und Service für<br />
+            Privathaushalte.
+          </p>
+          
+          {/* Call-to-Action Buttons - genau wie im Original */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-3 text-lg rounded-lg shadow-soft"
+              onClick={() => window.open('tel:+4923054459886')}
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              Jetzt anrufen
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-primary/30 bg-background/60 text-primary hover:bg-primary/10 hover:border-primary px-8 py-3 text-lg rounded-lg backdrop-blur-sm"
+              onClick={() => window.open('mailto:service@neuhaus-it.de')}
+            >
+              <Mail className="mr-2 h-5 w-5" />
+              Kontakt aufnehmen
+            </Button>
+          </div>
+          
+          {/* Location und USP Info - genau wie im Original */}
+          <div className="text-center text-muted-foreground space-y-4">
+            <p className="text-sm opacity-60">
+              📍 Castrop-Rauxel, Dortmund, Bochum & Umgebung
+            </p>
+            <p className="text-sm font-medium">
+              Schnell • Zuverlässig • Kompetent
+            </p>
           </div>
         </div>
       </div>
