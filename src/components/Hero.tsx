@@ -88,7 +88,7 @@ const Hero = () => {
           
           {/* Location und USP Info - genau wie im Original */}
           <div className="text-center text-muted-foreground space-y-4">
-            <p className="text-sm opacity-60">
+            <p className="text-sm opacity-80">
               📍 Castrop-Rauxel, Dortmund, Bochum & Umgebung
             </p>
             <p className="text-sm font-medium">
