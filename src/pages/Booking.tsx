@@ -21,7 +21,7 @@ const Booking = () => {
                 <Card>
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-3">
-                      <Phone className="h-5 w-5 text-primary" />
+                      <Phone className="h-7 w-7 text-primary" />
                       Kostenlose telefonische Erstberatung
                     </CardTitle>
                   </CardHeader>
@@ -35,7 +35,7 @@ const Booking = () => {
                 <Card>
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-3">
-                      <Home className="h-5 w-5 text-primary" />
+                      <Home className="h-7 w-7 text-primary" />
                       Persönlicher Termin bei Ihnen vor Ort
                     </CardTitle>
                   </CardHeader>
@@ -47,7 +47,7 @@ const Booking = () => {
                 <Card>
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-3">
-                      <MapPin className="h-5 w-5 text-primary" />
+                      <MapPin className="h-7 w-7 text-primary" />
                       Persönlicher Termin bei Neuhaus-IT
                     </CardTitle>
                   </CardHeader>
@@ -59,7 +59,7 @@ const Booking = () => {
                 <Card>
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-3">
-                      <Monitor className="h-5 w-5 text-primary" />
+                      <Monitor className="h-7 w-7 text-primary" />
                       Unterstützung per Telefon und/ oder Fernwartung
                     </CardTitle>
                   </CardHeader>
@@ -126,11 +126,11 @@ const Booking = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg">
-                  <Phone className="mr-2 h-4 w-4" />
+                  <Phone className="mr-2 h-6 w-6" />
                   Jetzt anrufen
                 </Button>
                 <Button variant="outline" size="lg">
-                  <MapPin className="mr-2 h-4 w-4" />
+                  <MapPin className="mr-2 h-6 w-6" />
                   Termin vereinbaren
                 </Button>
               </div>
