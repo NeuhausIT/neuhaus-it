@@ -20,9 +20,7 @@ const Header = () => {
           <a href="/terminbuchungen-preise" className="text-foreground hover:text-primary transition-colors">
             Terminbuchungen & Preise
           </a>
-          <a href="/kontakt-impressum" className="text-foreground hover:text-primary transition-colors">
-            Kontakt & Impressum
-          </a>
+          <a href="/kontakt-impressum" className="text-foreground hover:text-primary transition-colors">Kontakt, Impressum &amp; Datenschutz</a>
         </nav>
 
         <Button variant="outline" className="hidden md:flex border-primary text-primary hover:bg-primary hover:text-primary-foreground">
