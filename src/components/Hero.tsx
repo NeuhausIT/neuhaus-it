@@ -27,20 +27,45 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Haupttitel - exakt wie auf der originalen Website */}
+          {/* Haupttitel */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
             Neuhaus-IT
           </h1>
           
           {/* Untertitel */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Ihr zuverlässiger Partner für IT-Dienstleistungen in<br />
-            Castrop-Rauxel, Dortmund, Bochum und Umgebung.<br />
-            Professionelle Beratung, Handel und Service für<br />
-            Privathaushalte.
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            Ihr Experte für IT-Beratung, Handel und Service<br />
+            Inh. Till Neuhaus
           </p>
           
-          {/* Call-to-Action Buttons - genau wie im Original */}
+          {/* Tochterprojekte - prominent verlinkt */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="bg-background/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:bg-background/90 transition-all">
+              <h3 className="text-xl font-semibold mb-3">IT-Service-Castrop-Rauxel.de</h3>
+              <p className="text-muted-foreground mb-4">Professionelle IT-Lösungen für lokale Kleinunternehmen und Institutionen</p>
+              <Button 
+                variant="outline" 
+                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                onClick={() => window.open('https://it-service-castrop-rauxel.de', '_blank')}
+              >
+                Für Unternehmen →
+              </Button>
+            </div>
+            
+            <div className="bg-background/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:bg-background/90 transition-all">
+              <h3 className="text-xl font-semibold mb-3">Computerhilfe-Castrop-Rauxel.de</h3>
+              <p className="text-muted-foreground mb-4">Individuelle Computerhilfe und Support für Privathaushalte</p>
+              <Button 
+                variant="outline" 
+                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                onClick={() => window.open('https://computerhilfe-castrop-rauxel.de', '_blank')}
+              >
+                Für Privatkunden →
+              </Button>
+            </div>
+          </div>
+          
+          {/* Call-to-Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button 
               size="lg" 

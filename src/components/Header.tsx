@@ -21,14 +21,17 @@ const Header = () => {
           <a href="#about" className="text-foreground hover:text-primary transition-colors">
             Über mich
           </a>
-          <a href="#services" className="text-foreground hover:text-primary transition-colors">
-            Leistungen
-          </a>
           <a href="/terminbuchungen-preise" className="text-foreground hover:text-primary transition-colors">
             Terminbuchungen & Preise
           </a>
           <a href="#contact" className="text-foreground hover:text-primary transition-colors">
             Kontakt
+          </a>
+          <a href="/impressum" className="text-foreground hover:text-primary transition-colors">
+            Impressum
+          </a>
+          <a href="/datenschutz" className="text-foreground hover:text-primary transition-colors">
+            Datenschutz
           </a>
         </nav>
 
