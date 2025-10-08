@@ -18,8 +18,9 @@ const Hero = () => {
           
           
           {/* Haupttitel */}
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Neuhaus-IT
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <span className="text-primary">Neuhaus</span>
+            <span className="text-accent">-IT</span>
           </h1>
           
           {/* Untertitel */}
