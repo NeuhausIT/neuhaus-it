@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import heroBackground from "@/assets/hero-tech-background.jpg";
+import ActionButtonMenu from "@/components/ActionButtonMenu";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center" style={{
     backgroundImage: `url(${heroBackground})`,
@@ -48,13 +49,10 @@ const Hero = () => {
           
           {/* Call-to-Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" variant="action" className="px-8 py-3 text-lg rounded-lg" onClick={() => window.open('tel:+4923054459886')}>
-              <Phone className="mr-2 h-5 w-5" />
-              Jetzt anrufen
-            </Button>
+            <ActionButtonMenu size="lg" className="px-8 py-3 text-lg rounded-lg" />
             <Button size="lg" variant="outline" className="border-2 border-primary/30 bg-background/60 text-primary hover:bg-primary/10 hover:border-primary px-8 py-3 text-lg rounded-lg backdrop-blur-sm" onClick={() => window.open('mailto:service@neuhaus-it.de')}>
               <Mail className="mr-2 h-5 w-5" />
-              Kontakt aufnehmen
+              E-Mail schreiben
             </Button>
           </div>
           

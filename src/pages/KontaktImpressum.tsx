@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Calendar, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import ActionButtonMenu from "@/components/ActionButtonMenu";
 const KontaktImpressum = () => {
   return <div className="min-h-screen bg-background">
       <Header />
@@ -50,14 +51,7 @@ const KontaktImpressum = () => {
                   </div>
 
                   <div className="mt-8 pt-6 border-t border-border">
-                    <Button variant="action" className="mr-4">
-                      <Calendar className="mr-2 h-4 w-4" />
-                      Termin online buchen
-                    </Button>
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <Mail className="mr-2 h-4 w-4" />
-                      E-Mail schreiben
-                    </Button>
+                    <ActionButtonMenu />
                   </div>
                 </Card>
 
@@ -110,16 +104,9 @@ const KontaktImpressum = () => {
                 </Card>
 
                 <Card className="p-6 text-center bg-accent/10">
-                  <Calendar className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    Kostenlose Erstberatung
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Lernen Sie mich und meine Arbeitsweise unverbindlich kennen.
-                  </p>
-                  <Button variant="action" size="sm" className="w-full">
-                    Jetzt Termin buchen
-                  </Button>
+                  <div className="flex justify-center mb-4">
+                    <ActionButtonMenu size="sm" className="w-full" />
+                  </div>
                 </Card>
               </div>
             </div>

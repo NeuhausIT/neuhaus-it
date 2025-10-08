@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Server, Users, User, Home, Building2, Cloud, Shield, Clock, TrendingUp, Phone, Calendar } from "lucide-react";
+import { Check, Server, Users, User, Home, Building2, Cloud, Shield, Clock, TrendingUp, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet";
+import ActionButtonMenu from "@/components/ActionButtonMenu";
 
 const ManagedNodes = () => {
   const adminModels = [
@@ -127,12 +128,7 @@ const ManagedNodes = () => {
                 Mit Managed Nodes kümmert sich Neuhaus-IT um die reibungslose Funktion Ihrer Systeme – damit Sie sich auf Ihr Geschäft konzentrieren können.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="action" asChild>
-                  <a href="/kontakt">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Kostenlos beraten lassen
-                  </a>
-                </Button>
+                <ActionButtonMenu size="lg" />
                 <Button size="lg" variant="outline" asChild>
                   <a href="/terminbuchungen-preise">
                     Jetzt passende Lösung finden
@@ -257,16 +253,11 @@ const ManagedNodes = () => {
                 Vereinbaren Sie jetzt ein kostenloses Erstgespräch und finden Sie die passende Lösung für Ihre Systeme.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="action" asChild>
-                  <a href="tel:+4923059699902">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Jetzt anrufen
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <a href="/terminbuchungen-preise">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Termin vereinbaren
+                <ActionButtonMenu size="lg" />
+                <Button size="lg" variant="outline">
+                  <Phone className="mr-2 h-5 w-5" />
+                  <a href="tel:+4923054459886">
+                    Direkt anrufen
                   </a>
                 </Button>
               </div>
