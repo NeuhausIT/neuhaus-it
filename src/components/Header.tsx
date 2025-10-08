@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
 const Header = () => {
-  return;
+  return null;
 };
 export default Header;
