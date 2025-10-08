@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Home, Monitor } from "lucide-react";
+import ActionButtonMenu from "@/components/ActionButtonMenu";
 const Booking = () => {
   return <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16">
@@ -124,15 +124,8 @@ const Booking = () => {
               <p className="text-muted-foreground mb-6">
                 Kontaktieren Sie uns für Ihre kostenlose Erstberatung oder vereinbaren Sie einen Termin
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">
-                  <Phone className="mr-2 h-6 w-6" />
-                  Jetzt anrufen
-                </Button>
-                <Button variant="outline" size="lg">
-                  <MapPin className="mr-2 h-6 w-6" />
-                  Termin vereinbaren
-                </Button>
+              <div className="flex justify-center">
+                <ActionButtonMenu size="lg" />
               </div>
             </div>
           </div>
