@@ -26,9 +26,7 @@ const Header = () => {
           <a href="/kontakt" className="text-foreground hover:text-primary transition-colors">Kontakt, Impressum &amp; Datenschutz</a>
         </nav>
 
-        <Button variant="outline" className="hidden md:flex border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-          Termin buchen
-        </Button>
+        
       </div>
     </header>;
 };
