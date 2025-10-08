@@ -1,24 +1,26 @@
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, FileText } from "lucide-react";
 import ActionButtonMenu from "@/components/ActionButtonMenu";
+import SubpageHero from "@/components/SubpageHero";
+import BackToHomeButton from "@/components/BackToHomeButton";
 const KontaktImpressum = () => {
   return <div className="min-h-screen bg-background">
-      <Header />
+      <SubpageHero
+        title="Kontakt, Impressum & Datenschutz"
+        description="Lassen Sie uns gemeinsam durchstarten! Kontaktieren Sie mich für eine unverbindliche Beratung oder vereinbaren Sie direkt einen Termin."
+        icon={<FileText className="h-16 w-16 text-primary" />}
+      >
+        <ActionButtonMenu size="lg" />
+      </SubpageHero>
+      
+      <BackToHomeButton />
+      
       <main className="container mx-auto px-4 py-16">
         {/* Kontakt Sektion */}
         <section id="contact" className="mb-20">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl font-bold text-foreground mb-6">Kontakt, Impressum &amp; Datenschutz</h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Lassen Sie uns gemeinsam durchstarten! Kontaktieren Sie mich für eine 
-                unverbindliche Beratung oder vereinbaren Sie direkt einen Termin.
-              </p>
-            </div>
-
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Contact Info */}
               <div className="lg:col-span-2 space-y-6">

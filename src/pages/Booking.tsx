@@ -1,18 +1,23 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, MapPin, Home, Monitor } from "lucide-react";
+import { Phone, MapPin, Home, Monitor, Calendar } from "lucide-react";
 import ActionButtonMenu from "@/components/ActionButtonMenu";
+import SubpageHero from "@/components/SubpageHero";
+import BackToHomeButton from "@/components/BackToHomeButton";
+import Footer from "@/components/Footer";
 const Booking = () => {
   return <div className="min-h-screen bg-background">
+      <SubpageHero
+        title="Terminbuchungen & Preise"
+        description="Flexible Beratungsoptionen für Ihre individuellen Bedürfnisse"
+        icon={<Calendar className="h-16 w-16 text-primary" />}
+      >
+        <ActionButtonMenu size="lg" />
+      </SubpageHero>
+      
+      <BackToHomeButton />
+      
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Terminbuchungen & Preise
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Flexible Beratungsoptionen für Ihre individuellen Bedürfnisse
-            </p>
-          </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div>
@@ -131,6 +136,8 @@ const Booking = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>;
 };
 export default Booking;

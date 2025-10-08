@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Server, Users, User, Home, Building2, Cloud, Shield, Clock, TrendingUp, Phone } from "lucide-react";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet";
 import ActionButtonMenu from "@/components/ActionButtonMenu";
+import SubpageHero from "@/components/SubpageHero";
+import BackToHomeButton from "@/components/BackToHomeButton";
 
 const ManagedNodes = () => {
   const adminModels = [
@@ -112,31 +113,22 @@ const ManagedNodes = () => {
       </Helmet>
       
       <div className="min-h-screen flex flex-col bg-background">
-        <Header />
+        <SubpageHero
+          title="Managed Nodes"
+          description="Mit Managed Nodes kümmert sich Neuhaus-IT um die reibungslose Funktion Ihrer Systeme – damit Sie sich auf Ihr Geschäft konzentrieren können."
+          icon={<Server className="h-16 w-16 text-primary" />}
+        >
+          <ActionButtonMenu size="lg" />
+          <Button size="lg" variant="outline" asChild>
+            <a href="/terminbuchungen-preise">
+              Jetzt passende Lösung finden
+            </a>
+          </Button>
+        </SubpageHero>
+        
+        <BackToHomeButton />
         
         <main className="flex-1">
-          {/* Hero Section */}
-          <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
-            <div className="container mx-auto max-w-4xl text-center">
-              <div className="flex justify-center mb-6">
-                <Server className="h-16 w-16 text-primary" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Managed Nodes
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Mit Managed Nodes kümmert sich Neuhaus-IT um die reibungslose Funktion Ihrer Systeme – damit Sie sich auf Ihr Geschäft konzentrieren können.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <ActionButtonMenu size="lg" />
-                <Button size="lg" variant="outline" asChild>
-                  <a href="/terminbuchungen-preise">
-                    Jetzt passende Lösung finden
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </section>
 
           {/* Was ist eine Managed Node? */}
           <section className="py-16 px-4">
