@@ -6,123 +6,64 @@ import { Helmet } from "react-helmet";
 import ActionButtonMenu from "@/components/ActionButtonMenu";
 import SubpageHero from "@/components/SubpageHero";
 import BackToHomeButton from "@/components/BackToHomeButton";
-
 const ManagedNodes = () => {
-  const adminModels = [
-    {
-      title: "Managed-Hosts",
-      icon: Shield,
-      description: "Neuhaus-IT übernimmt alle administrativen Aufgaben",
-      features: [
-        "Vollständige Wartung und Updates",
-        "Professionelles Monitoring",
-        "Automatische Backups",
-        "Keine Adminrechte für Kunden",
-        "Haftung durch Neuhaus-IT",
-        "Maximale Sicherheit"
-      ],
-      highlight: true
-    },
-    {
-      title: "Co-Managed-Hosts",
-      icon: Users,
-      description: "Gemeinsame Administration mit flexibler Aufteilung",
-      features: [
-        "Beide Seiten haben Adminrechte",
-        "Flexible Aufgabenteilung",
-        "Mehr Kontrolle für Kunden",
-        "Gemeinsame Verantwortung",
-        "Keine Haftung durch Neuhaus-IT",
-        "Ideal für IT-affine Nutzer"
-      ],
-      highlight: false
-    },
-    {
-      title: "Self-Managed-Hosts",
-      icon: User,
-      description: "Komplette Eigenverwaltung durch den Kunden",
-      features: [
-        "Volle administrative Kontrolle",
-        "Eigenverantwortliche Verwaltung",
-        "Infrastruktur durch Neuhaus-IT",
-        "Keine Haftung durch Neuhaus-IT",
-        "Maximale Flexibilität",
-        "Für erfahrene Administratoren"
-      ],
-      highlight: false
-    }
-  ];
-
-  const useCases = [
-    {
-      category: "Privatkunden",
-      icon: Home,
-      examples: [
-        "NAS-System (Synology, QNAP)",
-        "Nextcloud-Server für private Cloud",
-        "Smart-Home-Controller",
-        "Heimserver für Medien und Backups",
-        "VPN-Server für sicheren Zugriff"
-      ]
-    },
-    {
-      category: "Kleinunternehmen",
-      icon: Building2,
-      examples: [
-        "Datei- und Backup-Server",
-        "Mail-Server und Groupware",
-        "Webhosting und CMS",
-        "Virtuelle Maschinen für Anwendungen",
-        "ERP- und CRM-Systeme"
-      ]
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Shield,
-      title: "Rundum-Sorglos-Betrieb",
-      description: "Keine Ausfälle durch proaktives Monitoring und schnelle Reaktionszeiten"
-    },
-    {
-      icon: Clock,
-      title: "Zeitersparnis",
-      description: "Konzentrieren Sie sich auf Ihr Kerngeschäft, nicht auf IT-Probleme"
-    },
-    {
-      icon: TrendingUp,
-      title: "Professionelles Monitoring",
-      description: "Fehler werden erkannt und behoben, bevor sie kritisch werden"
-    },
-    {
-      icon: Cloud,
-      title: "Transparente Kosten",
-      description: "Klare Zuständigkeiten und kalkulierbare monatliche Ausgaben"
-    }
-  ];
-
-  return (
-    <>
+  const adminModels = [{
+    title: "Managed-Hosts",
+    icon: Shield,
+    description: "Neuhaus-IT übernimmt alle administrativen Aufgaben",
+    features: ["Vollständige Wartung und Updates", "Professionelles Monitoring", "Automatische Backups", "Keine Adminrechte für Kunden", "Haftung durch Neuhaus-IT", "Maximale Sicherheit"],
+    highlight: true
+  }, {
+    title: "Co-Managed-Hosts",
+    icon: Users,
+    description: "Gemeinsame Administration mit flexibler Aufteilung",
+    features: ["Beide Seiten haben Adminrechte", "Flexible Aufgabenteilung", "Mehr Kontrolle für Kunden", "Gemeinsame Verantwortung", "Keine Haftung durch Neuhaus-IT", "Ideal für IT-affine Nutzer"],
+    highlight: false
+  }, {
+    title: "Self-Managed-Hosts",
+    icon: User,
+    description: "Komplette Eigenverwaltung durch den Kunden",
+    features: ["Volle administrative Kontrolle", "Eigenverantwortliche Verwaltung", "Infrastruktur durch Neuhaus-IT", "Keine Haftung durch Neuhaus-IT", "Maximale Flexibilität", "Für erfahrene Administratoren"],
+    highlight: false
+  }];
+  const useCases = [{
+    category: "Privatkunden",
+    icon: Home,
+    examples: ["NAS-System (Synology, QNAP)", "Nextcloud-Server für private Cloud", "Smart-Home-Controller", "Heimserver für Medien und Backups", "VPN-Server für sicheren Zugriff"]
+  }, {
+    category: "Kleinunternehmen",
+    icon: Building2,
+    examples: ["Datei- und Backup-Server", "Mail-Server und Groupware", "Webhosting und CMS", "Virtuelle Maschinen für Anwendungen", "ERP- und CRM-Systeme"]
+  }];
+  const benefits = [{
+    icon: Shield,
+    title: "Rundum-Sorglos-Betrieb",
+    description: "Keine Ausfälle durch proaktives Monitoring und schnelle Reaktionszeiten"
+  }, {
+    icon: Clock,
+    title: "Zeitersparnis",
+    description: "Konzentrieren Sie sich auf Ihr Kerngeschäft, nicht auf IT-Probleme"
+  }, {
+    icon: TrendingUp,
+    title: "Professionelles Monitoring",
+    description: "Fehler werden erkannt und behoben, bevor sie kritisch werden"
+  }, {
+    icon: Cloud,
+    title: "Transparente Kosten",
+    description: "Klare Zuständigkeiten und kalkulierbare monatliche Ausgaben"
+  }];
+  return <>
       <Helmet>
         <title>Managed Nodes - Professionelle Serveradministration | Neuhaus-IT</title>
-        <meta 
-          name="description" 
-          content="Neuhaus-IT betreut Ihre Systeme professionell: von vollständig gemanagten Hosts über Co-Managed-Lösungen bis zu Self-Managed-Systemen. Sicher, flexibel und transparent." 
-        />
+        <meta name="description" content="Neuhaus-IT betreut Ihre Systeme professionell: von vollständig gemanagten Hosts über Co-Managed-Lösungen bis zu Self-Managed-Systemen. Sicher, flexibel und transparent." />
         <meta name="keywords" content="Managed Nodes, Serveradministration, IT-Betreuung, Co-Managed-Hosting, Self-Managed-Hosting, Server-Management für KMU, Server-Monitoring" />
       </Helmet>
       
       <div className="min-h-screen flex flex-col bg-background">
-        <SubpageHero
-          title="Managed Nodes"
-          description="Mit Managed Nodes kümmert sich Neuhaus-IT um die reibungslose Funktion Ihrer Systeme – damit Sie sich auf Ihr Geschäft konzentrieren können."
-          icon={<Server className="h-16 w-16 text-primary" />}
-        >
+        <SubpageHero title="Managed Nodes" description="Mit Managed Nodes kümmert sich Neuhaus-IT um die reibungslose Funktion Ihrer Systeme – damit Sie sich auf Ihr Geschäft konzentrieren können." icon={<Server className="h-16 w-16 text-primary" />}>
           <ActionButtonMenu size="lg" />
           <Button size="lg" variant="outline" asChild>
-            <a href="/terminbuchungen-preise">
-              Jetzt passende Lösung finden
-            </a>
+            
           </Button>
         </SubpageHero>
         
@@ -150,12 +91,11 @@ const ManagedNodes = () => {
           {/* Administrationsmodelle */}
           <section className="py-16 px-4 bg-muted/30">
             <div className="container mx-auto max-w-6xl">
-              <h2 className="text-3xl font-bold mb-12 text-center">Unsere Administrationsmodelle</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center">Meine Administrationsmodelle</h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {adminModels.map((model, index) => {
-                  const Icon = model.icon;
-                  return (
-                    <Card key={index} className={model.highlight ? "border-primary shadow-lg" : ""}>
+                const Icon = model.icon;
+                return <Card key={index} className={model.highlight ? "border-primary shadow-lg" : ""}>
                       <CardHeader>
                         <div className="flex justify-center mb-4">
                           <Icon className="h-12 w-12 text-primary" />
@@ -165,17 +105,14 @@ const ManagedNodes = () => {
                       </CardHeader>
                       <CardContent>
                         <ul className="space-y-3">
-                          {model.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
+                          {model.features.map((feature, idx) => <li key={idx} className="flex items-start gap-2">
                               <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                               <span className="text-sm">{feature}</span>
-                            </li>
-                          ))}
+                            </li>)}
                         </ul>
                       </CardContent>
-                    </Card>
-                  );
-                })}
+                    </Card>;
+              })}
               </div>
             </div>
           </section>
@@ -186,9 +123,8 @@ const ManagedNodes = () => {
               <h2 className="text-3xl font-bold mb-12 text-center">Ihre Vorteile</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {benefits.map((benefit, index) => {
-                  const Icon = benefit.icon;
-                  return (
-                    <Card key={index}>
+                const Icon = benefit.icon;
+                return <Card key={index}>
                       <CardHeader>
                         <div className="flex items-start gap-4">
                           <Icon className="h-10 w-10 text-primary shrink-0" />
@@ -198,9 +134,8 @@ const ManagedNodes = () => {
                           </div>
                         </div>
                       </CardHeader>
-                    </Card>
-                  );
-                })}
+                    </Card>;
+              })}
               </div>
             </div>
           </section>
@@ -211,9 +146,8 @@ const ManagedNodes = () => {
               <h2 className="text-3xl font-bold mb-12 text-center">Beispielhafte Einsatzszenarien</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {useCases.map((useCase, index) => {
-                  const Icon = useCase.icon;
-                  return (
-                    <Card key={index}>
+                const Icon = useCase.icon;
+                return <Card key={index}>
                       <CardHeader>
                         <div className="flex items-center gap-3 mb-4">
                           <Icon className="h-8 w-8 text-primary" />
@@ -222,17 +156,14 @@ const ManagedNodes = () => {
                       </CardHeader>
                       <CardContent>
                         <ul className="space-y-2">
-                          {useCase.examples.map((example, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
+                          {useCase.examples.map((example, idx) => <li key={idx} className="flex items-start gap-2">
                               <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                               <span>{example}</span>
-                            </li>
-                          ))}
+                            </li>)}
                         </ul>
                       </CardContent>
-                    </Card>
-                  );
-                })}
+                    </Card>;
+              })}
               </div>
             </div>
           </section>
@@ -246,12 +177,7 @@ const ManagedNodes = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <ActionButtonMenu size="lg" />
-                <Button size="lg" variant="outline">
-                  <Phone className="mr-2 h-5 w-5" />
-                  <a href="tel:+4923054459886">
-                    Direkt anrufen
-                  </a>
-                </Button>
+                
               </div>
             </div>
           </section>
@@ -259,8 +185,6 @@ const ManagedNodes = () => {
 
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default ManagedNodes;
