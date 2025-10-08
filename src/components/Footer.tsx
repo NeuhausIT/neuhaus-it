@@ -46,6 +46,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="/fernwartung" className="text-muted-foreground hover:text-primary transition-colors">
+                    Fernwartung
+                  </a>
+                </li>
+                <li>
                   <a href="/terminbuchungen-preise" className="text-muted-foreground hover:text-primary transition-colors">
                     Terminbuchung & Preise
                   </a>
