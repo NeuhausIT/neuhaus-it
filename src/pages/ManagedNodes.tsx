@@ -105,7 +105,7 @@ const ManagedNodes = () => {
         <title>Managed Nodes - Professionelle Serveradministration | Neuhaus-IT</title>
         <meta 
           name="description" 
-          content="Neuhaus-IT betreut eure Systeme professionell: von vollständig gemanagten Hosts über Co-Managed-Lösungen bis zu Self-Managed-Systemen. Sicher, flexibel und transparent." 
+          content="Neuhaus-IT betreut Ihre Systeme professionell: von vollständig gemanagten Hosts über Co-Managed-Lösungen bis zu Self-Managed-Systemen. Sicher, flexibel und transparent." 
         />
         <meta name="keywords" content="Managed Nodes, Serveradministration, IT-Betreuung, Co-Managed-Hosting, Self-Managed-Hosting, Server-Management für KMU, Server-Monitoring" />
       </Helmet>
@@ -124,7 +124,7 @@ const ManagedNodes = () => {
                 Managed Nodes
               </h1>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Mit Managed Nodes kümmert sich Neuhaus-IT um die reibungslose Funktion eurer Systeme – damit ihr euch auf euer Geschäft konzentrieren könnt.
+                Mit Managed Nodes kümmert sich Neuhaus-IT um die reibungslose Funktion Ihrer Systeme – damit Sie sich auf Ihr Geschäft konzentrieren können.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
@@ -152,7 +152,7 @@ const ManagedNodes = () => {
                     Eine <strong>Node</strong> ist ein einzelner Host, Server, Container oder Computer, der durch Neuhaus-IT überwacht und administriert wird.
                   </p>
                   <p className="text-lg text-muted-foreground">
-                    Das Konzept ist skalierbar und modular: Von einem einzelnen Rechner bis zu einer kompletten Serverlandschaft – jedes System wird professionell betreut und auf eure individuellen Bedürfnisse angepasst.
+                    Das Konzept ist skalierbar und modular: Von einem einzelnen Rechner bis zu einer kompletten Serverlandschaft – jedes System wird professionell betreut und auf Ihre individuellen Bedürfnisse angepasst.
                   </p>
                 </CardContent>
               </Card>
@@ -195,7 +195,7 @@ const ManagedNodes = () => {
           {/* Kundenvorteile */}
           <section className="py-16 px-4">
             <div className="container mx-auto max-w-6xl">
-              <h2 className="text-3xl font-bold mb-12 text-center">Eure Vorteile</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center">Ihre Vorteile</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {benefits.map((benefit, index) => {
                   const Icon = benefit.icon;
@@ -254,7 +254,7 @@ const ManagedNodes = () => {
             <div className="container mx-auto max-w-4xl text-center">
               <h2 className="text-3xl font-bold mb-6">Bereit für professionelle IT-Betreuung?</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Vereinbart jetzt ein kostenloses Erstgespräch und findet die passende Lösung für eure Systeme.
+                Vereinbaren Sie jetzt ein kostenloses Erstgespräch und finden Sie die passende Lösung für Ihre Systeme.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>

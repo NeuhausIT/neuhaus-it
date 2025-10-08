@@ -93,7 +93,7 @@ const ServicesSection = () => {
                   Professionelle Serveradministration und IT-Betreuung
                 </p>
                 <Button variant="secondary" size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" asChild>
-                  <a href="/managed-nodes">
+                  <a href="/serveradministration">
                     Mehr erfahren
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
