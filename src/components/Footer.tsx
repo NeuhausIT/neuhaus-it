@@ -16,7 +16,7 @@ const Footer = () => {
                 </div>
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                Ihr Experte für die Digitalisierung von kleinen und mittleren Unternehmen 
+                Experte für die Digitalisierung von kleinen und mittleren Unternehmen 
                 mit Fokus auf freie Software und digitale Souveränität.
               </p>
               
@@ -65,7 +65,7 @@ const Footer = () => {
 
             {/* Services */}
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Unsere Angebote</h4>
+              <h4 className="font-semibold text-foreground mb-4">Meine Angebote</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="https://computerhilfe-castrop-rauxel.de" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">

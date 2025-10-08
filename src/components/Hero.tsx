@@ -24,7 +24,7 @@ const Hero = () => {
           
           {/* Untertitel */}
           <p className="text-lg md:text-xl text-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Ihr Experte für IT-Beratung, Handel und Service<br />
+            Experte für IT-Beratung, Handel und Service<br />
             Inh. Till Neuhaus
           </p>
           
