@@ -83,12 +83,7 @@ const Contact = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   Bei Notfällen und Störungen bin ich kurzfristig für Sie verfügbar.
                 </p>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  onClick={() => window.location.href = 'tel:+4923054459886'}
-                >
+                <Button variant="outline" size="sm" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.location.href = 'tel:+4923054459886'}>
                   Jetzt anrufen
                 </Button>
               </Card>
@@ -113,15 +108,8 @@ const Contact = () => {
                 <h3 className="text-lg font-semibold text-foreground mb-2">
                   Fernwartung
                 </h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Remote-Support für Windows und Linux Systeme verfügbar.
-                </p>
-                <Button 
-                  variant="destructive" 
-                  size="lg" 
-                  className="w-full sm:w-auto"
-                  asChild
-                >
+                
+                <Button variant="destructive" size="lg" className="w-full sm:w-auto" asChild>
                   <Link to="/fernwartung">
                     Fernwartung starten
                   </Link>
