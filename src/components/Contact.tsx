@@ -82,8 +82,13 @@ const Contact = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   Bei Notfällen und Störungen bin ich kurzfristig für Sie verfügbar.
                 </p>
-                <Button variant="outline" size="sm" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Soforthilfe anfordern
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  onClick={() => window.location.href = 'tel:+4923054459886'}
+                >
+                  Jetzt anrufen
                 </Button>
               </Card>
 
