@@ -17,34 +17,44 @@ const Footer = () => {
                   <p className="text-sm text-muted-foreground">Inh. Till Neuhaus</p>
                 </div>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 Ihr Experte für die Digitalisierung von kleinen und mittleren Unternehmen 
                 mit Fokus auf freie Software und digitale Souveränität.
               </p>
+              
+              {/* Servicegebiete */}
+              <div className="mt-4">
+                <h4 className="font-semibold text-foreground mb-2 text-sm">Servicegebiete</h4>
+                <p className="text-muted-foreground text-xs leading-relaxed">
+                  Castrop-Rauxel, Dortmund, Bochum, Herne, Recklinghausen, Waltrop, 
+                  Herten, Oer-Erkenschwick, Datteln, Lünen, Schwerte, Witten, Hattingen, 
+                  Gelsenkirchen, Essen und Umgebung
+                </p>
+              </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Schnellzugriff</h4>
+              <h4 className="font-semibold text-foreground mb-4">Seiten</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-                    Über mich
+                  <a href="/" className="text-muted-foreground hover:text-primary transition-colors">
+                    Startseite
                   </a>
                 </li>
                 <li>
-                  <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
-                    Leistungen
+                  <a href="/managed-nodes" className="text-muted-foreground hover:text-primary transition-colors">
+                    Managed Nodes
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-                    Kontakt
+                  <a href="/terminbuchungen-preise" className="text-muted-foreground hover:text-primary transition-colors">
+                    Terminbuchung & Preise
                   </a>
                 </li>
                 <li>
-                  <a href="https://cloud.neuhaus-it.de/apps/appointments/dir/7085d01d1268180a" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                    Termin buchen
+                  <a href="/kontakt-impressum" className="text-muted-foreground hover:text-primary transition-colors">
+                    Kontakt & Impressum
                   </a>
                 </li>
               </ul>
@@ -75,10 +85,10 @@ const Footer = () => {
               © 2025 Neuhaus-IT (Inh. Till Neuhaus). Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="/kontakt-impressum#impressum" className="hover:text-primary transition-colors">
                 Impressum
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="/kontakt-impressum#datenschutz" className="hover:text-primary transition-colors">
                 Datenschutz
               </a>
             </div>
