@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, ShoppingCart, Wrench, Monitor, Shield, Settings, ArrowRight } from "lucide-react";
+import { Lightbulb, ShoppingCart, Wrench, Monitor, Shield, Settings, ArrowRight, Server } from "lucide-react";
 const ServicesSection = () => {
   const mainServices = [{
     icon: Lightbulb,
@@ -78,10 +78,35 @@ const ServicesSection = () => {
               </Card>)}
           </div>
 
-          {/* Fernwartung & Monitoring - Hervorgehoben */}
-          <div className="mb-12">
+          {/* Hervorgehobene Services */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Managed Nodes */}
             <Card className="p-8 bg-gradient-primary text-primary-foreground">
               <div className="text-center">
+                <div className="w-16 h-16 bg-primary-foreground/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Server className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">
+                  Managed Nodes
+                </h3>
+                <p className="text-lg opacity-90 mb-6">
+                  Professionelle Serveradministration und IT-Betreuung
+                </p>
+                <Button variant="secondary" size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" asChild>
+                  <a href="/managed-nodes">
+                    Mehr erfahren
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+              </div>
+            </Card>
+
+            {/* Fernwartung & Monitoring */}
+            <Card className="p-8 bg-gradient-primary text-primary-foreground">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary-foreground/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Monitor className="h-8 w-8 text-primary-foreground" />
+                </div>
                 <h3 className="text-2xl font-bold mb-4">
                   Fernwartung & Monitoring
                 </h3>

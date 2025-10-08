@@ -17,6 +17,9 @@ const Header = () => {
           <a href="#about" className="text-foreground hover:text-primary transition-colors">
             Über mich
           </a>
+          <a href="/managed-nodes" className="text-foreground hover:text-primary transition-colors">
+            Managed Nodes
+          </a>
           <a href="/terminbuchungen-preise" className="text-foreground hover:text-primary transition-colors">
             Terminbuchungen & Preise
           </a>
