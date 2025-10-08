@@ -166,7 +166,7 @@ const KontaktImpressum = () => {
               <h4 className="text-xl font-semibold mb-3">Umsatzsteuer-ID</h4>
               <div className="mb-8">
                 <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                [USt-IdNr.]</p>
+                DE320473148</p>
               </div>
               
               <h4 className="text-xl font-semibold mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h4>
