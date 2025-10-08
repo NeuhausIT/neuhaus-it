@@ -49,15 +49,7 @@ const About = () => {
                 </Card>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
-                  <Calendar className="mr-2 h-4 w-4" />
-                  Termin vereinbaren
-                </Button>
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Mehr über mich
-                </Button>
-              </div>
+              
             </div>
           </div>
         </div>
