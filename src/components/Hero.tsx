@@ -48,7 +48,7 @@ const Hero = () => {
           
           {/* Call-to-Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-3 text-lg rounded-lg shadow-soft" onClick={() => window.open('tel:+4923054459886')}>
+            <Button size="lg" variant="action" className="px-8 py-3 text-lg rounded-lg" onClick={() => window.open('tel:+4923054459886')}>
               <Phone className="mr-2 h-5 w-5" />
               Jetzt anrufen
             </Button>

@@ -127,7 +127,7 @@ const ManagedNodes = () => {
                 Mit Managed Nodes kümmert sich Neuhaus-IT um die reibungslose Funktion Ihrer Systeme – damit Sie sich auf Ihr Geschäft konzentrieren können.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
+                <Button size="lg" variant="action" asChild>
                   <a href="/kontakt">
                     <Calendar className="mr-2 h-5 w-5" />
                     Kostenlos beraten lassen
@@ -257,7 +257,7 @@ const ManagedNodes = () => {
                 Vereinbaren Sie jetzt ein kostenloses Erstgespräch und finden Sie die passende Lösung für Ihre Systeme.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
+                <Button size="lg" variant="action" asChild>
                   <a href="tel:+4923059699902">
                     <Phone className="mr-2 h-5 w-5" />
                     Jetzt anrufen

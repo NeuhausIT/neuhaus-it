@@ -50,7 +50,7 @@ const KontaktImpressum = () => {
                   </div>
 
                   <div className="mt-8 pt-6 border-t border-border">
-                    <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300 mr-4">
+                    <Button variant="action" className="mr-4">
                       <Calendar className="mr-2 h-4 w-4" />
                       Termin online buchen
                     </Button>
@@ -109,15 +109,15 @@ const KontaktImpressum = () => {
                   </Button>
                 </Card>
 
-                <Card className="p-6 text-center bg-gradient-primary text-primary-foreground">
-                  <Calendar className="h-12 w-12 text-primary-foreground mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">
+                <Card className="p-6 text-center bg-accent/10">
+                  <Calendar className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
                     Kostenlose Erstberatung
                   </h3>
-                  <p className="text-primary-foreground/90 text-sm mb-4">
+                  <p className="text-muted-foreground text-sm mb-4">
                     Lernen Sie mich und meine Arbeitsweise unverbindlich kennen.
                   </p>
-                  <Button variant="secondary" size="sm" className="w-full">
+                  <Button variant="action" size="sm" className="w-full">
                     Jetzt Termin buchen
                   </Button>
                 </Card>
