@@ -33,14 +33,14 @@ const Fernwartung = () => {
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground">
               <p>
-                Für die Fernwartung setzen wir auf <strong className="text-foreground">RustDesk</strong> – eine 
+                Für die Fernwartung setze ich auf <strong className="text-foreground">RustDesk</strong> – eine 
                 Open-Source-Lösung, die maximale Sicherheit und Kontrolle bietet.
               </p>
               <p>
                 Im Gegensatz zu kommerziellen Lösungen wie TeamViewer oder AnyDesk werden die Verbindungen 
                 <strong className="text-foreground"> nicht über zentralisierte Server kommerzieller Anbieter</strong> vermittelt, 
-                sondern über einen <strong className="text-foreground">eigenen RustDesk-Server</strong>, der durch 
-                Neuhaus-IT verwaltet wird.
+                sondern über einen <strong className="text-foreground">eigenen RustDesk-Server</strong>, den ich 
+                selbst verwalte.
               </p>
               <p>
                 Dies garantiert Ihnen:

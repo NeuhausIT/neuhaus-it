@@ -9,6 +9,12 @@ interface SubpageHeroProps {
   showActionButton?: boolean;
 }
 
+/**
+ * SubpageHero Component
+ * 
+ * Standard Hero-Section für Unterseiten mit einheitlichem Design.
+ * Verwendet die Ich-Form, da Neuhaus-IT ein Einzelunternehmen ist.
+ */
 const SubpageHero = ({ title, description, icon, children, showActionButton = true }: SubpageHeroProps) => {
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">

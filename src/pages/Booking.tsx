@@ -125,7 +125,7 @@ const Booking = () => {
                 Bereit für eine Beratung?
               </h3>
               <p className="text-muted-foreground mb-6">
-                Kontaktieren Sie uns für Ihre kostenlose Erstberatung oder vereinbaren Sie einen Termin
+                Kontaktieren Sie mich für Ihre kostenlose Erstberatung oder vereinbaren Sie einen Termin
               </p>
               <div className="flex justify-center">
                 <ActionButtonMenu size="lg" />
