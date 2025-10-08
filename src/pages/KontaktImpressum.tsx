@@ -146,9 +146,15 @@ const KontaktImpressum = () => {
               
               <div className="mb-8">
                 <p><strong>Neuhaus-IT</strong><br />
-                Inh. Till Neuhaus<br />
-                [Adresse]<br />
-                [PLZ Ort]</p>
+                Inh. Till Neuhaus</p>
+                
+                <p className="mt-4"><strong>Unternehmenssitz (Postanschrift):</strong><br />
+                Gerther Str. 65<br />
+                44577 Castrop-Rauxel</p>
+                
+                <p className="mt-4"><strong>Geschäftsstelle (für Kundentermine):</strong><br />
+                Erinstr. 7<br />
+                44575 Castrop-Rauxel</p>
               </div>
               
               <h4 className="text-xl font-semibold mb-3">Kontakt</h4>
@@ -166,8 +172,8 @@ const KontaktImpressum = () => {
               <h4 className="text-xl font-semibold mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h4>
               <div className="mb-8">
                 <p>Till Neuhaus<br />
-                [Adresse]<br />
-                [PLZ Ort]</p>
+                Gerther Str. 65<br />
+                44577 Castrop-Rauxel</p>
               </div>
               
               <h4 className="text-xl font-semibold mb-3">Geltungsbereich</h4>
@@ -216,8 +222,8 @@ const KontaktImpressum = () => {
                 <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
                 <p><strong>Neuhaus-IT</strong><br />
                 Inh. Till Neuhaus<br />
-                [Adresse]<br />
-                [PLZ Ort]<br />
+                Gerther Str. 65<br />
+                44577 Castrop-Rauxel<br />
                 Telefon: +49 (0) 2305 44 59 886<br />
                 E-Mail: service@neuhaus-it.de</p>
               </div>
