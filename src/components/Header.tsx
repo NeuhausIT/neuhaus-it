@@ -23,7 +23,7 @@ const Header = () => {
           <a href="/terminbuchungen-preise" className="text-foreground hover:text-primary transition-colors">
             Terminbuchungen & Preise
           </a>
-          <a href="/kontakt" className="text-foreground hover:text-primary transition-colors">Kontakt, Impressum &amp; Datenschutz</a>
+          
         </nav>
 
         

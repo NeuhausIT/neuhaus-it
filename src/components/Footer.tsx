@@ -1,8 +1,6 @@
 import { Separator } from "@/components/ui/separator";
-
 const Footer = () => {
-  return (
-    <footer className="bg-muted py-12">
+  return <footer className="bg-muted py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
@@ -81,22 +79,11 @@ const Footer = () => {
           <Separator className="my-8" />
 
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>
-              © 2025 Neuhaus-IT (Inh. Till Neuhaus). Alle Rechte vorbehalten.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/kontakt-impressum#impressum" className="hover:text-primary transition-colors">
-                Impressum
-              </a>
-              <a href="/kontakt-impressum#datenschutz" className="hover:text-primary transition-colors">
-                Datenschutz
-              </a>
-            </div>
+            <p>CC BY-NC-SA 4.0 or later by Neuhaus-IT (Inh. Till Neuhaus)</p>
+            
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
