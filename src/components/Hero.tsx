@@ -50,10 +50,7 @@ const Hero = () => {
           {/* Call-to-Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <ActionButtonMenu size="lg" className="px-8 py-3 text-lg rounded-lg" />
-            <Button size="lg" variant="outline" className="border-2 border-primary/30 bg-background/60 text-primary hover:bg-primary/10 hover:border-primary px-8 py-3 text-lg rounded-lg backdrop-blur-sm" onClick={() => window.open('mailto:service@neuhaus-it.de')}>
-              <Mail className="mr-2 h-5 w-5" />
-              E-Mail schreiben
-            </Button>
+            
           </div>
           
           {/* Location und USP Info - genau wie im Original */}
