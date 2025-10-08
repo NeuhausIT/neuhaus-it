@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import ActionButtonMenu from "@/components/ActionButtonMenu";
+import { Link } from "react-router-dom";
 const Contact = () => {
   return <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -100,8 +101,15 @@ const Contact = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   Remote-Support für Windows und Linux Systeme verfügbar.
                 </p>
-                <Button variant="outline" size="sm" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Fernwartung starten
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  asChild
+                >
+                  <Link to="/fernwartung">
+                    Fernwartung starten
+                  </Link>
                 </Button>
               </Card>
 
