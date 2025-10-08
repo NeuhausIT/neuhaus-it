@@ -10,9 +10,7 @@ const Booking = () => {
         title="Terminbuchungen & Preise"
         description="Flexible Beratungsoptionen für Ihre individuellen Bedürfnisse"
         icon={<Calendar className="h-16 w-16 text-primary" />}
-      >
-        <ActionButtonMenu size="lg" />
-      </SubpageHero>
+      />
       
       <BackToHomeButton />
       

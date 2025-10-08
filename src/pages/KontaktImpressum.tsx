@@ -2,14 +2,11 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, MessageCircle, FileText } from "lucide-react";
-import ActionButtonMenu from "@/components/ActionButtonMenu";
 import SubpageHero from "@/components/SubpageHero";
 import BackToHomeButton from "@/components/BackToHomeButton";
 const KontaktImpressum = () => {
   return <div className="min-h-screen bg-background">
-      <SubpageHero title="Kontakt, Impressum & Datenschutz" description="Lassen Sie uns gemeinsam durchstarten! Kontaktieren Sie mich für eine unverbindliche Beratung oder vereinbaren Sie direkt einen Termin." icon={<FileText className="h-16 w-16 text-primary" />}>
-        <ActionButtonMenu size="lg" />
-      </SubpageHero>
+      <SubpageHero title="Kontakt, Impressum & Datenschutz" description="Lassen Sie uns gemeinsam durchstarten! Kontaktieren Sie mich für eine unverbindliche Beratung oder vereinbaren Sie direkt einen Termin." icon={<FileText className="h-16 w-16 text-primary" />} />
       
       <BackToHomeButton />
       

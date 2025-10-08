@@ -1,6 +1,5 @@
 import { Download, Shield, Lock } from "lucide-react";
 import Footer from "@/components/Footer";
-import ActionButtonMenu from "@/components/ActionButtonMenu";
 import SubpageHero from "@/components/SubpageHero";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -271,7 +270,6 @@ const Fernwartung = () => {
         </section>
       </main>
 
-      <ActionButtonMenu />
       <Footer />
     </div>
   );

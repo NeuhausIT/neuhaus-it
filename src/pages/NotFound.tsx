@@ -18,6 +18,7 @@ const NotFound = () => {
         title="404 - Seite nicht gefunden"
         description="Die von Ihnen gesuchte Seite existiert leider nicht."
         icon={<AlertCircle className="h-16 w-16 text-destructive" />}
+        showActionButton={false}
       >
         <Button size="lg" variant="action" asChild>
           <Link to="/">

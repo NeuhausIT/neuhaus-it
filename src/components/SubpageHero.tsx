@@ -1,13 +1,15 @@
 import { ReactNode } from "react";
+import ActionButtonMenu from "@/components/ActionButtonMenu";
 
 interface SubpageHeroProps {
   title: string;
   description: string;
   icon?: ReactNode;
   children?: ReactNode;
+  showActionButton?: boolean;
 }
 
-const SubpageHero = ({ title, description, icon, children }: SubpageHeroProps) => {
+const SubpageHero = ({ title, description, icon, children, showActionButton = true }: SubpageHeroProps) => {
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
       <div className="container mx-auto max-w-4xl text-center">
@@ -22,8 +24,9 @@ const SubpageHero = ({ title, description, icon, children }: SubpageHeroProps) =
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           {description}
         </p>
-        {children && (
+        {(showActionButton || children) && (
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {showActionButton && <ActionButtonMenu size="lg" />}
             {children}
           </div>
         )}
