@@ -1,6 +1,7 @@
 import { Download, Shield, Lock } from "lucide-react";
 import Footer from "@/components/Footer";
 import SubpageHero from "@/components/SubpageHero";
+import BackToHomeButton from "@/components/BackToHomeButton";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
@@ -20,6 +21,8 @@ const Fernwartung = () => {
         description="Sichere Remote-Unterstützung über unseren eigenen Server – ohne Umwege über kommerzielle Anbieter."
         icon={<Shield className="w-16 h-16 text-primary" />}
       />
+
+      <BackToHomeButton />
 
       <main className="container mx-auto px-4 py-16 max-w-6xl">
         {/* Einleitung */}
