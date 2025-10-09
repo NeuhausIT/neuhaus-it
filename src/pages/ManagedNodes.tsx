@@ -60,9 +60,9 @@ const ManagedNodes = () => {
       </Helmet>
       
       <div className="min-h-screen flex flex-col bg-background">
-        <SubpageHero title="Managed Nodes" description="Mit Managed Nodes kümmert sich Neuhaus-IT um die reibungslose Funktion Ihrer Systeme – damit Sie sich auf Ihr Geschäft konzentrieren können." icon={<Server className="h-16 w-16 text-primary" />} />
-        
         <BackToHomeButton />
+        
+        <SubpageHero title="Managed Nodes" description="Mit Managed Nodes kümmert sich Neuhaus-IT um die reibungslose Funktion Ihrer Systeme – damit Sie sich auf Ihr Geschäft konzentrieren können." icon={<Server className="h-16 w-16 text-primary" />} />
         
         <main className="flex-1">
 

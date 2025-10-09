@@ -16,13 +16,13 @@ const Fernwartung = () => {
         <meta name="description" content="Sichere Fernwartung über eigenen RustDesk-Server. Keine kommerziellen Anbieter, volle Kontrolle über Ihre Daten." />
       </Helmet>
 
+      <BackToHomeButton />
+
       <SubpageHero
         title="Fernwartung mit RustDesk"
         description="Sichere Remote-Unterstützung über unseren eigenen Server – ohne Umwege über kommerzielle Anbieter."
         icon={<Shield className="w-16 h-16 text-primary" />}
       />
-
-      <BackToHomeButton />
 
       <main className="container mx-auto px-4 py-16 max-w-6xl">
         {/* Einleitung */}

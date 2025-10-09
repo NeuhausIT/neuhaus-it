@@ -6,9 +6,9 @@ import SubpageHero from "@/components/SubpageHero";
 import BackToHomeButton from "@/components/BackToHomeButton";
 const KontaktImpressum = () => {
   return <div className="min-h-screen bg-background">
-      <SubpageHero title="Kontakt, Impressum & Datenschutz" description="Lassen Sie uns gemeinsam durchstarten! Kontaktieren Sie mich für eine unverbindliche Beratung oder vereinbaren Sie direkt einen Termin." icon={<FileText className="h-16 w-16 text-primary" />} />
-      
       <BackToHomeButton />
+      
+      <SubpageHero title="Kontakt, Impressum & Datenschutz" description="Lassen Sie uns gemeinsam durchstarten! Kontaktieren Sie mich für eine unverbindliche Beratung oder vereinbaren Sie direkt einen Termin." icon={<FileText className="h-16 w-16 text-primary" />} />
       
       <main className="container mx-auto px-4 py-16">
         {/* Kontakt Sektion */}

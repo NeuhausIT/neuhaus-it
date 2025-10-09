@@ -4,6 +4,7 @@ import { AlertCircle, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import SubpageHero from "@/components/SubpageHero";
+import BackToHomeButton from "@/components/BackToHomeButton";
 
 const NotFound = () => {
   const location = useLocation();
@@ -14,6 +15,8 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <BackToHomeButton />
+      
       <SubpageHero
         title="404 - Seite nicht gefunden"
         description="Die von Ihnen gesuchte Seite existiert leider nicht."

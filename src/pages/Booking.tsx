@@ -6,13 +6,13 @@ import BackToHomeButton from "@/components/BackToHomeButton";
 import Footer from "@/components/Footer";
 const Booking = () => {
   return <div className="min-h-screen bg-background">
+      <BackToHomeButton />
+      
       <SubpageHero
         title="Terminbuchungen & Preise"
         description="Flexible Beratungsoptionen für Ihre individuellen Bedürfnisse"
         icon={<Calendar className="h-16 w-16 text-primary" />}
       />
-      
-      <BackToHomeButton />
       
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
