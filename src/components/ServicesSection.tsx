@@ -63,17 +63,12 @@ const ServicesSection = () => {
                 </CardHeader>
                 
                 <CardContent className="pt-0">
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-2">
                     {service.features.map((feature, idx) => <li key={idx} className="text-sm text-muted-foreground flex items-center">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
                         {feature}
                       </li>)}
                   </ul>
-                  
-                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open(service.link, '_blank')}>
-                    Mehr erfahren
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
                 </CardContent>
               </Card>)}
           </div>
@@ -89,15 +84,9 @@ const ServicesSection = () => {
                 <h3 className="text-2xl font-bold mb-4">
                   Managed Nodes
                 </h3>
-                <p className="text-lg opacity-90 mb-6">
+                <p className="text-lg opacity-90">
                   Professionelle Serveradministration und IT-Betreuung
                 </p>
-                <Button variant="secondary" size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" asChild>
-                  <a href="/serveradministration">
-                    Mehr erfahren
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
               </div>
             </Card>
 
@@ -110,13 +99,9 @@ const ServicesSection = () => {
                 <h3 className="text-2xl font-bold mb-4">
                   Fernwartung & Monitoring
                 </h3>
-                <p className="text-lg opacity-90 mb-6">
+                <p className="text-lg opacity-90">
                   Automatische PC-Wartung und Überwachung
                 </p>
-                <Button variant="secondary" size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" onClick={() => window.open('https://computerhilfe-castrop-rauxel.de/fernwartung', '_blank')}>
-                  Mehr erfahren
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
               </div>
             </Card>
           </div>
