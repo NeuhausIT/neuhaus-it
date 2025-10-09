@@ -54,14 +54,7 @@ const Hero = () => {
           </div>
           
           {/* Location und USP Info - genau wie im Original */}
-          <div className="text-center text-muted-foreground space-y-4">
-            <p className="text-sm opacity-80">
-              📍 Castrop-Rauxel, Dortmund, Bochum & Umgebung
-            </p>
-            <p className="text-sm font-medium">
-              Schnell • Zuverlässig • Kompetent
-            </p>
-          </div>
+          
         </div>
       </div>
     </section>;
