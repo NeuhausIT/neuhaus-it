@@ -8,19 +8,19 @@ import SubpageHero from "@/components/SubpageHero";
 import BackToHomeButton from "@/components/BackToHomeButton";
 const ManagedNodes = () => {
   const adminModels = [{
-    title: "Managed-Hosts",
+    title: "Managed-Nodes",
     icon: Shield,
     description: "Neuhaus-IT übernimmt alle administrativen Aufgaben",
     features: ["Vollständige Wartung und Updates", "Professionelles Monitoring", "Automatische Backups", "Keine Adminrechte für Kunden", "Haftung durch Neuhaus-IT", "Maximale Sicherheit"],
     highlight: true
   }, {
-    title: "Co-Managed-Hosts",
+    title: "Co-Managed-Nodes",
     icon: Users,
     description: "Gemeinsame Administration mit flexibler Aufteilung",
     features: ["Beide Seiten haben Adminrechte", "Flexible Aufgabenteilung", "Mehr Kontrolle für Kunden", "Gemeinsame Verantwortung", "Keine Haftung durch Neuhaus-IT", "Ideal für IT-affine Nutzer"],
     highlight: false
   }, {
-    title: "Self-Managed-Hosts",
+    title: "Self-Managed-Nodes",
     icon: User,
     description: "Komplette Eigenverwaltung durch den Kunden",
     features: ["Volle administrative Kontrolle", "Eigenverantwortliche Verwaltung", "Infrastruktur durch Neuhaus-IT", "Keine Haftung durch Neuhaus-IT", "Maximale Flexibilität", "Für erfahrene Administratoren"],
