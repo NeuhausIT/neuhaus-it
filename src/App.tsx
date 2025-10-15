@@ -24,8 +24,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/terminbuchungen-preise" element={<Booking />} />
           <Route path="/kontakt" element={<KontaktImpressum />} />
-          <Route path="/serveradministration" element={<ManagedNodes />} />
-          <Route path="/managed-nodes" element={<ManagedNodes />} /> {/* Legacy redirect */}
+          <Route path="/managed-nodes" element={<ManagedNodes />} />
+          <Route path="/serveradministration" element={<ManagedNodes />} /> {/* Legacy redirect */}
           <Route path="/fernwartung" element={<Fernwartung />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
