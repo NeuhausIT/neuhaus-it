@@ -25,39 +25,6 @@ const Fernwartung = () => {
       />
 
       <main className="container mx-auto px-4 py-16 max-w-6xl">
-        {/* Einleitung */}
-        <section className="mb-16">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Lock className="w-6 h-6 text-primary" />
-                Datenschutz und Sicherheit
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 text-muted-foreground">
-              <p>
-                Für die Fernwartung setze ich auf <strong className="text-foreground">RustDesk</strong> – eine 
-                Open-Source-Lösung, die maximale Sicherheit und Kontrolle bietet.
-              </p>
-              <p>
-                Im Gegensatz zu kommerziellen Lösungen wie TeamViewer oder AnyDesk werden die Verbindungen 
-                <strong className="text-foreground"> nicht über zentralisierte Server kommerzieller Anbieter</strong> vermittelt, 
-                sondern über einen <strong className="text-foreground">eigenen RustDesk-Server</strong>, den ich 
-                selbst verwalte.
-              </p>
-              <p>
-                Dies garantiert Ihnen:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Vollständige Kontrolle über Ihre Daten</li>
-                <li>Keine Weitergabe an Dritte</li>
-                <li>DSGVO-konforme Verarbeitung</li>
-                <li>Maximale Transparenz durch Open Source</li>
-              </ul>
-            </CardContent>
-          </Card>
-        </section>
-
         {/* Client-Typen */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">Support- vs. Managed-Clients</h2>
@@ -272,6 +239,41 @@ const Fernwartung = () => {
           </Card>
         </section>
       </main>
+
+      {/* Datenschutz und Sicherheit */}
+      <section className="bg-muted py-16">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Lock className="w-6 h-6 text-primary" />
+                Datenschutz und Sicherheit
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-muted-foreground">
+              <p>
+                Für die Fernwartung setze ich auf <strong className="text-foreground">RustDesk</strong> – eine 
+                Open-Source-Lösung, die maximale Sicherheit und Kontrolle bietet.
+              </p>
+              <p>
+                Im Gegensatz zu kommerziellen Lösungen wie TeamViewer oder AnyDesk werden die Verbindungen 
+                <strong className="text-foreground"> nicht über zentralisierte Server kommerzieller Anbieter</strong> vermittelt, 
+                sondern über einen <strong className="text-foreground">eigenen RustDesk-Server</strong>, den ich 
+                selbst verwalte.
+              </p>
+              <p>
+                Dies garantiert Ihnen:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Vollständige Kontrolle über Ihre Daten</li>
+                <li>Keine Weitergabe an Dritte</li>
+                <li>DSGVO-konforme Verarbeitung</li>
+                <li>Maximale Transparenz durch Open Source</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
 
       <Footer />
     </div>
