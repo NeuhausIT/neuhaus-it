@@ -11,7 +11,7 @@ const ManagedNodes = () => {
     title: "Managed-Nodes",
     icon: Shield,
     description: "Neuhaus-IT übernimmt alle administrativen Aufgaben",
-    features: ["Vollständige Wartung und Updates", "Professionelles Monitoring", "Automatische Backups", "Keine Adminrechte für Kunden", "Haftung durch Neuhaus-IT", "Maximale Sicherheit"],
+    features: ["Vollständige Wartung und Updates", "Professionelles Monitoring", "Keine Adminrechte für Kunden", "Haftung durch Neuhaus-IT", "Maximale Sicherheit", "Automatische Backups (optional)"],
     highlight: true
   }, {
     title: "Co-Managed-Nodes",
