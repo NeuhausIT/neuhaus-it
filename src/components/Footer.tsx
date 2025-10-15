@@ -57,7 +57,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a href="/kontakt" className="text-muted-foreground hover:text-primary transition-colors">
-                    Kontakt & Impressum
+                    Kontakt, Impressum & Datenschutz
                   </a>
                 </li>
               </ul>
