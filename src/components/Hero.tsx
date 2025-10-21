@@ -34,7 +34,7 @@ const Hero = () => {
               <h3 className="text-xl font-semibold mb-3">Für Unternehmen</h3>
               <p className="text-muted-foreground mb-4">Professionelle IT-Lösungen für lokale Kleinunternehmen und Institutionen</p>
               <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://it-service-castrop-rauxel.de', '_blank')}>
-                IT-Service-Castrop-Rauxel.de →
+                IT-Service-Castrop-Rauxel.de
               </Button>
             </div>
             
@@ -42,7 +42,7 @@ const Hero = () => {
               <h3 className="text-xl font-semibold mb-3">Für Privatkunden</h3>
               <p className="text-muted-foreground mb-4">Individuelle Computerhilfe und Support für Privathaushalte</p>
               <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://computerhilfe-castrop-rauxel.de', '_blank')}>
-                Computerhilfe-Castrop-Rauxel.de →
+                Computerhilfe-Castrop-Rauxel.de
               </Button>
             </div>
             
@@ -50,7 +50,7 @@ const Hero = () => {
               <h3 className="text-xl font-semibold mb-3">Künstliche Intelligenz</h3>
               <p className="text-muted-foreground mb-4">Webinare, Workshops, Schulungen & Entwicklung von KI-Lösungen</p>
               <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://ki-castrop-rauxel.de', '_blank')}>
-                KI-Castrop-Rauxel.de →
+                KI-Castrop-Rauxel.de
               </Button>
             </div>
           </div>
