@@ -48,7 +48,7 @@ const Hero = () => {
             
             <div className="bg-background/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:bg-background/90 transition-all">
               <h3 className="text-xl font-semibold mb-3">Künstliche Intelligenz</h3>
-              <p className="text-muted-foreground mb-4">Webinare, Workshops und individuelle Schulungen im Umgang mit KI-Werkzeugen + Entwicklung von KI-Lösungen für Unternehmen in Castrop-Rauxel und Umgebung</p>
+              <p className="text-muted-foreground mb-4">Webinare, Workshops, Schulungen & Entwicklung von KI-Lösungen</p>
               <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://ki-castrop-rauxel.de', '_blank')}>
                 KI-Castrop-Rauxel.de →
               </Button>
