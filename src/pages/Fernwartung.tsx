@@ -13,7 +13,10 @@ const Fernwartung = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Fernwartung mit RustDesk | Neuhaus-IT</title>
-        <meta name="description" content="Sichere Fernwartung über eigenen RustDesk-Server. Keine kommerziellen Anbieter, volle Kontrolle über Ihre Daten." />
+        <meta
+          name="description"
+          content="Sichere Fernwartung über eigenen RustDesk-Server. Keine kommerziellen Anbieter, volle Kontrolle über Ihre Daten."
+        />
       </Helmet>
 
       <BackToHomeButton />
@@ -28,20 +31,22 @@ const Fernwartung = () => {
         {/* Client-Typen */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">Support- vs. Managed-Clients</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {/* Support-Clients */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Badge variant="outline" className="text-base">Support-Clients</Badge>
+                  <Badge variant="outline" className="text-base">
+                    Support-Clients
+                  </Badge>
                 </CardTitle>
                 <CardDescription>Für gelegentliche Hilfestellungen</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Support-Clients erlauben den Verbindungsaufbau <strong className="text-foreground">nur nach 
-                  ausdrücklicher Zustimmung</strong> der Nutzenden.
+                  Support-Clients erlauben den Verbindungsaufbau{" "}
+                  <strong className="text-foreground">nur nach ausdrücklicher Zustimmung</strong> der Nutzenden.
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2">
@@ -64,14 +69,17 @@ const Fernwartung = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Badge variant="default" className="text-base">Managed-Clients</Badge>
+                  <Badge variant="default" className="text-base">
+                    Managed-Clients
+                  </Badge>
                 </CardTitle>
                 <CardDescription>Für regelmäßige Wartungsarbeiten</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Managed-Clients erlauben den Verbindungsaufbau <strong className="text-foreground">zusätzlich 
-                  in Ihrer Abwesenheit</strong> für Wartungsarbeiten über ein vordefiniertes Passwort.
+                  Managed-Clients erlauben den Verbindungsaufbau{" "}
+                  <strong className="text-foreground">zusätzlich in Ihrer Abwesenheit</strong> für Wartungsarbeiten über
+                  ein vordefiniertes Passwort.
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2">
@@ -123,7 +131,7 @@ const Fernwartung = () => {
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-managed.msi" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-wartung.msi" download>
                             Download
                           </a>
                         </Button>
@@ -135,14 +143,20 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">macOS (arm64)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-macos-arm64.dmg" download>
+                          <a
+                            href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-macos-arm64.dmg"
+                            download
+                          >
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-macos-arm64.dmg" download>
+                          <a
+                            href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-macos-arm64.dmg"
+                            download
+                          >
                             Download
                           </a>
                         </Button>
@@ -153,14 +167,20 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">macOS (x64)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-macos-x64.dmg" download>
+                          <a
+                            href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-macos-x64.dmg"
+                            download
+                          >
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-macos-x64.dmg" download>
+                          <a
+                            href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-macos-x64.dmg"
+                            download
+                          >
                             Download
                           </a>
                         </Button>
@@ -172,14 +192,20 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">Linux (arm64)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-linux-arm64.deb" download>
+                          <a
+                            href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-linux-arm64.deb"
+                            download
+                          >
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-linux-arm64.deb" download>
+                          <a
+                            href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-linux-arm64.deb"
+                            download
+                          >
                             Download
                           </a>
                         </Button>
@@ -190,14 +216,20 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">Linux (x64)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-linux-x64.deb" download>
+                          <a
+                            href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-linux-x64.deb"
+                            download
+                          >
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-linux-x64.deb" download>
+                          <a
+                            href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-linux-x64.deb"
+                            download
+                          >
                             Download
                           </a>
                         </Button>
@@ -209,14 +241,20 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">Android</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-android.apk" download>
+                          <a
+                            href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-android.apk"
+                            download
+                          >
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-android.apk" download>
+                          <a
+                            href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-android.apk"
+                            download
+                          >
                             Download
                           </a>
                         </Button>
@@ -228,11 +266,10 @@ const Fernwartung = () => {
 
               <div className="mt-6 p-4 bg-muted rounded-lg">
                 <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Hinweis:</strong> Wählen Sie die passende Architektur für Ihr System:
-                  <br />
-                  • <strong>arm64</strong>: Für Apple Silicon Macs (M1, M2, M3) und moderne ARM-basierte Geräte
-                  <br />
-                  • <strong>x64</strong>: Für Intel/AMD-basierte Systeme
+                  <strong className="text-foreground">Hinweis:</strong> Wählen Sie die passende Architektur für Ihr
+                  System:
+                  <br />• <strong>arm64</strong>: Für Apple Silicon Macs (M1, M2, M3) und moderne ARM-basierte Geräte
+                  <br />• <strong>x64</strong>: Für Intel/AMD-basierte Systeme
                 </p>
               </div>
             </CardContent>
@@ -252,18 +289,19 @@ const Fernwartung = () => {
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground">
               <p>
-                Für die Fernwartung setze ich auf <strong className="text-foreground">RustDesk</strong> – eine 
+                Für die Fernwartung setze ich auf <strong className="text-foreground">RustDesk</strong> – eine
                 Open-Source-Lösung, die maximale Sicherheit und Kontrolle bietet.
               </p>
               <p>
-                Im Gegensatz zu kommerziellen Lösungen wie TeamViewer oder AnyDesk werden die Verbindungen 
-                <strong className="text-foreground"> nicht über zentralisierte Server kommerzieller Anbieter</strong> vermittelt, 
-                sondern über einen <strong className="text-foreground">eigenen RustDesk-Server</strong>, den ich 
-                selbst verwalte.
+                Im Gegensatz zu kommerziellen Lösungen wie TeamViewer oder AnyDesk werden die Verbindungen
+                <strong className="text-foreground">
+                  {" "}
+                  nicht über zentralisierte Server kommerzieller Anbieter
+                </strong>{" "}
+                vermittelt, sondern über einen <strong className="text-foreground">eigenen RustDesk-Server</strong>, den
+                ich selbst verwalte.
               </p>
-              <p>
-                Dies garantiert Ihnen:
-              </p>
+              <p>Dies garantiert Ihnen:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Vollständige Kontrolle über Ihre Daten</li>
                 <li>Keine Weitergabe an Dritte</li>
