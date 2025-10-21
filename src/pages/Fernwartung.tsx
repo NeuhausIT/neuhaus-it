@@ -116,7 +116,7 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">Windows</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="/clients/neuhaus-it-support.msi" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-support.msi" download>
                             Download
                           </a>
                         </Button>
