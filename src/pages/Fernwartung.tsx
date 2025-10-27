@@ -189,7 +189,7 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">Linux (x64, .deb)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-linux-x64.deb" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-support-aarch64.deb" download>
                             Download
                           </a>
                         </Button>
