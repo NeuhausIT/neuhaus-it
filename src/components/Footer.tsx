@@ -56,8 +56,13 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/terminbuchungen-preise" className="text-muted-foreground hover:text-primary transition-colors">
-                    Terminbuchung & Preise
+                  <a href="/terminbuchungen" className="text-muted-foreground hover:text-primary transition-colors">
+                    Terminbuchung
+                  </a>
+                </li>
+                <li>
+                  <a href="/preise" className="text-muted-foreground hover:text-primary transition-colors">
+                    Preise
                   </a>
                 </li>
                 <li>
