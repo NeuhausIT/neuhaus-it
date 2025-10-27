@@ -101,10 +101,10 @@ const Fernwartung = () => {
           <Card>
             <CardContent className="pt-6">
               <div className="overflow-x-auto">
-                <Table>
+                  <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="w-[150px]">Betriebssystem</TableHead>
+                      <TableHead className="text-center">Betriebssystem</TableHead>
                       <TableHead className="text-center">Support-Nodes</TableHead>
                       <TableHead className="text-center">Managed-Nodes</TableHead>
                     </TableRow>
