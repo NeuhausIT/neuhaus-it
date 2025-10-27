@@ -10,7 +10,7 @@ const Hero = () => {
     backgroundRepeat: 'no-repeat'
   }}>
       {/* Overlay für bessere Lesbarkeit */}
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-[1px]"></div>
+      <div className="absolute inset-0 bg-background/85 backdrop-blur-[1px]"></div>
       
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -18,7 +18,9 @@ const Hero = () => {
           
           
           {/* Haupttitel */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-dark to-accent bg-clip-text text-transparent" style={{
+            filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))'
+          }}>
             Neuhaus-IT
           </h1>
           
