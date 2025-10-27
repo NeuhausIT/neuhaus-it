@@ -8,7 +8,7 @@ const KontaktImpressum = () => {
   return <div className="min-h-screen bg-background">
       <BackToHomeButton />
       
-      <SubpageHero title="Kontakt, Impressum & Datenschutz" description="Lassen Sie uns gemeinsam durchstarten! Kontaktieren Sie mich für eine unverbindliche Beratung oder vereinbaren Sie direkt einen Termin." icon={<FileText className="h-16 w-16 text-primary" />} />
+      <SubpageHero title="Kontakt & Impressum" description="Lassen Sie uns gemeinsam durchstarten! Kontaktieren Sie mich für eine unverbindliche Beratung oder vereinbaren Sie direkt einen Termin." icon={<FileText className="h-16 w-16 text-primary" />} />
       
       <main className="container mx-auto px-4 py-16">
         {/* Kontakt Sektion */}
@@ -98,59 +98,6 @@ const KontaktImpressum = () => {
           </div>
         </section>
 
-        {/* Datenschutz Sektion */}
-        <section id="datenschutz">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8">Datenschutzerklärung</h2>
-            
-            <div className="prose prose-lg max-w-none">
-              <h3 className="text-2xl font-semibold mb-4">1. Datenschutz auf einen Blick</h3>
-              
-              <h4 className="text-xl font-semibold mb-3">Allgemeine Hinweise</h4>
-              <div className="mb-8">
-                <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
-              </div>
-              
-              <h3 className="text-2xl font-semibold mb-4">2. Verantwortliche Stelle</h3>
-              <div className="mb-8">
-                <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-                <p><strong>Neuhaus-IT</strong><br />
-                Inh. Till Neuhaus<br />
-                Gerther Str. 65<br />
-                44577 Castrop-Rauxel<br />
-                Telefon: +49 (0) 2305 44 59 886<br />
-                E-Mail: service@neuhaus-it.de</p>
-              </div>
-              
-              <h3 className="text-2xl font-semibold mb-4">3. Datenerfassung auf dieser Website</h3>
-              
-              <h4 className="text-xl font-semibold mb-3">Cookies</h4>
-              <div className="mb-8">
-                <p>Diese Website verwendet teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.</p>
-              </div>
-              
-              <h4 className="text-xl font-semibold mb-3">Server-Log-Dateien</h4>
-              <div className="mb-8">
-                <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind: Browsertyp und Browserversion, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse.</p>
-              </div>
-              
-              <h4 className="text-xl font-semibold mb-3">Kontaktformular</h4>
-              <div className="mb-8">
-                <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
-              </div>
-              
-              <h3 className="text-2xl font-semibold mb-4">4. Ihre Rechte</h3>
-              <div className="mb-8">
-                <p>Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen.</p>
-              </div>
-              
-              <h3 className="text-2xl font-semibold mb-4">5. SSL- bzw. TLS-Verschlüsselung</h3>
-              <div className="mb-8">
-                <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>;
