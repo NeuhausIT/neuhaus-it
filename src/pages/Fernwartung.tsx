@@ -37,7 +37,7 @@ const Fernwartung = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Badge variant="outline" className="text-base">
+                  <Badge variant="default" className="text-base">
                     Support-Nodes
                   </Badge>
                 </CardTitle>
