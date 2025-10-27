@@ -134,14 +134,14 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">macOS (arm64)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-macos-arm64.dmg" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-support-arm64.dmg" download>
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-macos-arm64.dmg" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-wartung-arm64.dmg" download>
                             Download
                           </a>
                         </Button>
@@ -152,14 +152,14 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">macOS (x64)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-macos-x64.dmg" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-support-x64.dmg" download>
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-macos-x64.dmg" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-wartung-x64.dmg" download>
                             Download
                           </a>
                         </Button>
@@ -171,14 +171,14 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">Linux (arm64, .deb)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-linux-arm64.deb" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-support-aarch64.deb" download>
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-linux-arm64.deb" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-wartung-aarch64.deb" download>
                             Download
                           </a>
                         </Button>
@@ -189,14 +189,14 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">Linux (x64, .deb)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-support-aarch64.deb" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-support-x86_64.deb" download>
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-linux-x64.deb" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-wartung-x86_64.deb" download>
                             Download
                           </a>
                         </Button>
@@ -215,7 +215,7 @@ const Fernwartung = () => {
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-android.apk" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-wartung.apk" download>
                             Download
                           </a>
                         </Button>
