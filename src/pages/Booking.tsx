@@ -17,7 +17,10 @@ const Booking = () => {
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Terminbuchungen online</h2>
               <div className="space-y-4">
-                <Card>
+                <Card 
+                  className="cursor-pointer hover:shadow-lg transition-shadow"
+                  onClick={() => window.open('https://cloud.neuhaus-it.de/apps/appointments/pub/zq9Y7Z4qtDQGrN7c/form', '_blank')}
+                >
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-3">
                       <Phone className="h-7 w-7 text-primary" />
