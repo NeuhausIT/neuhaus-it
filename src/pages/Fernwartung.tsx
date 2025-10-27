@@ -208,7 +208,7 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">Android</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-android.apk" download>
+                          <a href="https://downloads.neuhaus-it.de/neuhaus-it-support.apk" download>
                             Download
                           </a>
                         </Button>
