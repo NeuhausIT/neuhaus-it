@@ -5,7 +5,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Phone, Mail, Calendar, ChevronDown } from "lucide-react";
+import { Phone, Mail, Calendar, ChevronDown, FileText } from "lucide-react";
 
 interface ActionButtonMenuProps {
   size?: "default" | "sm" | "lg";
@@ -42,6 +42,13 @@ const ActionButtonMenu = ({ size = "lg", className = "" }: ActionButtonMenuProps
         >
           <Calendar className="mr-3 h-5 w-5 text-primary" />
           <span className="text-base">Termin buchen</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem 
+          className="cursor-pointer py-3"
+          onClick={() => window.open('https://cloud.neuhaus-it.de/apps/forms/s/BRRq2H9AQYTRJmnD39iis55w', '_blank')}
+        >
+          <FileText className="mr-3 h-5 w-5 text-primary" />
+          <span className="text-base">Kontaktformular</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
