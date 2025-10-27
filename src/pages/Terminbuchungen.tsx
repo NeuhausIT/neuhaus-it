@@ -95,7 +95,10 @@ const Terminbuchungen = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card 
+                className="cursor-pointer hover:shadow-lg transition-shadow"
+                onClick={() => window.open('https://cloud.neuhaus-it.de/apps/appointments/pub/B19Dt7NrqtD5ttQM/form', '_blank')}
+              >
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-3">
                     <Home className="h-7 w-7 text-primary" />
