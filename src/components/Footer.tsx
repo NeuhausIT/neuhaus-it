@@ -67,7 +67,12 @@ const Footer = () => {
                 </li>
                 <li>
                   <a href="/kontakt" className="text-muted-foreground hover:text-primary transition-colors">
-                    Kontakt, Impressum & Datenschutz
+                    Kontakt & Impressum
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.neuhaus-it.de/kontakt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    Datenschutz
                   </a>
                 </li>
               </ul>
