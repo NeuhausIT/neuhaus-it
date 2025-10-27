@@ -38,7 +38,7 @@ const ActionButtonMenu = ({ size = "lg", className = "" }: ActionButtonMenuProps
         </DropdownMenuItem>
         <DropdownMenuItem 
           className="cursor-pointer py-3"
-          onClick={() => window.location.href = '/terminbuchungen-preise'}
+          onClick={() => window.location.href = '/terminbuchungen'}
         >
           <Calendar className="mr-3 h-5 w-5 text-primary" />
           <span className="text-base">Termin buchen</span>
