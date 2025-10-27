@@ -28,24 +28,24 @@ const Fernwartung = () => {
       />
 
       <main className="container mx-auto px-4 py-16 max-w-6xl">
-        {/* Client-Typen */}
+        {/* Node-Typen */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Support- vs. Managed-Clients</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Support- vs. Managed-Nodes</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Support-Clients */}
+            {/* Support-Nodes */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Badge variant="outline" className="text-base">
-                    Support-Clients
+                    Support-Nodes
                   </Badge>
                 </CardTitle>
                 <CardDescription>Für gelegentliche Hilfestellungen</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Support-Clients erlauben den Verbindungsaufbau{" "}
+                  Support-Nodes erlauben den Verbindungsaufbau{" "}
                   <strong className="text-foreground">nur nach ausdrücklicher Zustimmung</strong> der Nutzenden.
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
@@ -65,19 +65,19 @@ const Fernwartung = () => {
               </CardContent>
             </Card>
 
-            {/* Managed-Clients */}
+            {/* Managed-Nodes */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Badge variant="default" className="text-base">
-                    Managed-Clients
+                    Managed-Nodes
                   </Badge>
                 </CardTitle>
                 <CardDescription>Für regelmäßige Wartungsarbeiten</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Managed-Clients erlauben den Verbindungsaufbau{" "}
+                  Managed-Nodes erlauben den Verbindungsaufbau{" "}
                   <strong className="text-foreground">zusätzlich in Ihrer Abwesenheit</strong> für Wartungsarbeiten über
                   ein vordefiniertes Passwort.
                 </p>
@@ -104,7 +104,7 @@ const Fernwartung = () => {
         <section>
           <div className="flex items-center gap-3 mb-8">
             <Download className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl font-bold">Client-Downloads</h2>
+            <h2 className="text-3xl font-bold">Node-Downloads</h2>
           </div>
 
           <Card>
@@ -114,8 +114,8 @@ const Fernwartung = () => {
                   <TableHeader>
                     <TableRow>
                       <TableHead className="w-[150px]">Betriebssystem</TableHead>
-                      <TableHead className="text-center">Support-Clients</TableHead>
-                      <TableHead className="text-center">Managed-Clients</TableHead>
+                      <TableHead className="text-center">Support-Nodes</TableHead>
+                      <TableHead className="text-center">Managed-Nodes</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -144,7 +144,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-macos-arm64.dmg"
+                            href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-macos-arm64.dmg"
                             download
                           >
                             Download
@@ -154,7 +154,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-macos-arm64.dmg"
+                            href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-macos-arm64.dmg"
                             download
                           >
                             Download
@@ -168,7 +168,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-macos-x64.dmg"
+                            href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-macos-x64.dmg"
                             download
                           >
                             Download
@@ -178,7 +178,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-macos-x64.dmg"
+                            href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-macos-x64.dmg"
                             download
                           >
                             Download
@@ -193,7 +193,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-linux-arm64.deb"
+                            href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-linux-arm64.deb"
                             download
                           >
                             Download
@@ -203,7 +203,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-linux-arm64.deb"
+                            href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-linux-arm64.deb"
                             download
                           >
                             Download
@@ -217,7 +217,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-linux-x64.deb"
+                            href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-linux-x64.deb"
                             download
                           >
                             Download
@@ -227,7 +227,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-linux-x64.deb"
+                            href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-linux-x64.deb"
                             download
                           >
                             Download
@@ -242,7 +242,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/clients/support/rustdesk-support-android.apk"
+                            href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-android.apk"
                             download
                           >
                             Download
@@ -252,7 +252,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/clients/managed/rustdesk-managed-android.apk"
+                            href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-android.apk"
                             download
                           >
                             Download
