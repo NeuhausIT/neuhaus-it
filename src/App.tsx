@@ -9,6 +9,7 @@ import Booking from "./pages/Booking";
 import KontaktImpressum from "./pages/KontaktImpressum";
 import ManagedNodes from "./pages/ManagedNodes";
 import Fernwartung from "./pages/Fernwartung";
+import Leitbild from "./pages/Leitbild";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/managed-nodes" element={<ManagedNodes />} />
           <Route path="/serveradministration" element={<ManagedNodes />} /> {/* Legacy redirect */}
           <Route path="/fernwartung" element={<Fernwartung />} />
+          <Route path="/leitbild" element={<Leitbild />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

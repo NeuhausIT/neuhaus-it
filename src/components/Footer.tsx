@@ -41,6 +41,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="/leitbild" className="text-muted-foreground hover:text-primary transition-colors">
+                    Leitbild
+                  </a>
+                </li>
+                <li>
                   <a href="/managed-nodes" className="text-muted-foreground hover:text-primary transition-colors">
                     Managed Nodes
                   </a>

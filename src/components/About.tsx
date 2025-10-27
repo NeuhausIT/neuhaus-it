@@ -33,6 +33,9 @@ const About = () => {
                   Mit einem starken Fokus auf freie Software (Open-Source-Software) unterstütze ich Sie dabei, 
                   digitale Souveränität und Unabhängigkeit zu erreichen.
                 </p>
+                <Button asChild variant="outline">
+                  <a href="/leitbild">Mehr zum Leitbild</a>
+                </Button>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
