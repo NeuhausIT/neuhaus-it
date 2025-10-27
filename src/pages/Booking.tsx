@@ -4,18 +4,85 @@ import ActionButtonMenu from "@/components/ActionButtonMenu";
 import SubpageHero from "@/components/SubpageHero";
 import BackToHomeButton from "@/components/BackToHomeButton";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet";
 const Booking = () => {
-  return <div className="min-h-screen bg-background">
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "IT-Beratung & Support Neuhaus-IT",
+    "description": "Professionelle IT-Beratung und Support-Services für Privat- und Geschäftskunden",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Neuhaus-IT",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Erinstr. 7",
+        "addressLocality": "Castrop-Rauxel",
+        "postalCode": "44575",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49-2305-4499699"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "51.5432",
+        "longitude": "7.3113"
+      },
+      "geoRadius": "50000"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Kostenlose telefonische Erstberatung",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "IT-Beratung erste 30 Minuten",
+        "price": "40",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "40",
+          "priceCurrency": "EUR",
+          "unitText": "30 Minuten"
+        }
+      }
+    ]
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Terminbuchung & Preise - IT-Beratung Neuhaus-IT</title>
+        <meta 
+          name="description" 
+          content="IT-Beratung Terminbuchung & transparente Preise ✓ Kostenlose Erstberatung ✓ Ab 40€/30min ✓ Vor-Ort & Remote-Service in Castrop-Rauxel" 
+        />
+        <meta name="keywords" content="IT-Beratung Terminbuchung, IT-Service Preise, Computerhilfe Castrop-Rauxel, IT-Support Kosten" />
+        <link rel="canonical" href="https://neuhaus-it.de/terminbuchungen-preise" />
+        <meta property="og:title" content="Terminbuchung & Preise - IT-Beratung Neuhaus-IT" />
+        <meta property="og:description" content="IT-Beratung Terminbuchung & transparente Preise ✓ Kostenlose Erstberatung ✓ Ab 40€/30min ✓ Vor-Ort & Remote-Service" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://neuhaus-it.de/terminbuchungen-preise" />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
+      </Helmet>
+      
       <BackToHomeButton />
       
-      <SubpageHero title="Terminbuchungen & Preise" description="Flexible Beratungsoptionen für Ihre individuellen Bedürfnisse" icon={<Calendar className="h-16 w-16 text-primary" />} />
+      <SubpageHero title="Terminbuchung & Preise für IT-Beratung" description="Flexible Beratungsoptionen für Ihre individuellen Bedürfnisse" icon={<Calendar className="h-16 w-16 text-primary" />} />
       
-      <div className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Terminbuchungen online</h2>
+            <section aria-labelledby="booking-heading">
+              <h2 id="booking-heading" className="text-2xl font-bold text-foreground mb-6 text-center">Terminbuchungen online</h2>
               <div className="space-y-4">
                 <Card 
                   className="cursor-pointer hover:shadow-lg transition-shadow"
@@ -72,10 +139,10 @@ const Booking = () => {
                   </CardContent>
                 </Card>
               </div>
-            </div>
+            </section>
 
-            <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Preisstruktur</h2>
+            <section aria-labelledby="pricing-heading">
+              <h2 id="pricing-heading" className="text-2xl font-bold text-foreground mb-6 text-center">Preisstruktur</h2>
               <Card>
                 <CardHeader>
                   <CardTitle>Transparente Abrechnung</CardTitle>
@@ -115,12 +182,12 @@ const Booking = () => {
                   </div>
                 </CardContent>
               </Card>
-            </div>
+            </section>
           </div>
 
-          <div className="text-center">
+          <section className="text-center" aria-labelledby="cta-heading">
             <div className="bg-muted/50 rounded-lg p-8">
-              <h3 className="text-xl font-bold text-foreground mb-4">
+              <h3 id="cta-heading" className="text-xl font-bold text-foreground mb-4">
                 Bereit für eine Beratung?
               </h3>
               <p className="text-muted-foreground mb-6">
@@ -130,11 +197,12 @@ const Booking = () => {
                 <ActionButtonMenu size="lg" />
               </div>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
+      </main>
       
       <Footer />
-    </div>;
+    </div>
+  );
 };
 export default Booking;
