@@ -75,7 +75,7 @@ const Booking = () => {
       
       <BackToHomeButton />
       
-      <SubpageHero title="Terminbuchung & Preise für IT-Beratung" description="Flexible Beratungsoptionen für Ihre individuellen Bedürfnisse" icon={<Calendar className="h-16 w-16 text-primary" />} />
+      <SubpageHero title="Terminbuchung & Preise für IT-Beratung & -Service" description="Flexible Beratungsoptionen für Ihre individuellen Bedürfnisse" icon={<Calendar className="h-16 w-16 text-primary" />} />
       
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
