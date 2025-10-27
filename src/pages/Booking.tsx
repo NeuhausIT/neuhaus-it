@@ -8,18 +8,14 @@ const Booking = () => {
   return <div className="min-h-screen bg-background">
       <BackToHomeButton />
       
-      <SubpageHero
-        title="Terminbuchungen & Preise"
-        description="Flexible Beratungsoptionen für Ihre individuellen Bedürfnisse"
-        icon={<Calendar className="h-16 w-16 text-primary" />}
-      />
+      <SubpageHero title="Terminbuchungen & Preise" description="Flexible Beratungsoptionen für Ihre individuellen Bedürfnisse" icon={<Calendar className="h-16 w-16 text-primary" />} />
       
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Meine Angebote</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Terminbuchungen online</h2>
               <div className="space-y-4">
                 <Card>
                   <CardHeader className="pb-3">
