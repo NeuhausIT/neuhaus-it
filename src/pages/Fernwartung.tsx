@@ -144,7 +144,7 @@ const Fernwartung = () => {
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
                           <a
-                            href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-macos-arm64.dmg"
+                            href="https://download.neuhaus-it.de/neuhaus-it-support-arm64.dmg"
                             download
                           >
                             Download
