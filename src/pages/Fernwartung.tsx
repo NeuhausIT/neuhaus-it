@@ -104,7 +104,7 @@ const Fernwartung = () => {
                   <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="text-center">Betriebssystem</TableHead>
+                      <TableHead>Betriebssystem</TableHead>
                       <TableHead className="text-center">Support-Nodes</TableHead>
                       <TableHead className="text-center">Managed-Nodes</TableHead>
                     </TableRow>
