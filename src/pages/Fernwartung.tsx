@@ -7,25 +7,16 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Helmet } from "react-helmet";
-
 const Fernwartung = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Helmet>
         <title>Fernwartung mit RustDesk | Neuhaus-IT</title>
-        <meta
-          name="description"
-          content="Sichere Fernwartung über eigenen RustDesk-Server. Keine kommerziellen Anbieter, volle Kontrolle über Ihre Daten."
-        />
+        <meta name="description" content="Sichere Fernwartung über eigenen RustDesk-Server. Keine kommerziellen Anbieter, volle Kontrolle über Ihre Daten." />
       </Helmet>
 
       <BackToHomeButton />
 
-      <SubpageHero
-        title="Fernwartung mit RustDesk"
-        description="Sichere Remote-Unterstützung über unseren eigenen Server – ohne Umwege über kommerzielle Anbieter."
-        icon={<Shield className="w-16 h-16 text-primary" />}
-      />
+      <SubpageHero title="Fernwartung mit RustDesk" description="Sichere Remote-Unterstützung über unseren eigenen Server – ohne Umwege über kommerzielle Anbieter." icon={<Shield className="w-16 h-16 text-primary" />} />
 
       <main className="container mx-auto px-4 py-16 max-w-6xl">
         {/* Node-Typen */}
@@ -37,7 +28,7 @@ const Fernwartung = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Badge variant="default" className="text-base">
+                  <Badge variant="outline" className="text-base">
                     Support-Nodes
                   </Badge>
                 </CardTitle>
@@ -113,7 +104,7 @@ const Fernwartung = () => {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Betriebssystem</TableHead>
+                      <TableHead className="w-[150px]">Betriebssystem</TableHead>
                       <TableHead className="text-center">Support-Nodes</TableHead>
                       <TableHead className="text-center">Managed-Nodes</TableHead>
                     </TableRow>
@@ -143,20 +134,14 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">macOS (arm64)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a
-                            href="https://downloads.neuhaus-it.de/neuhaus-it-support-arm64.dmg"
-                            download
-                          >
+                          <a href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-macos-arm64.dmg" download>
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a
-                            href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-macos-arm64.dmg"
-                            download
-                          >
+                          <a href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-macos-arm64.dmg" download>
                             Download
                           </a>
                         </Button>
@@ -167,20 +152,14 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">macOS (x64)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a
-                            href="https://downloads.neuhaus-it.de/neuhaus-it-support-x64.dmg"
-                            download
-                          >
+                          <a href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-macos-x64.dmg" download>
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a
-                            href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-macos-x64.dmg"
-                            download
-                          >
+                          <a href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-macos-x64.dmg" download>
                             Download
                           </a>
                         </Button>
@@ -189,23 +168,17 @@ const Fernwartung = () => {
 
                     {/* Linux */}
                     <TableRow>
-                      <TableCell className="font-medium">Linux (arm64)</TableCell>
+                      <TableCell className="font-medium">Linux (arm64, .deb)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a
-                            href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-linux-arm64.deb"
-                            download
-                          >
+                          <a href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-linux-arm64.deb" download>
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a
-                            href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-linux-arm64.deb"
-                            download
-                          >
+                          <a href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-linux-arm64.deb" download>
                             Download
                           </a>
                         </Button>
@@ -213,23 +186,17 @@ const Fernwartung = () => {
                     </TableRow>
 
                     <TableRow>
-                      <TableCell className="font-medium">Linux (x64)</TableCell>
+                      <TableCell className="font-medium">Linux (x64, .deb)</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a
-                            href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-linux-x64.deb"
-                            download
-                          >
+                          <a href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-linux-x64.deb" download>
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a
-                            href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-linux-x64.deb"
-                            download
-                          >
+                          <a href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-linux-x64.deb" download>
                             Download
                           </a>
                         </Button>
@@ -241,20 +208,14 @@ const Fernwartung = () => {
                       <TableCell className="font-medium">Android</TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a
-                            href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-android.apk"
-                            download
-                          >
+                          <a href="https://rustdesk.neuhaus-it.de/nodes/support/rustdesk-support-android.apk" download>
                             Download
                           </a>
                         </Button>
                       </TableCell>
                       <TableCell className="text-center">
                         <Button variant="outline" size="sm" asChild>
-                          <a
-                            href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-android.apk"
-                            download
-                          >
+                          <a href="https://rustdesk.neuhaus-it.de/nodes/managed/rustdesk-managed-android.apk" download>
                             Download
                           </a>
                         </Button>
@@ -314,8 +275,6 @@ const Fernwartung = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Fernwartung;
