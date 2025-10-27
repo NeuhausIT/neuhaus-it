@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
-import Booking from "./pages/Booking";
 import Terminbuchungen from "./pages/Terminbuchungen";
 import Preise from "./pages/Preise";
 import KontaktImpressum from "./pages/KontaktImpressum";
@@ -27,7 +26,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/terminbuchungen" element={<Terminbuchungen />} />
           <Route path="/preise" element={<Preise />} />
-          <Route path="/terminbuchungen-preise" element={<Booking />} /> {/* Legacy redirect - kept for backwards compatibility */}
           <Route path="/kontakt" element={<KontaktImpressum />} />
           <Route path="/managed-nodes" element={<ManagedNodes />} />
           <Route path="/serveradministration" element={<ManagedNodes />} /> {/* Legacy redirect */}
