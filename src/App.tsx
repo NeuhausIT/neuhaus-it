@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Terminbuchungen from "./pages/Terminbuchungen";
@@ -26,7 +26,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/terminbuchungen" element={<Terminbuchungen />} />
           <Route path="/preise" element={<Preise />} />
-          <Route path="/kontakt" element={<KontaktImpressum />} />
+          <Route path="/kontakt-und-impressum" element={<KontaktImpressum />} />
+          <Route path="/kontakt" element={<Navigate to="/kontakt-und-impressum" replace />} /> {/* Legacy redirect */}
           <Route path="/managed-nodes" element={<ManagedNodes />} />
           <Route path="/serveradministration" element={<ManagedNodes />} /> {/* Legacy redirect */}
           <Route path="/fernwartung" element={<Fernwartung />} />
