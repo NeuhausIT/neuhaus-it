@@ -27,7 +27,6 @@ const App = () => (
           <Route path="/terminbuchungen" element={<Terminbuchungen />} />
           <Route path="/preise" element={<Preise />} />
           <Route path="/kontakt-und-impressum" element={<KontaktImpressum />} />
-          <Route path="/kontakt" element={<Navigate to="/kontakt-und-impressum" replace />} /> {/* Legacy redirect */}
           <Route path="/managed-nodes" element={<ManagedNodes />} />
           <Route path="/serveradministration" element={<ManagedNodes />} /> {/* Legacy redirect */}
           <Route path="/fernwartung" element={<Fernwartung />} />
