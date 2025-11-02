@@ -1,4 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Euro } from "lucide-react";
 import { Link } from "react-router-dom";
 import ActionButtonMenu from "@/components/ActionButtonMenu";
@@ -91,36 +92,42 @@ const Preise = () => {
                     Transparente Abrechnung nach tatsächlichem Zeitaufwand
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="border-l-4 border-primary pl-4">
-                    <div className="font-semibold text-foreground">Erste 30 Minuten voll</div>
-                    <div className="text-2xl font-bold text-primary">40,- €</div>
-                  </div>
+                <CardContent>
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="w-[200px]">Leistung</TableHead>
+                        <TableHead className="text-right">Netto</TableHead>
+                        <TableHead className="text-right">Brutto</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell className="font-medium">Erste 30 Minuten voll</TableCell>
+                        <TableCell className="text-right">40,00 €</TableCell>
+                        <TableCell className="text-right font-semibold">47,60 €</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Je angebrochene 15 Minuten</TableCell>
+                        <TableCell className="text-right">20,00 €</TableCell>
+                        <TableCell className="text-right font-semibold">23,80 €</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Reisekosten bis 15 km</TableCell>
+                        <TableCell className="text-right">30,00 €</TableCell>
+                        <TableCell className="text-right font-semibold">35,70 €</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Reisekosten ab 15 km (je km)</TableCell>
+                        <TableCell className="text-right">1,00 €</TableCell>
+                        <TableCell className="text-right font-semibold">1,19 €</TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
                   
-                  <div className="border-l-4 border-muted pl-4">
-                    <div className="font-semibold text-foreground">Danach je angebrochene 15 Minuten</div>
-                    <div className="text-xl font-bold text-foreground">20,- €</div>
-                  </div>
-
-                  <div className="pt-4 border-t">
-                    <h3 className="font-semibold text-foreground mb-3">Reisekosten</h3>
-                    <div className="space-y-2">
-                      <div className="flex">
-                        <span className="text-muted-foreground text-left flex-1">Bis 15 km Radius:</span>
-                        <span className="font-semibold text-right">pauschal 30,- €</span>
-                      </div>
-                      <div className="flex">
-                        <span className="text-muted-foreground text-left flex-1">Ab 15 km Radius:</span>
-                        <span className="font-semibold text-right">1,- € je Kilometer (Hin- und Rückfahrt)</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="pt-4 border-t">
-                    <p className="text-sm text-muted-foreground italic text-center">
-                      Alle Preise netto zzgl. gesetzlicher Umsatzsteuer
-                    </p>
-                  </div>
+                  <p className="text-sm text-muted-foreground italic text-center mt-4">
+                    Alle Preise inkl. gesetzlicher Umsatzsteuer (19%)
+                  </p>
                 </CardContent>
               </Card>
             </div>
