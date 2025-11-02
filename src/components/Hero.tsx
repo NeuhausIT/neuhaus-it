@@ -27,7 +27,7 @@ const Hero = () => {
           {/* Untertitel */}
           <p className="text-lg md:text-xl text-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
             Inh. Till Neuhaus<br />
-            Ihr Systempartner für Unternehmen und Privathaushalte seit 2017 – persönlich, schnell, zuverlässig und kompetent.
+            Ihr Systempartner für Unternehmen und Privathaushalte aus Castrop-Rauxel und Umgebung seit 2017 – persönlich, schnell, zuverlässig und kompetent.
           </p>
           
           {/* Tochterprojekte - prominent verlinkt */}
