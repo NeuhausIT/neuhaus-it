@@ -8,7 +8,6 @@ import BackToHomeButton from "@/components/BackToHomeButton";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
-
 const Preise = () => {
   const schemaData = {
     "@context": "https://schema.org",
@@ -49,15 +48,10 @@ const Preise = () => {
       }
     }
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Helmet>
         <title>Preise IT-Beratung & Service - Neuhaus-IT</title>
-        <meta 
-          name="description" 
-          content="Transparente IT-Service Preise ✓ Ab 40€/30min ✓ Faire Abrechnung ✓ Keine versteckten Kosten ✓ IT-Beratung Castrop-Rauxel" 
-        />
+        <meta name="description" content="Transparente IT-Service Preise ✓ Ab 40€/30min ✓ Faire Abrechnung ✓ Keine versteckten Kosten ✓ IT-Beratung Castrop-Rauxel" />
         <meta name="keywords" content="IT-Service Preise, IT-Beratung Kosten, Computerhilfe Preise Castrop-Rauxel, IT-Support Abrechnung" />
         <link rel="canonical" href="https://neuhaus-it.de/preise" />
         <meta property="og:title" content="Preise IT-Beratung & Service - Neuhaus-IT" />
@@ -71,11 +65,7 @@ const Preise = () => {
       
       <BackToHomeButton />
       
-      <SubpageHero 
-        title="Preise für IT-Beratung & -Service" 
-        description="Transparente Abrechnung ohne versteckte Kosten" 
-        icon={<Euro className="h-16 w-16 text-primary" />} 
-      />
+      <SubpageHero title="Preise für IT-Beratung & -Service" description="Transparente Abrechnung ohne versteckte Kosten" icon={<Euro className="h-16 w-16 text-primary" />} />
       
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
@@ -108,7 +98,7 @@ const Preise = () => {
                         <TableCell className="text-right font-semibold">47,60 €</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Je angebrochene 15 Minuten</TableCell>
+                        <TableCell className="font-medium">Danach je angebrochene 15 Minuten</TableCell>
                         <TableCell className="text-right">20,00 €</TableCell>
                         <TableCell className="text-right font-semibold">23,80 €</TableCell>
                       </TableRow>
@@ -125,9 +115,7 @@ const Preise = () => {
                     </TableBody>
                   </Table>
                   
-                  <p className="text-sm text-muted-foreground italic text-center mt-4">
-                    Alle Preise inkl. gesetzlicher Umsatzsteuer (19%)
-                  </p>
+                  
                 </CardContent>
               </Card>
             </div>
@@ -181,8 +169,6 @@ const Preise = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Preise;
