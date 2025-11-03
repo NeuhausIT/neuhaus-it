@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Terminbuchungen from "./pages/Terminbuchungen";
+import Termine from "./pages/Termine";
 import Preise from "./pages/Preise";
 import KontaktImpressum from "./pages/KontaktImpressum";
 import ManagedNodes from "./pages/ManagedNodes";
@@ -24,6 +25,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/termine" element={<Termine />} />
           <Route path="/terminbuchungen" element={<Terminbuchungen />} />
           <Route path="/preise" element={<Preise />} />
           <Route path="/kontakt-und-impressum" element={<KontaktImpressum />} />
