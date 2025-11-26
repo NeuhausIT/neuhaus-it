@@ -35,8 +35,8 @@ const Hero = () => {
             <div className="bg-background/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:bg-background/90 transition-all">
               <h3 className="text-xl font-semibold mb-3">Für Unternehmen</h3>
               <p className="text-muted-foreground mb-4">Professionelle IT-Lösungen für lokale Kleinunternehmen und Institutionen</p>
-              <Button variant="destructive" className="w-full">
-                In Kürze mehr
+              <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://it-service-castrop-rauxel.de', '_blank')}>
+                IT-Service-Castrop-Rauxel.de
               </Button>
             </div>
             
