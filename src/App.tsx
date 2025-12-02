@@ -13,6 +13,7 @@ import ManagedNodes from "./pages/ManagedNodes";
 import Fernwartung from "./pages/Fernwartung";
 import Leitbild from "./pages/Leitbild";
 import GeschaeftsmodellUndDifferenzierung from "./pages/GeschaeftsmodellUndDifferenzierung";
+import ManagedItServicesMspMonitoring from "./pages/ManagedItServicesMspMonitoring";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/fernwartung" element={<Fernwartung />} />
           <Route path="/leitbild" element={<Leitbild />} />
           <Route path="/geschaeftsmodell-und-differenzierung" element={<GeschaeftsmodellUndDifferenzierung />} />
+          <Route path="/managed-it-services-msp-monitoring" element={<ManagedItServicesMspMonitoring />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
