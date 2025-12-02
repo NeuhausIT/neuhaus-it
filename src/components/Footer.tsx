@@ -92,6 +92,11 @@ const Footer = () => {
                     IT-Service für Unternehmen
                   </a>
                 </li>
+                <li>
+                  <a href="https://ki-castrop-rauxel.de" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    KI-Angebote
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
