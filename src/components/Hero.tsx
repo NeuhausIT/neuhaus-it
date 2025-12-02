@@ -31,7 +31,7 @@ const Hero = () => {
           </p>
           
           {/* Tochterprojekte - prominent verlinkt */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
             <div className="bg-background/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:bg-background/90 transition-all">
               <h3 className="text-xl font-semibold mb-3">Für Unternehmen</h3>
               <p className="text-muted-foreground mb-4">Professionelle IT-Lösungen für lokale Kleinunternehmen und Institutionen</p>
@@ -53,6 +53,14 @@ const Hero = () => {
               <p className="text-muted-foreground mb-4">Webinare, Workshops, Schulungen & Entwicklung von KI-Lösungen</p>
               <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://ki-castrop-rauxel.de', '_blank')}>
                 KI-Castrop-Rauxel.de
+              </Button>
+            </div>
+            
+            <div className="bg-background/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:bg-background/90 transition-all">
+              <h3 className="text-xl font-semibold mb-3">Smart Home</h3>
+              <p className="text-muted-foreground mb-4">Intelligente Hausautomation für mehr Komfort und Sicherheit</p>
+              <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://smart-home-castrop-rauxel.de', '_blank')}>
+                Smart-Home-Castrop-Rauxel.de
               </Button>
             </div>
           </div>
