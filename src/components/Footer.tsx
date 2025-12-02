@@ -97,6 +97,11 @@ const Footer = () => {
                     KI-Angebote
                   </a>
                 </li>
+                <li>
+                  <a href="https://smart-home-castrop-rauxel.de" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    Smart Home Lösungen
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
