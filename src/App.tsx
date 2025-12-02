@@ -12,6 +12,7 @@ import KontaktImpressum from "./pages/KontaktImpressum";
 import ManagedNodes from "./pages/ManagedNodes";
 import Fernwartung from "./pages/Fernwartung";
 import Leitbild from "./pages/Leitbild";
+import GeschaeftsmodellUndDifferenzierung from "./pages/GeschaeftsmodellUndDifferenzierung";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/serveradministration" element={<ManagedNodes />} /> {/* Legacy redirect */}
           <Route path="/fernwartung" element={<Fernwartung />} />
           <Route path="/leitbild" element={<Leitbild />} />
+          <Route path="/geschaeftsmodell-und-differenzierung" element={<GeschaeftsmodellUndDifferenzierung />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
