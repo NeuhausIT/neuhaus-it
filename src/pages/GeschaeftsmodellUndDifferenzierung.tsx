@@ -103,7 +103,7 @@ const GeschaeftsmodellUndDifferenzierung = () => {
 
       <SubpageHero
         title="Geschäftsmodell & Differenzierung"
-        description="Ein lokal verankerter, unabhängiger IT-Dienstleister, der kleinen Unternehmen und Privathaushalten im Ruhrgebiet digitale Souveränität ermöglicht"
+        description="Neuhaus-IT ist ein lokal verankerter, unabhängiger IT-Dienstleister, der kleinen Unternehmen und Privathaushalten im Ruhrgebiet digitale Souveränität ermöglicht"
         icon={<Briefcase className="h-16 w-16 text-primary" />}
       />
 
