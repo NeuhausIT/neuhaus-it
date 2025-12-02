@@ -19,8 +19,8 @@ const Hero = () => {
           
           {/* Haupttitel */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-dark to-accent bg-clip-text text-transparent" style={{
-            filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))'
-          }}>
+          filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))'
+        }}>
             Neuhaus-IT
           </h1>
           
@@ -36,7 +36,7 @@ const Hero = () => {
               <h3 className="text-xl font-semibold mb-3">Für Unternehmen</h3>
               <p className="text-muted-foreground mb-4">Professionelle IT-Lösungen für lokale Kleinunternehmen und Institutionen</p>
               <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://it-service-castrop-rauxel.de', '_blank')}>
-                IT-Service-Castrop-Rauxel.de
+                ​IT-Service
               </Button>
             </div>
             
@@ -44,7 +44,7 @@ const Hero = () => {
               <h3 className="text-xl font-semibold mb-3">Für Privatkunden</h3>
               <p className="text-muted-foreground mb-4">Individuelle Computerhilfe und Support für Privathaushalte</p>
               <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://computerhilfe-castrop-rauxel.de', '_blank')}>
-                Computerhilfe-Castrop-Rauxel.de
+                Computerhilfe
               </Button>
             </div>
             
@@ -52,7 +52,7 @@ const Hero = () => {
               <h3 className="text-xl font-semibold mb-3">Künstliche Intelligenz</h3>
               <p className="text-muted-foreground mb-4">Webinare, Workshops, Schulungen & Entwicklung von KI-Lösungen</p>
               <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://ki-castrop-rauxel.de', '_blank')}>
-                KI-Castrop-Rauxel.de
+                KI Angebote 
               </Button>
             </div>
             
@@ -60,7 +60,7 @@ const Hero = () => {
               <h3 className="text-xl font-semibold mb-3">Smart Home</h3>
               <p className="text-muted-foreground mb-4">Intelligente Hausautomation für mehr Komfort und Sicherheit</p>
               <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://smart-home-castrop-rauxel.de', '_blank')}>
-                Smart-Home-Castrop-Rauxel.de
+                Smart Home Angebote 
               </Button>
             </div>
           </div>
