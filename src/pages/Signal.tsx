@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet";
 import { MessageCircle, ExternalLink } from "lucide-react";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToHomeButton from "@/components/BackToHomeButton";
 import { Button } from "@/components/ui/button";
@@ -16,15 +15,13 @@ const Signal = () => {
         <meta name="description" content="Kontaktieren Sie Neuhaus-IT über Signal Messenger. Sicher, schnell und datenschutzfreundlich." />
       </Helmet>
       
-      <Header />
+      <BackToHomeButton />
       
       <main>
         {/* Hero Section mit QR-Code */}
         <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto max-w-2xl text-center">
-            <BackToHomeButton />
-            
-            <div className="flex justify-center mb-6 mt-8">
+            <div className="flex justify-center mb-6">
               <MessageCircle className="w-16 h-16 text-primary" />
             </div>
             
@@ -38,7 +35,7 @@ const Signal = () => {
             
             {/* QR-Code prominent */}
             <div className="flex justify-center mb-8">
-            <img 
+              <img 
                 src={signalQrCode} 
                 alt="Signal QR-Code für NeuhausIT.42" 
                 className="max-w-80 rounded-2xl shadow-lg"
