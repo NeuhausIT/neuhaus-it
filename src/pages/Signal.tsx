@@ -35,10 +35,10 @@ const Signal = () => {
             
             {/* QR-Code prominent */}
             <div className="flex justify-center mb-8">
-              <img 
+            <img 
                 src={signalQrCode} 
                 alt="Signal QR-Code für NeuhausIT.42" 
-                className="w-72 h-72 md:w-80 md:h-80 rounded-2xl shadow-lg"
+                className="max-w-80 rounded-2xl shadow-lg"
               />
             </div>
             
