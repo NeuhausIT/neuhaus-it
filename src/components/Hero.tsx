@@ -87,7 +87,7 @@ const Hero = () => {
                 className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground mt-auto"
                 onClick={() => window.open("https://smart-home-castrop-rauxel.de", "_blank")}
               >
-                Smart
+                Smart Home
               </Button>
             </div>
           </div>
