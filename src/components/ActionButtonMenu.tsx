@@ -5,7 +5,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Phone, Mail, Calendar, ChevronDown, FileText } from "lucide-react";
+import { Phone, Mail, Calendar, ChevronDown, FileText, MessageCircle } from "lucide-react";
 
 interface ActionButtonMenuProps {
   size?: "default" | "sm" | "lg";
@@ -28,6 +28,13 @@ const ActionButtonMenu = ({ size = "lg", className = "" }: ActionButtonMenuProps
         >
           <Phone className="mr-3 h-5 w-5 text-primary" />
           <span className="text-base">Anrufen</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem 
+          className="cursor-pointer py-3"
+          onClick={() => window.location.href = '/signal'}
+        >
+          <MessageCircle className="mr-3 h-5 w-5 text-primary" />
+          <span className="text-base">Chat</span>
         </DropdownMenuItem>
         <DropdownMenuItem 
           className="cursor-pointer py-3"
