@@ -1,7 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Shield, Users, Heart, Lightbulb, Target, CheckCircle2 } from "lucide-react";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubpageHero from "@/components/SubpageHero";
 import BackToHomeButton from "@/components/BackToHomeButton";
@@ -9,16 +7,14 @@ import BackToHomeButton from "@/components/BackToHomeButton";
 const Leitbild = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
+      <BackToHomeButton />
+
       <SubpageHero
         title="Leitbild Neuhaus-IT"
         description="Digitale Souveränität für Menschen und Unternehmen"
         icon={<Target className="h-16 w-16 text-primary" />}
         showActionButton={false}
-      >
-        <BackToHomeButton />
-      </SubpageHero>
+      />
 
       {/* Main Content */}
       <section className="py-16 px-4">
