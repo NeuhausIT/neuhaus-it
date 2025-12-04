@@ -18,9 +18,7 @@ const Hero = () => {
           
           
           {/* Haupttitel */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-dark to-accent bg-clip-text text-transparent" style={{
-          filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))'
-        }}>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Neuhaus-IT
           </h1>
           
