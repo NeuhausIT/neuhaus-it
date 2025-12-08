@@ -94,23 +94,23 @@ const Preise = () => {
                     <TableBody>
                       <TableRow>
                         <TableCell className="font-medium">Erste 30 Minuten voll</TableCell>
-                        <TableCell className="text-right">40,00 €</TableCell>
-                        <TableCell className="text-right font-semibold">47,60 €</TableCell>
+                        <TableCell className="text-right font-semibold">40,00 €</TableCell>
+                        <TableCell className="text-right">47,60 €</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">Danach je angebrochene 15 Minuten</TableCell>
-                        <TableCell className="text-right">20,00 €</TableCell>
-                        <TableCell className="text-right font-semibold">23,80 €</TableCell>
+                        <TableCell className="text-right font-semibold">20,00 €</TableCell>
+                        <TableCell className="text-right">23,80 €</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">Reisekosten bis 15 km</TableCell>
-                        <TableCell className="text-right">30,00 €</TableCell>
-                        <TableCell className="text-right font-semibold">35,70 €</TableCell>
+                        <TableCell className="text-right font-semibold">30,00 €</TableCell>
+                        <TableCell className="text-right">35,70 €</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">Reisekosten ab 15 km (je km)</TableCell>
-                        <TableCell className="text-right">1,00 €</TableCell>
-                        <TableCell className="text-right font-semibold">1,19 €</TableCell>
+                        <TableCell className="text-right font-semibold">1,00 €</TableCell>
+                        <TableCell className="text-right">1,19 €</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
