@@ -30,7 +30,7 @@ const Hero = () => {
           </p>
 
           {/* Tochterprojekte - prominent verlinkt */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
             <div className="bg-background/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:bg-background/90 transition-all flex flex-col">
               <h3 className="text-xl font-semibold mb-3">Für Unternehmen</h3>
               <p className="text-muted-foreground mb-4 flex-1">
