@@ -3,16 +3,12 @@ import { Mail } from "lucide-react";
 import heroBackground from "@/assets/hero-tech-background.jpg";
 import ActionButtonMenu from "@/components/ActionButtonMenu";
 const Hero = () => {
-  return (
-    <section
-      className="relative min-h-screen flex items-center justify-center"
-      style={{
-        backgroundImage: `url(${heroBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+  return <section className="relative min-h-screen flex items-center justify-center" style={{
+    backgroundImage: `url(${heroBackground})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}>
       {/* Overlay für bessere Lesbarkeit */}
       <div className="absolute inset-0 bg-background/85 backdrop-blur-[1px]"></div>
 
@@ -40,11 +36,7 @@ const Hero = () => {
               <p className="text-muted-foreground mb-4 flex-1">
                 Professionelle IT-Lösungen für lokale Kleinunternehmen und Institutionen
               </p>
-              <Button
-                variant="outline"
-                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground mt-auto"
-                onClick={() => window.open("https://it-service-castrop-rauxel.de", "_blank")}
-              >
+              <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground mt-auto" onClick={() => window.open("https://it-service-castrop-rauxel.de", "_blank")}>
                 ​IT-Service
               </Button>
             </div>
@@ -54,42 +46,14 @@ const Hero = () => {
               <p className="text-muted-foreground mb-4 flex-1">
                 Individuelle Computerhilfe und Support für Privathaushalte
               </p>
-              <Button
-                variant="outline"
-                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground mt-auto"
-                onClick={() => window.open("https://computerhilfe-castrop-rauxel.de", "_blank")}
-              >
+              <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground mt-auto" onClick={() => window.open("https://computerhilfe-castrop-rauxel.de", "_blank")}>
                 Computerhilfe
               </Button>
             </div>
 
-            <div className="bg-background/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:bg-background/90 transition-all flex flex-col">
-              <h3 className="text-xl font-semibold mb-3">Künstliche Intelligenz</h3>
-              <p className="text-muted-foreground mb-4 flex-1">
-                Webinare, Workshops, Schulungen & Entwicklung von KI-Lösungen
-              </p>
-              <Button
-                variant="outline"
-                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground mt-auto"
-                onClick={() => window.open("https://ki-castrop-rauxel.de", "_blank")}
-              >
-                KI
-              </Button>
-            </div>
+            
 
-            <div className="bg-background/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:bg-background/90 transition-all flex flex-col">
-              <h3 className="text-xl font-semibold mb-3">Smart Home</h3>
-              <p className="text-muted-foreground mb-4 flex-1">
-                Intelligente Hausautomation für mehr Komfort und Sicherheit
-              </p>
-              <Button
-                variant="outline"
-                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground mt-auto"
-                onClick={() => window.open("https://smart-home-castrop-rauxel.de", "_blank")}
-              >
-                Smart Home
-              </Button>
-            </div>
+            
           </div>
 
           {/* Call-to-Action Buttons */}
@@ -100,7 +64,6 @@ const Hero = () => {
           {/* Location und USP Info - genau wie im Original */}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default Hero;
