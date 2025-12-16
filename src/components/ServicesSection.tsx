@@ -75,41 +75,7 @@ const ServicesSection = () => {
           </div>
 
           {/* Hervorgehobene Services */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Managed Nodes */}
-            <Link to="/serveradministration" className="block">
-              <Card className="p-8 bg-gradient-primary text-primary-foreground hover:shadow-strong transition-all duration-300 cursor-pointer">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary-foreground/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Server className="h-8 w-8 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">
-                    Managed Nodes
-                  </h3>
-                  <p className="text-lg opacity-90">
-                    Professionelle Serveradministration und IT-Betreuung
-                  </p>
-                </div>
-              </Card>
-            </Link>
-
-            {/* Fernwartung & Monitoring */}
-            <Link to="/fernwartung" className="block">
-              <Card className="p-8 bg-gradient-primary text-primary-foreground hover:shadow-strong transition-all duration-300 cursor-pointer">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary-foreground/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Monitor className="h-8 w-8 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">
-                    Fernwartung & Monitoring
-                  </h3>
-                  <p className="text-lg opacity-90">
-                    Automatische PC-Wartung und Überwachung
-                  </p>
-                </div>
-              </Card>
-            </Link>
-          </div>
+          
 
           {/* Weitere Services */}
           
