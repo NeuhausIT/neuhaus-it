@@ -15,6 +15,7 @@ import Leitbild from "./pages/Leitbild";
 import GeschaeftsmodellUndDifferenzierung from "./pages/GeschaeftsmodellUndDifferenzierung";
 import ManagedItServicesMspMonitoring from "./pages/ManagedItServicesMspMonitoring";
 import Signal from "./pages/Signal";
+import Tresor from "./pages/Tresor";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/geschaeftsmodell-und-differenzierung" element={<GeschaeftsmodellUndDifferenzierung />} />
           <Route path="/managed-it-services-msp-monitoring" element={<ManagedItServicesMspMonitoring />} />
           <Route path="/signal" element={<Signal />} />
+          <Route path="/tresor" element={<Tresor />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
