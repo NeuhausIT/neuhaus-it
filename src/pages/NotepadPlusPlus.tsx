@@ -94,7 +94,7 @@ const CopyButton = ({ text }: { text: string }) => {
 
 const NotepadPlusPlus = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <Helmet>
         <title>Notepad++ Security Check - Neuhaus-IT</title>
         <meta
@@ -102,6 +102,8 @@ const NotepadPlusPlus = () => {
           content="Schnelle CMD-Prüfungen zum Notepad++ Security Incident (Chrysalis Backdoor / Lotus Blossom). Indicators of Compromise einfach vor Ort prüfen."
         />
       </Helmet>
+
+      <BackToHomeButton />
 
       <SubpageHero
         title="Notepad++ Security Check"
@@ -184,8 +186,7 @@ const NotepadPlusPlus = () => {
       </section>
 
       <Footer />
-      <BackToHomeButton />
-    </div>
+    </>
   );
 };
 
