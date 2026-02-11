@@ -17,37 +17,37 @@ const checks = [
   {
     title: "Malware-Datei: BluetoothService.exe",
     description: "Sucht nach BluetoothService.exe im versteckten Bluetooth-Verzeichnis.",
-    command: `dir "%APPDATA%\\Bluetooth\\BluetoothService.exe" 2>nul`,
+    command: `dir "%APPDATA%\\Bluetooth\\BluetoothService.exe" 2>$null`,
     severity: "critical" as const,
   },
   {
     title: "Malware-Datei: BluetoothService",
     description: "Sucht nach der Datei BluetoothService (ohne Endung) im Bluetooth-Verzeichnis.",
-    command: `dir "%APPDATA%\\Bluetooth\\BluetoothService" 2>nul`,
+    command: `dir "%APPDATA%\\Bluetooth\\BluetoothService" 2>$null`,
     severity: "critical" as const,
   },
   {
     title: "Malware-Datei: log.dll",
     description: "Sucht nach log.dll im versteckten Bluetooth-Verzeichnis.",
-    command: `dir "%APPDATA%\\Bluetooth\\log.dll" 2>nul`,
+    command: `dir "%APPDATA%\\Bluetooth\\log.dll" 2>$null`,
     severity: "critical" as const,
   },
   {
     title: "Staging-Pfad: conf.c (USOShared)",
     description: "Prüft, ob die Konfigurationsdatei conf.c im alternativen Staging-Pfad existiert.",
-    command: `dir "C:\\ProgramData\\USOShared\\conf.c" 2>nul`,
+    command: `dir "C:\\ProgramData\\USOShared\\conf.c" 2>$null`,
     severity: "high" as const,
   },
   {
     title: "Staging-Pfad: libtcc.dll (USOShared)",
     description: "Prüft, ob die Bibliothek libtcc.dll im alternativen Staging-Pfad existiert.",
-    command: `dir "C:\\ProgramData\\USOShared\\libtcc.dll" 2>nul`,
+    command: `dir "C:\\ProgramData\\USOShared\\libtcc.dll" 2>$null`,
     severity: "high" as const,
   },
   {
     title: "Staging-Pfad: svchost.exe (USOShared)",
     description: "Prüft, ob eine manipulierte svchost.exe im alternativen Staging-Pfad existiert.",
-    command: `dir "C:\\ProgramData\\USOShared\\svchost.exe" 2>nul`,
+    command: `dir "C:\\ProgramData\\USOShared\\svchost.exe" 2>$null`,
     severity: "high" as const,
   },
   {
