@@ -11,7 +11,7 @@ const checks = [
   {
     title: "Verstecktes Bluetooth-Verzeichnis in %APPDATA%",
     description: "Prüft, ob ein verdächtiges verstecktes Bluetooth-Verzeichnis existiert – stärkster Einzelindikator.",
-    command: `Get-Item "$env:APPDATA\\Bluetooth" -Force -ErrorAction SilentlyContinue`,
+    command: `Get-Item "$env:APPDATA\\Bluetooth" -Force -ErrorAction SilentlyContinue | Where-Object { $_.Attributes -match "Hidden" }`,
     severity: "critical" as const,
   },
   {
