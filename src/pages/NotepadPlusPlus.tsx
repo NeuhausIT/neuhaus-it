@@ -206,6 +206,19 @@ const NotepadPlusPlus = () => {
               <code className="bg-muted px-1 rounded text-xs">log.dll</code> darin. Bei Fund: System isolieren und professionelle Analyse einleiten.
             </p>
           </div>
+
+          <div className="mt-6 flex justify-center">
+            <Button asChild size="lg" className="gap-2">
+              <a
+                href="https://notepad-plus-plus.org/downloads/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Notepad++ herunterladen
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
