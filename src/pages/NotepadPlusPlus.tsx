@@ -123,7 +123,7 @@ const NotepadPlusPlus = () => {
         <title>Notepad++ Security Check - Neuhaus-IT</title>
         <meta
           name="description"
-          content="Schnelle CMD-Prüfungen zum Notepad++ Security Incident (Chrysalis Backdoor / Lotus Blossom). Indicators of Compromise einfach vor Ort prüfen."
+          content="Schnelle Prüfungen zum Notepad++ Security Incident (Chrysalis Backdoor / Lotus Blossom). Indicators of Compromise einfach vor Ort prüfen."
         />
       </Helmet>
 
@@ -131,7 +131,7 @@ const NotepadPlusPlus = () => {
 
       <SubpageHero
         title="Notepad++ Security Check"
-        description="Schnelle CMD-Prüfungen zum Notepad++ Security Incident – basierend auf den Indicators of Compromise der Chrysalis-Backdoor-Analyse."
+        description="Schnelle Prüfungen zum Notepad++ Security Incident – basierend auf den Indicators of Compromise der Chrysalis-Backdoor-Analyse."
         icon={<ShieldAlert className="w-16 h-16 text-destructive" />}
         showActionButton={false}
       >
