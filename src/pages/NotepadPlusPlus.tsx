@@ -163,7 +163,7 @@ const NotepadPlusPlus = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="mb-8 p-4 rounded-lg border border-primary/20 bg-primary/5">
             <p className="text-sm text-muted-foreground">
-              <strong className="text-foreground">Anleitung:</strong> Öffnen Sie eine Eingabeaufforderung (CMD) als Administrator und führen Sie die folgenden Befehle nacheinander aus. Wenn bei einem Befehl etwas zurückkommt (statt „Datei nicht gefunden" oder leerer Ausgabe), ist eine tiefere Analyse empfehlenswert.
+              <strong className="text-foreground">Anleitung:</strong> Öffnen Sie eine Eingabeaufforderung (PowerShell) als Administrator und führen Sie die folgenden Befehle nacheinander aus. Wenn bei einem Befehl etwas zurückkommt (statt „Datei nicht gefunden" oder leerer Ausgabe), ist eine tiefere Analyse empfehlenswert.
             </p>
           </div>
 
