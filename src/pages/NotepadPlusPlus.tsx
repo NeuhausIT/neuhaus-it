@@ -161,13 +161,13 @@ const NotepadPlusPlus = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="relative">
-                    <pre className="bg-muted/80 rounded-md p-3 pr-24 overflow-x-auto text-sm font-mono">
-                      <code>{check.command}</code>
-                    </pre>
-                    <div className="absolute top-1.5 right-1.5">
+                  <div>
+                    <div className="flex justify-end mb-1">
                       <CopyButton text={check.command} />
                     </div>
+                    <pre className="bg-muted/80 rounded-md p-3 overflow-x-auto text-sm font-mono">
+                      <code>{check.command}</code>
+                    </pre>
                   </div>
                 </CardContent>
               </Card>
