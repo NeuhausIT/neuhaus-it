@@ -65,7 +65,7 @@ const checks = [
   {
     title: "Registry-Run-Keys (HKCU)",
     description: "Durchsucht die Benutzer-Registry nach Bluetooth-Persistenz-Einträgen.",
-    command: `reg query "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" /s | findstr /i "Bluetooth"`,
+    command: `Get-ItemProperty "HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" | Select-String -Pattern "Bluetooth"`,
     severity: "medium" as const,
   },
   {
