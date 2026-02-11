@@ -71,7 +71,7 @@ const checks = [
   {
     title: "Registry-Run-Keys (HKLM)",
     description: "Durchsucht die System-Registry nach Bluetooth-Persistenz-Einträgen.",
-    command: `reg query "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" /s | findstr /i "Bluetooth"`,
+    command: `Get-ItemProperty "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run" | Select-String -Pattern "Bluetooth"`,
     severity: "medium" as const,
   },
 ];
