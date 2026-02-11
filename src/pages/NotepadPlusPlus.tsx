@@ -15,9 +15,21 @@ const checks = [
     severity: "critical" as const,
   },
   {
-    title: "Spezifische Malware-Dateien",
-    description: "Sucht nach BluetoothService.exe, BluetoothService und log.dll im Bluetooth-Verzeichnis.",
-    command: `dir "%APPDATA%\\Bluetooth\\BluetoothService.exe" "%APPDATA%\\Bluetooth\\BluetoothService" "%APPDATA%\\Bluetooth\\log.dll" 2>nul`,
+    title: "Malware-Datei: BluetoothService.exe",
+    description: "Sucht nach BluetoothService.exe im versteckten Bluetooth-Verzeichnis.",
+    command: `dir "%APPDATA%\\Bluetooth\\BluetoothService.exe" 2>nul`,
+    severity: "critical" as const,
+  },
+  {
+    title: "Malware-Datei: BluetoothService",
+    description: "Sucht nach der Datei BluetoothService (ohne Endung) im Bluetooth-Verzeichnis.",
+    command: `dir "%APPDATA%\\Bluetooth\\BluetoothService" 2>nul`,
+    severity: "critical" as const,
+  },
+  {
+    title: "Malware-Datei: log.dll",
+    description: "Sucht nach log.dll im versteckten Bluetooth-Verzeichnis.",
+    command: `dir "%APPDATA%\\Bluetooth\\log.dll" 2>nul`,
     severity: "critical" as const,
   },
   {
