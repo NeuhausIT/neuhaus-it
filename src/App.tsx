@@ -16,6 +16,7 @@ import GeschaeftsmodellUndDifferenzierung from "./pages/GeschaeftsmodellUndDiffe
 import ManagedItServicesMspMonitoring from "./pages/ManagedItServicesMspMonitoring";
 import Signal from "./pages/Signal";
 import Tresor from "./pages/Tresor";
+import NotepadPlusPlus from "./pages/NotepadPlusPlus";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/managed-it-services-msp-monitoring" element={<ManagedItServicesMspMonitoring />} />
           <Route path="/signal" element={<Signal />} />
           <Route path="/tresor" element={<Tresor />} />
+          <Route path="/notepadplusplus" element={<NotepadPlusPlus />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
