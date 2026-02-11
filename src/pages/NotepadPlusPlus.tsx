@@ -21,9 +21,21 @@ const checks = [
     severity: "critical" as const,
   },
   {
-    title: "Zweiter Staging-Pfad (USOShared)",
-    description: "Prüft einen alternativen Staging-Pfad unter ProgramData.",
-    command: `dir "C:\\ProgramData\\USOShared\\conf.c" "C:\\ProgramData\\USOShared\\libtcc.dll" "C:\\ProgramData\\USOShared\\svchost.exe" 2>nul`,
+    title: "Staging-Pfad: conf.c (USOShared)",
+    description: "Prüft, ob die Konfigurationsdatei conf.c im alternativen Staging-Pfad existiert.",
+    command: `dir "C:\\ProgramData\\USOShared\\conf.c" 2>nul`,
+    severity: "high" as const,
+  },
+  {
+    title: "Staging-Pfad: libtcc.dll (USOShared)",
+    description: "Prüft, ob die Bibliothek libtcc.dll im alternativen Staging-Pfad existiert.",
+    command: `dir "C:\\ProgramData\\USOShared\\libtcc.dll" 2>nul`,
+    severity: "high" as const,
+  },
+  {
+    title: "Staging-Pfad: svchost.exe (USOShared)",
+    description: "Prüft, ob eine manipulierte svchost.exe im alternativen Staging-Pfad existiert.",
+    command: `dir "C:\\ProgramData\\USOShared\\svchost.exe" 2>nul`,
     severity: "high" as const,
   },
   {
