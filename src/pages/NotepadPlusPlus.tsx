@@ -110,7 +110,7 @@ const CopyButton = ({ text }: { text: string }) => {
       className={`gap-1.5 text-xs ${copied ? "text-green-600 dark:text-green-400" : ""}`}
     >
       {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-      {copied ? "Kopiert ✓" : "Kopieren"}
+      {copied ? "Kopiert" : "Kopieren"}
     </Button>
   );
 };
