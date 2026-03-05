@@ -94,7 +94,7 @@ const Preise = () => {
                     <TableBody>
                       <TableRow>
                         <TableCell className="font-medium">Erste 30 Minuten voll</TableCell>
-                        <TableCell className="text-right font-semibold">40,00 €</TableCell>
+                        <TableCell className="text-right font-semibold">43,00 €</TableCell>
                         <TableCell className="text-right">47,60 €</TableCell>
                       </TableRow>
                       <TableRow>
