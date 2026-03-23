@@ -95,12 +95,12 @@ const Preise = () => {
                       <TableRow>
                         <TableCell className="font-medium">Erste 30 Minuten voll</TableCell>
                         <TableCell className="text-right font-semibold">43,00 €</TableCell>
-                        <TableCell className="text-right">47,60 €</TableCell>
+                        <TableCell className="text-right">51,17 €</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">Danach je angebrochene 15 Minuten</TableCell>
-                        <TableCell className="text-right font-semibold">20,00 €</TableCell>
-                        <TableCell className="text-right">23,80 €</TableCell>
+                        <TableCell className="text-right font-semibold">21,50 €</TableCell>
+                        <TableCell className="text-right">25,59 €</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">Reisekosten bis 15 km</TableCell>
