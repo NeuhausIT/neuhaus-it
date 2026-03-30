@@ -17,6 +17,7 @@ import ManagedItServicesMspMonitoring from "./pages/ManagedItServicesMspMonitori
 import Signal from "./pages/Signal";
 import Tresor from "./pages/Tresor";
 import NotepadPlusPlus from "./pages/NotepadPlusPlus";
+import KundenZahnarztAmMarkt from "./pages/KundenZahnarztAmMarkt";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
