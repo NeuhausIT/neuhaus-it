@@ -99,7 +99,7 @@ const KontaktImpressum = () => {
             <h2 className="text-4xl font-bold mb-8">Impressum</h2>
             
             <div className="prose prose-lg max-w-none">
-              <h3 className="text-2xl font-semibold mb-4">Angaben gemäß § 5 TMG</h3>
+              <h3 className="text-2xl font-semibold mb-4">{"\n"}</h3>
               
               <div className="mb-8">
                 <p><strong>Neuhaus-IT</strong><br />
@@ -122,7 +122,7 @@ const KontaktImpressum = () => {
               
               <h4 className="text-xl font-semibold mb-3">Umsatzsteuer-ID</h4>
               <div className="mb-8">
-                <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+                <p>Umsatzsteuer-Identifikationsnummer:&nbsp;<br />
                 DE320473148</p>
               </div>
               
