@@ -126,7 +126,7 @@ const KontaktImpressum = () => {
                 DE320473148</p>
               </div>
               
-              <h4 className="text-xl font-semibold mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h4>
+              <h4 className="text-xl font-semibold mb-3">Verantwortlich für den Inhalt</h4>
               <div className="mb-8">
                 <p>Till Neuhaus<br />
                 Gerther Str. 65<br />
@@ -145,7 +145,7 @@ const KontaktImpressum = () => {
               
               <h4 className="text-xl font-semibold mb-3">Haftung für Inhalte</h4>
               <div className="mb-8">
-                <p>Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+                <p>Als Diensteanbieter bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Ich bin als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
               </div>
               
               <h4 className="text-xl font-semibold mb-3">Haftung für Links</h4>
