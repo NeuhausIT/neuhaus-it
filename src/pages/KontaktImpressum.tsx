@@ -110,7 +110,7 @@ const KontaktImpressum = () => {
                 44577 Castrop-Rauxel</p>
                 
                 <p className="mt-4"><strong>Geschäftsstelle (für Kundentermine):</strong><br />
-                Erinstr. 7<br />
+                Erinstraße 7<br />
                 44575 Castrop-Rauxel</p>
               </div>
               
