@@ -43,7 +43,7 @@ const ManagedItServicesMspMonitoring = () => {
       icon: <Shield className="w-12 h-12 text-primary" />,
       title: "Monitoring & Alarme",
       benefit: "Keine Überraschungen.",
-      description: "24/7 Überwachung Ihrer Systeme. Wir wissen von Problemen, bevor Sie diese bemerken, und reagieren sofort."
+      description: "24/7 Überwachung Ihrer Systeme. Ich weiß von Problemen, bevor Sie diese bemerken, und reagiere sofort."
     },
     {
       icon: <RefreshCw className="w-12 h-12 text-primary" />,
@@ -98,10 +98,10 @@ const ManagedItServicesMspMonitoring = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Was wir für Sie tun
+              Was ich für Sie tue
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Unsere Managed IT-Services sorgen dafür, dass Ihre IT-Infrastruktur 
+              Meine Managed IT-Services sorgen dafür, dass Ihre IT-Infrastruktur 
               zuverlässig, sicher und auf dem neuesten Stand bleibt.
             </p>
           </div>
@@ -138,10 +138,10 @@ const ManagedItServicesMspMonitoring = () => {
               Planbare Kosten, verlässliche IT
             </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Mit unseren Managed IT-Services erhalten Sie feste, planbare Kosten 
+              Mit meinen Managed IT-Services erhalten Sie feste, planbare Kosten 
               für IT-Sicherheit und -Betrieb. Das gibt Ihnen Kalkulationssicherheit 
               und ermöglicht es Ihnen, sich voll auf Ihr Kerngeschäft zu konzentrieren – 
-              während wir uns um Ihre IT kümmern.
+              während ich mich um Ihre IT kümmere.
             </p>
             <div className="bg-card border border-border rounded-lg p-8 shadow-soft">
               <h3 className="text-2xl font-bold mb-4">Ihre Vorteile auf einen Blick</h3>
@@ -176,7 +176,7 @@ const ManagedItServicesMspMonitoring = () => {
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Jedes Unternehmen hat unterschiedliche IT-Anforderungen. 
-            Deshalb erstellen wir Ihnen ein maßgeschneidertes Angebot.
+            Deshalb erstelle ich Ihnen ein maßgeschneidertes Angebot.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/preise">
@@ -196,8 +196,8 @@ const ManagedItServicesMspMonitoring = () => {
             Bereit für eine zuverlässige IT?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-95">
-            Lassen Sie uns gemeinsam die beste Lösung für Ihr Unternehmen finden. 
-            Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.
+            Ich finde gemeinsam mit Ihnen die beste Lösung für Ihr Unternehmen. 
+            Kontaktieren Sie mich für ein unverbindliches Beratungsgespräch.
           </p>
           <ActionButtonMenu size="lg" />
         </div>
