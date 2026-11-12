@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Download } from "lucide-react";
 import BackToHomeButton from "@/components/BackToHomeButton";
 import SubpageHero from "@/components/SubpageHero";

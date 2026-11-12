@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Briefcase, Target, Wrench, ShoppingCart, Cloud, GraduationCap, Sparkles, Shield, Lightbulb } from "lucide-react";
 import SubpageHero from "@/components/SubpageHero";
 import BackToHomeButton from "@/components/BackToHomeButton";
@@ -70,10 +70,14 @@ const GeschaeftsmodellUndDifferenzierung = () => {
   }];
   return <>
       <Helmet>
-        <title>Geschäftsmodell & Differenzierung | Neuhaus-IT</title>
+        <title>Geschäftsmodell | Neuhaus-IT</title>
         <meta name="description" content="Erfahren Sie mehr über das Geschäftsmodell von Neuhaus-IT: Ein lokal verankerter IT-Dienstleister für digitale Souveränität im Ruhrgebiet." />
         <meta name="keywords" content="Geschäftsmodell, IT-Dienstleister, digitale Souveränität, KI-Beratung, Nextcloud, Open Source" />
+        <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://neuhaus-it.de/geschaeftsmodell-und-differenzierung" />
+        <meta property="og:title" content="Geschäftsmodell | Neuhaus-IT" />
+        <meta property="og:description" content="Erfahren Sie mehr über das Geschäftsmodell von Neuhaus-IT: Ein lokal verankerter IT-Dienstleister für digitale Souveränität im Ruhrgebiet." />
+        <meta property="og:url" content="https://neuhaus-it.de/geschaeftsmodell-und-differenzierung" />
       </Helmet>
 
       <BackToHomeButton />

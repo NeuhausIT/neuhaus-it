@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { MessageCircle, ExternalLink } from "lucide-react";
 import Footer from "@/components/Footer";
 import BackToHomeButton from "@/components/BackToHomeButton";
@@ -11,8 +11,12 @@ const Signal = () => {
   return (
     <>
       <Helmet>
-        <title>Signal Kontakt | Neuhaus-IT</title>
-        <meta name="description" content="Kontaktieren Sie Neuhaus-IT über Signal Messenger. Sicher, schnell und datenschutzfreundlich." />
+        <title>Kontakt per Signal | Neuhaus-IT</title>
+        <meta name="description" content="Schreiben Sie mir sicher und Ende-zu-Ende-verschlüsselt per Signal Messenger: QR-Code scannen oder Link öffnen – datenschutzfreundlich und kostenlos." />
+        <link rel="canonical" href="https://neuhaus-it.de/signal" />
+        <meta property="og:title" content="Kontakt per Signal | Neuhaus-IT" />
+        <meta property="og:description" content="Schreiben Sie mir sicher und Ende-zu-Ende-verschlüsselt per Signal Messenger: QR-Code scannen oder Link öffnen – datenschutzfreundlich und kostenlos." />
+        <meta property="og:url" content="https://neuhaus-it.de/signal" />
       </Helmet>
       
       <BackToHomeButton />

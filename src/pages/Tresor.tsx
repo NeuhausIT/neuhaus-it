@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Download, Shield } from "lucide-react";
 import SubpageHero from "@/components/SubpageHero";
 import Footer from "@/components/Footer";
@@ -11,8 +11,13 @@ const Tresor = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Tresor - Neuhaus-IT</title>
+        <title>Tresor | Neuhaus-IT</title>
         <meta name="description" content="Sicherer Datentresor von Neuhaus-IT - Zugriff auf verschlüsselte Dateien und Downloads." />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://neuhaus-it.de/tresor" />
+        <meta property="og:title" content="Tresor | Neuhaus-IT" />
+        <meta property="og:description" content="Sicherer Datentresor von Neuhaus-IT - Zugriff auf verschlüsselte Dateien und Downloads." />
+        <meta property="og:url" content="https://neuhaus-it.de/tresor" />
       </Helmet>
 
       <SubpageHero

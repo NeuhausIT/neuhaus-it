@@ -6,7 +6,7 @@ import ActionButtonMenu from "@/components/ActionButtonMenu";
 import SubpageHero from "@/components/SubpageHero";
 import BackToHomeButton from "@/components/BackToHomeButton";
 import Footer from "@/components/Footer";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 const Preise = () => {
   const schemaData = {
@@ -19,7 +19,7 @@ const Preise = () => {
       "name": "Neuhaus-IT",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Erinstr. 7",
+        "streetAddress": "Erinstraße 7",
         "addressLocality": "Castrop-Rauxel",
         "postalCode": "44575",
         "addressCountry": "DE"
@@ -50,12 +50,12 @@ const Preise = () => {
   };
   return <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Preise IT-Beratung & Service - Neuhaus-IT</title>
-        <meta name="description" content="Transparente IT-Service Preise ✓ Ab 40€/30min ✓ Faire Abrechnung ✓ Keine versteckten Kosten ✓ IT-Beratung Castrop-Rauxel" />
+        <title>Preise für IT-Service &amp; Beratung | Neuhaus-IT</title>
+        <meta name="description" content="Transparente Preise: Abrechnung im 15-Minuten-Takt, klare Anfahrtspauschalen, kostenlose telefonische Erstberatung für Neukunden. Alle Preise netto und brutto." />
         <meta name="keywords" content="IT-Service Preise, IT-Beratung Kosten, Computerhilfe Preise Castrop-Rauxel, IT-Support Abrechnung" />
         <link rel="canonical" href="https://neuhaus-it.de/preise" />
-        <meta property="og:title" content="Preise IT-Beratung & Service - Neuhaus-IT" />
-        <meta property="og:description" content="Transparente IT-Service Preise ✓ Ab 40€/30min ✓ Faire Abrechnung ✓ Keine versteckten Kosten" />
+        <meta property="og:title" content="Preise für IT-Service &amp; Beratung | Neuhaus-IT" />
+        <meta property="og:description" content="Transparente Preise: Abrechnung im 15-Minuten-Takt, klare Anfahrtspauschalen, kostenlose telefonische Erstberatung für Neukunden. Alle Preise netto und brutto." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://neuhaus-it.de/preise" />
         <script type="application/ld+json">

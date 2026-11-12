@@ -6,12 +6,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 const Fernwartung = () => {
   return <div className="min-h-screen bg-background">
       <Helmet>
         <title>Fernwartung mit RustDesk | Neuhaus-IT</title>
-        <meta name="description" content="Sichere Fernwartung über eigenen RustDesk-Server. Keine kommerziellen Anbieter, volle Kontrolle über Ihre Daten." />
+        <meta name="description" content="Sichere Fernwartung mit RustDesk auf eigenem Server: Support-Nodes nur mit Ihrer Freigabe, Managed-Nodes für regelmäßige Wartung. Downloads hier." />
+        <link rel="canonical" href="https://neuhaus-it.de/fernwartung" />
+        <meta property="og:title" content="Fernwartung mit RustDesk | Neuhaus-IT" />
+        <meta property="og:description" content="Sichere Fernwartung mit RustDesk auf eigenem Server: Support-Nodes nur mit Ihrer Freigabe, Managed-Nodes für regelmäßige Wartung. Downloads hier." />
+        <meta property="og:url" content="https://neuhaus-it.de/fernwartung" />
       </Helmet>
 
       <BackToHomeButton />

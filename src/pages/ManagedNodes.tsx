@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Server, Users, User, Home, Building2, Cloud, Shield, Clock, TrendingUp, Phone } from "lucide-react";
 import Footer from "@/components/Footer";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import ActionButtonMenu from "@/components/ActionButtonMenu";
 import SubpageHero from "@/components/SubpageHero";
 import BackToHomeButton from "@/components/BackToHomeButton";
@@ -54,9 +54,13 @@ const ManagedNodes = () => {
   }];
   return <>
       <Helmet>
-        <title>Managed Nodes - Professionelle Serveradministration | Neuhaus-IT</title>
-        <meta name="description" content="Neuhaus-IT betreut Ihre Systeme professionell: von vollständig gemanagten Hosts über Co-Managed-Lösungen bis zu Self-Managed-Systemen. Sicher, flexibel und transparent." />
+        <title>Managed Nodes: IT-Betreuung pro Gerät | Neuhaus-IT</title>
+        <meta name="description" content="Managed Nodes: Server, PCs und Container einzeln überwacht und administriert – skalierbar vom Einzelrechner bis zur Serverlandschaft. Jetzt anfragen." />
         <meta name="keywords" content="Managed Nodes, Serveradministration, IT-Betreuung, Co-Managed-Hosting, Self-Managed-Hosting, Server-Management für KMU, Server-Monitoring" />
+        <link rel="canonical" href="https://neuhaus-it.de/managed-nodes" />
+        <meta property="og:title" content="Managed Nodes: IT-Betreuung pro Gerät | Neuhaus-IT" />
+        <meta property="og:description" content="Managed Nodes: Server, PCs und Container einzeln überwacht und administriert – skalierbar vom Einzelrechner bis zur Serverlandschaft. Jetzt anfragen." />
+        <meta property="og:url" content="https://neuhaus-it.de/managed-nodes" />
       </Helmet>
       
       <div className="min-h-screen flex flex-col bg-background">
