@@ -88,7 +88,7 @@ const ManagedItServicesMspMonitoring = () => {
       <BackToHomeButton />
 
       <SubpageHero
-        title="Ihre IT läuft einfach. Wir kümmern uns um alles."
+        title="Ihre IT läuft einfach. Ich kümmere mich um alles."
         description="Verlässliche Managed IT-Services (MSP): Von automatischem Monitoring bis zu sicheren Updates – damit Sie sich auf Ihr Kerngeschäft konzentrieren können."
         icon={<Shield className="w-16 h-16 text-primary" />}
       />
