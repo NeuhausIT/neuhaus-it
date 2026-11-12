@@ -19,7 +19,7 @@ const Terminbuchungen = () => {
       "name": "Neuhaus-IT",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Erinstr. 7",
+        "streetAddress": "Erinstraße 7",
         "addressLocality": "Castrop-Rauxel",
         "postalCode": "44575",
         "addressCountry": "DE"
@@ -46,15 +46,15 @@ const Terminbuchungen = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Terminbuchung IT-Beratung - Neuhaus-IT</title>
+        <title>Termin buchen: IT-Beratung &amp; Service | Neuhaus-IT</title>
         <meta 
           name="description" 
-          content="Buchen Sie Ihren IT-Beratungstermin ✓ Kostenlose Erstberatung ✓ Vor-Ort & Remote-Service ✓ Flexible Terminvergabe in Castrop-Rauxel" 
+          content="Termin online buchen: kostenlose telefonische Erstberatung, Fernwartung, Vor-Ort-Service oder Besuch im Büro in der Erinstraße 7, Castrop-Rauxel." 
         />
         <meta name="keywords" content="IT-Beratung Terminbuchung, IT-Support Termin, Computerhilfe Castrop-Rauxel, IT-Service buchen" />
         <link rel="canonical" href="https://neuhaus-it.de/terminbuchungen" />
-        <meta property="og:title" content="Terminbuchung IT-Beratung - Neuhaus-IT" />
-        <meta property="og:description" content="Buchen Sie Ihren IT-Beratungstermin ✓ Kostenlose Erstberatung ✓ Vor-Ort & Remote-Service" />
+        <meta property="og:title" content="Termin buchen: IT-Beratung &amp; Service | Neuhaus-IT" />
+        <meta property="og:description" content="Termin online buchen: kostenlose telefonische Erstberatung, Fernwartung, Vor-Ort-Service oder Besuch im Büro in der Erinstraße 7, Castrop-Rauxel." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://neuhaus-it.de/terminbuchungen" />
         <script type="application/ld+json">
@@ -121,7 +121,7 @@ const Terminbuchungen = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription>Besuchen Sie mich in meinem Büro (Erinstr. 7, 44575 Castrop-Rauxel)</CardDescription>
+                  <CardDescription>Besuchen Sie mich in meinem Büro (Erinstraße 7, 44575 Castrop-Rauxel)</CardDescription>
                 </CardContent>
               </Card>
 

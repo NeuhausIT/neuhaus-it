@@ -62,10 +62,10 @@ const ManagedItServicesMspMonitoring = () => {
   return (
     <>
       <Helmet>
-        <title>Managed IT Services für Ihr Unternehmen in Castrop-Rauxel – Neuhaus-IT</title>
+        <title>Managed IT-Services &amp; Monitoring | Neuhaus-IT</title>
         <meta 
           name="description" 
-          content="Verlässliche Managed IT-Services (MSP): Von automatischem Monitoring bis zu sicheren Updates – damit Sie sich auf Ihr Kerngeschäft konzentrieren können. Professionelle IT-Betreuung für Unternehmen in Castrop-Rauxel." 
+          content="Managed IT-Services für KMU in Castrop-Rauxel und Umgebung: Monitoring, Updates, Backups und Support zu planbaren Kosten. Ihre IT läuft einfach." 
         />
         <meta 
           name="keywords" 
@@ -76,8 +76,8 @@ const ManagedItServicesMspMonitoring = () => {
         {/* Open Graph / Social Media */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://neuhaus-it.de/managed-it-services-msp-monitoring" />
-        <meta property="og:title" content="Managed IT Services für Ihr Unternehmen in Castrop-Rauxel – Neuhaus-IT" />
-        <meta property="og:description" content="Verlässliche Managed IT-Services (MSP): 24/7 Monitoring, automatische Updates und professionelle IT-Betreuung für Ihr Unternehmen." />
+        <meta property="og:title" content="Managed IT-Services &amp; Monitoring | Neuhaus-IT" />
+        <meta property="og:description" content="Managed IT-Services für KMU in Castrop-Rauxel und Umgebung: Monitoring, Updates, Backups und Support zu planbaren Kosten. Ihre IT läuft einfach." />
         
         {/* Structured Data */}
         <script type="application/ld+json">
