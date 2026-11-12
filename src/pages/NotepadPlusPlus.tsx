@@ -119,11 +119,15 @@ const NotepadPlusPlus = () => {
   return (
     <>
       <Helmet>
-        <title>Notepad++ Security Check - Neuhaus-IT</title>
+        <title>Notepad++ Security Check: Backdoor prüfen | Neuhaus-IT</title>
         <meta
           name="description"
-          content="Schnelle Prüfungen zum Notepad++ Security Incident (Chrysalis Backdoor / Lotus Blossom). Indicators of Compromise einfach vor Ort prüfen."
+          content="Notepad++ Sicherheitsvorfall: Mit diesen PowerShell-Befehlen prüfen Sie Ihren Windows-PC auf Spuren der Chrysalis-Backdoor. Schritt für Schritt."
         />
+        <link rel="canonical" href="https://neuhaus-it.de/notepadplusplus" />
+        <meta property="og:title" content="Notepad++ Security Check: Backdoor prüfen | Neuhaus-IT" />
+        <meta property="og:description" content="Notepad++ Sicherheitsvorfall: Mit diesen PowerShell-Befehlen prüfen Sie Ihren Windows-PC auf Spuren der Chrysalis-Backdoor. Schritt für Schritt." />
+        <meta property="og:url" content="https://neuhaus-it.de/notepadplusplus" />
       </Helmet>
 
       <BackToHomeButton />

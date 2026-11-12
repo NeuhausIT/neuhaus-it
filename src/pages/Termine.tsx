@@ -26,13 +26,14 @@ const Termine = () => {
           name="keywords"
           content="IT Termin, Beratungstermin, Computerhilfe Termin, IT Service Duisburg, Terminbuchung"
         />
-        <link rel="canonical" href="https://neuhaus-it.de/termine" />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://neuhaus-it.de/terminbuchungen" />
         <meta property="og:title" content="Termine - IT-Beratung vereinbaren | Neuhaus-IT" />
         <meta
           property="og:description"
           content="Vereinbaren Sie einen Termin für professionelle IT-Beratung und Computerhilfe in Duisburg und Umgebung."
         />
-        <meta property="og:url" content="https://neuhaus-it.de/termine" />
+        <meta property="og:url" content="https://neuhaus-it.de/terminbuchungen" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>

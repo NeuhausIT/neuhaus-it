@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Card } from "@/components/ui/card";
 import { Shield, Users, Heart, Lightbulb, Target, CheckCircle2 } from "lucide-react";
 import Footer from "@/components/Footer";
@@ -7,6 +8,15 @@ import BackToHomeButton from "@/components/BackToHomeButton";
 const Leitbild = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Leitbild: Digitale Souveränität | Neuhaus-IT</title>
+        <meta name="description" content="Wofür Neuhaus-IT steht: freie Software, Selfhosting und digitale Souveränität für Menschen und kleine Unternehmen – sicher, selbstbestimmt, nachhaltig." />
+        <link rel="canonical" href="https://neuhaus-it.de/leitbild" />
+        <meta property="og:title" content="Leitbild: Digitale Souveränität | Neuhaus-IT" />
+        <meta property="og:description" content="Wofür Neuhaus-IT steht: freie Software, Selfhosting und digitale Souveränität für Menschen und kleine Unternehmen – sicher, selbstbestimmt, nachhaltig." />
+        <meta property="og:url" content="https://neuhaus-it.de/leitbild" />
+      </Helmet>
+
       <BackToHomeButton />
 
       <SubpageHero

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,6 +17,14 @@ const KontaktImpressum = () => {
   const [qrDialogOpen, setQrDialogOpen] = useState(false);
 
   return <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Kontakt &amp; Impressum | Neuhaus-IT Castrop-Rauxel</title>
+        <meta name="description" content="Kontakt zu Neuhaus-IT: Telefon 02305 4459886, E-Mail service@neuhaus-it.de, Büro Erinstraße 7, 44575 Castrop-Rauxel. Impressum und Anschrift." />
+        <link rel="canonical" href="https://neuhaus-it.de/kontakt-und-impressum" />
+        <meta property="og:title" content="Kontakt & Impressum | Neuhaus-IT Castrop-Rauxel" />
+        <meta property="og:description" content="Kontakt zu Neuhaus-IT: Telefon 02305 4459886, E-Mail service@neuhaus-it.de, Büro Erinstraße 7, 44575 Castrop-Rauxel. Impressum und Anschrift." />
+        <meta property="og:url" content="https://neuhaus-it.de/kontakt-und-impressum" />
+      </Helmet>
       <BackToHomeButton />
       
       <SubpageHero title="Kontakt & Impressum" description="Lassen Sie uns gemeinsam durchstarten! Kontaktieren Sie mich für eine unverbindliche Beratung oder vereinbaren Sie direkt einen Termin." icon={<FileText className="h-16 w-16 text-primary" />} />
