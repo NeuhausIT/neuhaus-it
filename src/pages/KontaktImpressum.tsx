@@ -99,8 +99,6 @@ const KontaktImpressum = () => {
             <h2 className="text-4xl font-bold mb-8">Impressum</h2>
             
             <div className="prose prose-lg max-w-none">
-              <h3 className="text-2xl font-semibold mb-4">{"\n"}</h3>
-              
               <div className="mb-8">
                 <p><strong>Neuhaus-IT</strong><br />
                 Inh. Till Neuhaus</p>
