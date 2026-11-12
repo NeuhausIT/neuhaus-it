@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import BackToHomeButton from "@/components/BackToHomeButton";
 import SubpageHero from "@/components/SubpageHero";
 import Footer from "@/components/Footer";

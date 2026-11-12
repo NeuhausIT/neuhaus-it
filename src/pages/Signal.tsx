@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { MessageCircle, ExternalLink } from "lucide-react";
 import Footer from "@/components/Footer";
 import BackToHomeButton from "@/components/BackToHomeButton";

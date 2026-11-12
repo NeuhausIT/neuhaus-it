@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Briefcase, Target, Wrench, ShoppingCart, Cloud, GraduationCap, Sparkles, Shield, Lightbulb } from "lucide-react";
 import SubpageHero from "@/components/SubpageHero";
 import BackToHomeButton from "@/components/BackToHomeButton";

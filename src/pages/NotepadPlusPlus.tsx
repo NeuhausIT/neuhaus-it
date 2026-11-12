@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { ShieldAlert, Terminal, Copy, Check, ExternalLink } from "lucide-react";
 import SubpageHero from "@/components/SubpageHero";
 import Footer from "@/components/Footer";

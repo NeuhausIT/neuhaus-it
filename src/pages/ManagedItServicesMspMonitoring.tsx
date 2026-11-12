@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Shield, RefreshCw, Package, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import ActionButtonMenu from "@/components/ActionButtonMenu";
