@@ -14,7 +14,7 @@ const url = "https://neuhaus-it.de/datensicherung";
 const steps = [
   { icon: Clock, title: "Automatisch sichern", text: "Die Sicherung läuft im Hintergrund, ohne dass Sie daran denken müssen. Ich richte die Zeiten passend zu Ihrem Alltag ein." },
   { icon: Radio, title: "Überwachen", text: "Jede Sicherung meldet sich. Bleibt die Meldung aus, kümmere ich mich." },
-  { icon: FileCheck2, title: "Wiederherstellung testen", text: "Ich stelle regelmäßig Probedateien wieder her und dokumentiere das Ergebnis. So prüfen wir, ob Ihre Daten im Ernstfall wieder verfügbar sind." },
+  { icon: FileCheck2, title: "Wiederherstellung testen", text: "Ich stelle regelmäßig Probedateien wieder her und dokumentiere das Ergebnis. So prüfe ich, ob Ihre Daten im Ernstfall wieder verfügbar sind." },
 ];
 
 const Datensicherung = () => (
