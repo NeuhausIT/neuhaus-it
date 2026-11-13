@@ -24,6 +24,9 @@ describe("Backup-Angebote", () => {
   test("Betreut enthält vierteljährliche Wiederherstellungstests", () => {
     assert.equal(backupPackages.find(p => p.name === "Betreut")?.testIntervalMonths, 3);
   });
+  test("Hardware und Cloudspeicher werden bei Basis separat angeboten", () => {
+    assert.deepEqual(backupPackages.find(p => p.name === "Basis")?.separatelyOffered, ["hardware", "cloudStorage"]);
+  });
   test("Komplett übernimmt vierteljährliche Tests und enthält jährliches Review", () => {
     const komplett = backupPackages.find(p => p.name === "Komplett");
     assert.equal(komplett?.testIntervalMonths, 3);
