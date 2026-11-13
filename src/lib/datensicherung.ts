@@ -1,10 +1,15 @@
 export const backupCheck = {
   durationMinutes: 30,
-  price: 0,
-  formats: ["vor Ort", "per Video"],
+  price: 49,
+  priceBasis: "gross",
+  priceType: "from",
+  durationType: "maximum",
+  formats: ["vor Ort", "per Fernzugriff"],
   bookingUrl: "https://neuhaus-it.de/terminbuchungen",
   telephone: "+4923054459886",
 };
+
+export const backupCheckTerms = `ab ${backupCheck.price},- € brutto · bis max. ${backupCheck.durationMinutes} Minuten · ${backupCheck.formats.join(" oder ")}`;
 
 export const backupPackages = [
   {
@@ -66,6 +71,6 @@ export const backupFaq = [
   },
   {
     question: "Was kostet eine Datensicherung für mein Unternehmen?",
-    answer: "Die Kosten richten sich nach Datenmenge, Arbeitsplätzen, vorhandener Hardware und gewünschter Betreuung. Nach dem kostenlosen 30-minütigen Backup-Check erhalten Sie ein individuelles Festpreisangebot. Einrichtung, laufende Betreuung und gegebenenfalls Speicher- oder Hardwarekosten werden transparent ausgewiesen; alle Preise verstehen sich netto zzgl. MwSt.",
+    answer: `Die Kosten richten sich nach Datenmenge, Arbeitsplätzen, vorhandener Hardware und gewünschter Betreuung. Der Backup-Check kostet ab ${backupCheck.price},- € brutto für bis max. ${backupCheck.durationMinutes} Minuten und findet ${backupCheck.formats.join(" oder ")} statt. Danach erhalten Sie ein individuelles Festpreisangebot; Einrichtung, laufende Betreuung und gegebenenfalls Speicher- oder Hardwarekosten werden transparent ausgewiesen. Die Paketpreise verstehen sich netto zzgl. MwSt.`,
   },
 ];

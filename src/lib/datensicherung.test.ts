@@ -4,12 +4,17 @@ import { strict as assert } from "node:assert";
 import { backupCheck, backupPackages } from "./datensicherung";
 
 describe("Backup-Angebote", () => {
-  test("Backup-Check ist kostenlos und dauert 30 Minuten", () => {
-    assert.equal(backupCheck.price, 0);
-    assert.equal(backupCheck.durationMinutes, 30);
+  test("Backup-Check kostet ab 49 Euro brutto", () => {
+    assert.equal(backupCheck.price, 49);
+    assert.equal(backupCheck.priceBasis, "gross");
+    assert.equal(backupCheck.priceType, "from");
   });
-  test("Backup-Check findet vor Ort oder per Video statt", () => {
-    assert.deepEqual(backupCheck.formats, ["vor Ort", "per Video"]);
+  test("Backup-Check dauert maximal 30 Minuten", () => {
+    assert.equal(backupCheck.durationMinutes, 30);
+    assert.equal(backupCheck.durationType, "maximum");
+  });
+  test("Backup-Check findet vor Ort oder per Fernzugriff statt", () => {
+    assert.deepEqual(backupCheck.formats, ["vor Ort", "per Fernzugriff"]);
   });
   test("Basis gilt einmalig für bis zu fünf Arbeitsplätze", () => {
     const basis = backupPackages.find(p => p.name === "Basis");
