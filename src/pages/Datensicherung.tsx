@@ -4,15 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import BackToHomeButton from "@/components/BackToHomeButton";
 import Footer from "@/components/Footer";
-import { backupCheck, backupFaq, backupPackages } from "@/lib/datensicherung";
+import { backupCheck, backupCheckTerms, backupFaq, backupPackages } from "@/lib/datensicherung";
 
 const title = "Datensicherung nach der 3-2-1-Regel für Unternehmen | Neuhaus-IT Castrop-Rauxel";
-const description = "Datensicherung und Backup nach der 3-2-1-Regel für Unternehmen in Castrop-Rauxel und im Ruhrgebiet. Jetzt kostenlosen Backup-Check buchen.";
+const description = "Datensicherung und Backup nach der 3-2-1-Regel für Unternehmen in Castrop-Rauxel und im Ruhrgebiet. Backup-Check ab 49,- € brutto buchen.";
 
 const BackupActions = () => (
   <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
     <Button size="lg" asChild className="h-auto min-h-12 whitespace-normal text-base py-3">
-      <a href={backupCheck.bookingUrl}><Calendar className="mr-2 h-5 w-5 shrink-0" />Kostenlosen Backup-Check buchen</a>
+      <a href={backupCheck.bookingUrl}><Calendar className="mr-2 h-5 w-5 shrink-0" />Backup-Check buchen</a>
     </Button>
     <Button variant="outline" size="lg" asChild className="min-h-12 text-base">
       <a href={`tel:${backupCheck.telephone}`}><Phone className="mr-2 h-5 w-5" />Jetzt anrufen</a>
@@ -38,7 +38,7 @@ const services = [
 ];
 
 const steps = [
-  { title: "Backup-Check", text: `${backupCheck.durationMinutes} Minuten, kostenlos – ${backupCheck.formats.join(" oder ")}. Ich prüfe mit Ihnen die aktuelle Sicherung.` },
+  { title: "Backup-Check", text: `${backupCheckTerms}. Ich prüfe mit Ihnen die aktuelle Sicherung.` },
   { title: "Konzept & Angebot", text: "Sie erhalten ein passendes Konzept und ein transparentes Festpreisangebot." },
   { title: "Einrichtung & Test", text: "Ich richte die Sicherung ein und prüfe die erste Wiederherstellung." },
   { title: "Laufende Betreuung", text: "Nach dem vereinbarten Paket überwache und teste ich Ihre Sicherung regelmäßig." },
@@ -83,7 +83,7 @@ const Datensicherung = () => (
             <h1 id="backup-title" className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent drop-shadow-sm">Ihre Daten. Dreifach gesichert.</h1>
             <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">Datensicherung nach der 3-2-1-Regel – eingerichtet, überwacht und regelmäßig getestet von Ihrem IT-Partner aus Castrop-Rauxel.</p>
             <BackupActions />
-            <p className="text-base mt-5">30 Minuten · kostenlos · vor Ort oder per Video</p>
+            <p className="text-base mt-5">{backupCheckTerms}</p>
           </div>
         </div>
       </section>
@@ -133,7 +133,7 @@ const Datensicherung = () => (
           <ul className="space-y-3 mb-8 flex-1">{pkg.items.map(item => <li key={item} className="flex gap-2 text-base"><Check className="h-5 w-5 shrink-0" aria-hidden="true" /><span>{item}</span></li>)}</ul>
           <Button variant={pkg.recommended ? "default" : "outline"} asChild className="text-base min-h-11"><a href={backupCheck.bookingUrl}>Backup-Check buchen</a></Button>
         </article>)}</div>
-        <p className="text-base text-center mt-6">Alle Preise netto zzgl. MwSt. Individuelles Angebot nach dem Backup-Check.</p>
+        <p className="text-base text-center mt-6">Alle Paketpreise netto zzgl. MwSt. Individuelles Angebot nach dem Backup-Check.</p>
       </div></section>
 
       <section className="px-4 py-16 bg-secondary" aria-labelledby="why-title"><div className="max-w-6xl mx-auto">
@@ -150,7 +150,7 @@ const Datensicherung = () => (
 
       <section className="px-4 py-16 bg-secondary text-center" aria-labelledby="final-title"><div className="max-w-4xl mx-auto">
         <h2 id="final-title" className="text-3xl md:text-4xl font-bold mb-5">Wann haben Sie Ihr Backup zuletzt getestet?</h2>
-        <p className="text-lg leading-relaxed max-w-2xl mx-auto mb-8">Im kostenlosen Backup-Check prüfe ich Ihre aktuelle Datensicherung und zeige Ihnen, wo es Lücken gibt.</p><BackupActions />
+        <p className="text-lg leading-relaxed max-w-2xl mx-auto mb-8">Im Backup-Check prüfe ich Ihre aktuelle Datensicherung und zeige Ihnen, wo es Lücken gibt – {backupCheckTerms}.</p><BackupActions />
         <address className="not-italic text-base leading-relaxed mt-10">Neuhaus-IT (Inh. Till Neuhaus)<br />Erinstraße 7 · 44575 Castrop-Rauxel<br /><a href={`tel:${backupCheck.telephone}`} className="underline underline-offset-4">02305 4459886</a> · <a href="mailto:service@neuhaus-it.de" className="underline underline-offset-4">service@neuhaus-it.de</a></address>
         <p className="text-base font-semibold mt-4">IT-Service, der mitdenkt.</p>
       </div></section>
