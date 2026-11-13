@@ -19,6 +19,7 @@ import Tresor from "./pages/Tresor";
 import NotepadPlusPlus from "./pages/NotepadPlusPlus";
 import KundenZahnarztAmMarkt from "./pages/KundenZahnarztAmMarkt";
 import NotFound from "./pages/NotFound";
+import Datensicherung from "./pages/Datensicherung";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/termine" element={<Termine />} />
           <Route path="/terminbuchungen" element={<Terminbuchungen />} />
           <Route path="/preise" element={<Preise />} />
+          <Route path="/datensicherung" element={<Datensicherung />} />
           <Route path="/kontakt-und-impressum" element={<KontaktImpressum />} />
           <Route path="/managed-nodes" element={<ManagedNodes />} />
           <Route path="/serveradministration" element={<ManagedNodes />} /> {/* Legacy redirect */}

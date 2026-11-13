@@ -51,6 +51,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="/datensicherung" className="text-muted-foreground hover:text-primary transition-colors">
+                    Datensicherung
+                  </a>
+                </li>
+                <li>
                   <a href="/fernwartung" className="text-muted-foreground hover:text-primary transition-colors">
                     Fernwartung
                   </a>
