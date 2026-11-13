@@ -145,7 +145,7 @@ const Datensicherung = () => (
 
       <section className="px-4 py-16 border-t border-border" aria-labelledby="faq-title"><div className="max-w-4xl mx-auto">
         <h2 id="faq-title" className="text-3xl font-bold mb-8">Ihre Fragen zur Datensicherung</h2>
-        <Accordion type="single" collapsible>{backupFaq.map((faq, index) => <AccordionItem key={faq.question} value={`faq-${index}`}><h3><AccordionTrigger className="text-base md:text-lg text-left gap-4">{faq.question}</AccordionTrigger></h3><AccordionContent className="text-base leading-relaxed">{faq.answer}</AccordionContent></AccordionItem>)}</Accordion>
+        <Accordion type="single" collapsible>{backupFaq.map((faq, index) => <AccordionItem key={faq.question} value={`faq-${index}`}><AccordionTrigger className="text-base md:text-lg text-left gap-4">{faq.question}</AccordionTrigger><AccordionContent className="text-base leading-relaxed">{faq.answer}</AccordionContent></AccordionItem>)}</Accordion>
       </div></section>
 
       <section className="px-4 py-16 bg-secondary text-center" aria-labelledby="final-title"><div className="max-w-4xl mx-auto">
