@@ -1,77 +1,68 @@
-export const backupCheck = {
-  durationMinutes: 30,
+export const backupContact = {
+  telephone: "+4923054459886",
+  displayTelephone: "02305 4459886",
+  bookingUrl: "/terminbuchungen",
+};
+
+export const backupAreas = ["Castrop-Rauxel", "Dortmund", "Bochum", "Herne", "Kreis Recklinghausen"];
+
+export const privateBackup = {
   price: 49,
   priceBasis: "gross",
   priceType: "from",
+  durationMinutes: 30,
   durationType: "maximum",
-  formats: ["vor Ort", "per Fernzugriff"],
-  bookingUrl: "https://neuhaus-it.de/terminbuchungen",
-  telephone: "+4923054459886",
+  travelChargedSeparately: true,
+  annualCheck: true,
+  url: "https://computerhilfe-castrop-rauxel.de/datensicherung",
+  items: [
+    "Fotos, Dokumente und Smartphone automatisch sichern",
+    "Externe Festplatte und auf Wunsch verschlüsselter Cloud-Speicher in Deutschland",
+    "Wiederherstellung gemeinsam üben",
+    "Jahres-Check",
+  ],
 };
 
-export const backupCheckTerms = `ab ${backupCheck.price},- € brutto · bis max. ${backupCheck.durationMinutes} Minuten · ${backupCheck.formats.join(" oder ")}`;
-
-export const backupPackages = [
-  {
-    name: "Basis",
-    price: "[PREIS]",
-    billing: "einmalig",
-    recommended: false,
-    maxWorkplaces: 5,
-    separatelyOffered: ["hardware", "cloudStorage"],
-    items: ["Einrichtung eines 3-2-1-Backups", "Für bis zu 5 Arbeitsplätze", "Einmalige Einrichtung", "Hardware oder Cloudspeicher wird separat angeboten."],
-    testIntervalMonths: null,
-    reviewIntervalMonths: null,
-  },
-  {
-    name: "Betreut",
-    price: "[PREIS]",
-    billing: "Einrichtung + monatliche Betreuung",
-    recommended: true,
-    maxWorkplaces: null,
-    items: ["Einrichtung des Backups", "Monatliche Überwachung", "Vierteljährlicher Wiederherstellungstest"],
-    testIntervalMonths: 3,
-    reviewIntervalMonths: null,
-  },
-  {
-    name: "Komplett",
-    price: "[PREIS]",
-    billing: "Einrichtung + laufende Betreuung",
-    recommended: false,
-    maxWorkplaces: null,
-    items: ["Alle Leistungen aus Betreut", "Zusätzlich Server und NAS", "Notfallplan für Ihr Unternehmen", "Jährliche Überprüfung des Konzepts"],
-    testIntervalMonths: 3,
-    reviewIntervalMonths: 12,
-  },
-];
+export const businessBackup = {
+  hourlyRate: 86,
+  priceBasis: "net",
+  quickCheckPrice: 149,
+  quickCheckCreditedOnOrder: true,
+  monthlyPricePerWorkplace: 12,
+  monthlyPriceType: "from",
+  reportIntervalMonths: 1,
+  url: "https://it-service-castrop-rauxel.de/datensicherung",
+  items: [
+    "Backup-Konzept nach 3-2-1 für Server, NAS und Arbeitsplätze",
+    "Überwachung mit monatlichem Bericht",
+    "Wiederherstellungstests mit Protokoll",
+    "Notfallplan",
+  ],
+};
 
 export const backupFaq = [
   {
-    question: "Reicht eine externe Festplatte nicht aus?",
-    answer: "Eine externe Festplatte ist ein guter Anfang, aber als einzige Sicherung nicht ausreichend. Sie kann ebenfalls ausfallen oder mit dem Computer beschädigt werden. Eine zusätzliche Kopie außer Haus und eine getrennte oder unveränderbare Sicherung machen Ihr Backup belastbarer.",
+    question: "Wie oft sollte ich meine Daten sichern?",
+    answer: "Automatisch mindestens täglich; wichtige Arbeitsdaten gern stündlich.",
   },
   {
-    question: "Ist eine Cloud wie OneDrive oder Dropbox schon ein Backup?",
-    answer: "Eine synchronisierte Cloud hält Dateien auf mehreren Geräten aktuell, ist aber nicht automatisch eine unabhängige Sicherung. Löschungen und verschlüsselte Dateien können ebenfalls übertragen werden. Versionsverläufe helfen, ersetzen jedoch kein geprüftes Backup mit festgelegter Aufbewahrung.",
+    question: "Reicht eine externe Festplatte?",
+    answer: "Sie ist ein guter Anfang. Bei Brand, Diebstahl oder Erpressungstrojanern hilft zusätzlich eine Kopie außer Haus.",
   },
   {
-    question: "Wo liegen meine Daten und wer hat Zugriff?",
-    answer: "Die lokale Sicherung liegt auf Ihrem NAS oder Backup-Server; die zusätzliche Kopie liegt verschlüsselt in einem Rechenzentrum in Deutschland. Die Daten werden vor der Übertragung verschlüsselt, der Schlüssel bleibt bei Ihnen. Zugriffsrechte und eine sichere Aufbewahrung des Schlüssels vereinbare ich mit Ihnen.",
+    question: "Ist Cloud-Backup sicher?",
+    answer: "Ja, wenn die Daten vor dem Hochladen verschlüsselt werden und Sie den Schlüssel behalten. Ich nutze Speicher in Deutschland.",
   },
   {
-    question: "Was passiert bei einem Verschlüsselungstrojaner?",
-    answer: "Zunächst werden betroffene Systeme vom Netzwerk getrennt und der Angriff eingegrenzt. Danach lassen sich Daten aus einer sauberen Sicherung auf bereinigte Systeme zurückspielen. Eine offline gehaltene oder unveränderbare Kopie schützt davor, dass der Trojaner auch das Backup verändert.",
+    question: "Was kostet eine Datensicherung?",
+    answer: `Privathaushalte ab ${privateBackup.price} € inkl. USt. für die Einrichtung (bis ${privateBackup.durationMinutes} Min.). Vor Ort kommt die Anfahrt hinzu. Für Unternehmen gibt es den Backup-Schnellcheck für ${businessBackup.quickCheckPrice} € netto, der bei Beauftragung angerechnet wird.`,
   },
   {
-    question: "Wie oft wird gesichert und wie lange werden Sicherungen aufbewahrt?",
-    answer: "Das hängt davon ab, wie häufig sich Ihre Daten ändern und wie viel Datenverlust vertretbar wäre. Im Backup-Check lege ich mit Ihnen Sicherungsintervalle und Aufbewahrungsfristen fest. Ältere Sicherungsstände bleiben nach diesem Plan verfügbar; ein Backup ersetzt nicht automatisch eine gesetzlich erforderliche Archivierung.",
+    question: "Woher weiß ich, dass mein Backup funktioniert?",
+    answer: "Durch Überwachung und regelmäßige Probe-Wiederherstellung. Beides ist bei mir Standard.",
   },
   {
-    question: "Wie schnell sind meine Daten im Ernstfall wieder da?",
-    answer: "Einzelne Dateien lassen sich häufig in kurzer Zeit wiederherstellen, ganze Systeme können mehrere Stunden oder länger benötigen. Datenmenge, Internetanbindung und verfügbare Hardware bestimmen die Dauer. Mit einem Wiederherstellungstest prüfe ich, welche Zeiten für Ihr Unternehmen realistisch sind – eine pauschale Garantie wäre nicht seriös.",
-  },
-  {
-    question: "Was kostet eine Datensicherung für mein Unternehmen?",
-    answer: `Die Kosten richten sich nach Datenmenge, Arbeitsplätzen, vorhandener Hardware und gewünschter Betreuung. Der Backup-Check kostet ab ${backupCheck.price},- € brutto für bis max. ${backupCheck.durationMinutes} Minuten und findet ${backupCheck.formats.join(" oder ")} statt. Danach erhalten Sie ein individuelles Festpreisangebot; Einrichtung, laufende Betreuung und gegebenenfalls Speicher- oder Hardwarekosten werden transparent ausgewiesen. Die Paketpreise verstehen sich netto zzgl. MwSt.`,
+    question: "Kommen Sie auch vor Ort?",
+    answer: `Ja, in Castrop-Rauxel, Dortmund, Bochum, Herne und im Kreis Recklinghausen. Vieles geht auch per Fernwartung.`,
   },
 ];
