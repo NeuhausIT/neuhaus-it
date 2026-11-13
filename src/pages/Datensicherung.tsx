@@ -1,164 +1,123 @@
 import { Helmet } from "react-helmet-async";
-import { Calendar, Check, Database, FileX2, Globe2, HardDrive, KeyRound, MapPin, Phone, Server, ShieldCheck, ShieldOff, UserRound } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Calendar, Check, Clock, Database, FileCheck2, Globe2, HardDrive, House, LockKeyhole, Phone, Radio, ShieldCheck, UserRound, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import Header from "@/components/Header";
 import BackToHomeButton from "@/components/BackToHomeButton";
 import Footer from "@/components/Footer";
-import { backupCheck, backupCheckTerms, backupFaq, backupPackages } from "@/lib/datensicherung";
+import { backupContact, backupAreas, backupFaq, privateBackup, businessBackup } from "@/lib/datensicherung";
 
-const title = "Datensicherung nach der 3-2-1-Regel für Unternehmen | Neuhaus-IT Castrop-Rauxel";
-const description = "Datensicherung und Backup nach der 3-2-1-Regel für Unternehmen in Castrop-Rauxel und im Ruhrgebiet. Backup-Check ab 49,- € brutto buchen.";
-
-const BackupActions = () => (
-  <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
-    <Button size="lg" asChild className="h-auto min-h-12 whitespace-normal text-base py-3">
-      <a href={backupCheck.bookingUrl}><Calendar className="mr-2 h-5 w-5 shrink-0" />Backup-Check buchen</a>
-    </Button>
-    <Button variant="outline" size="lg" asChild className="min-h-12 text-base">
-      <a href={`tel:${backupCheck.telephone}`}><Phone className="mr-2 h-5 w-5" />Jetzt anrufen</a>
-    </Button>
-  </div>
-);
-
-const scenarios = [
-  { icon: HardDrive, title: "Festplatte defekt", text: "Mit einer unabhängigen Sicherung können Ihre Daten auf ein Ersatzgerät zurück – statt von der defekten Festplatte abhängig zu sein." },
-  { icon: ShieldOff, title: "Daten verschlüsselt", text: "Bei einem Verschlüsselungstrojaner (Ransomware) hilft eine saubere, getrennte Sicherung, wieder arbeitsfähig zu werden." },
-  { icon: FileX2, title: "Datei versehentlich gelöscht", text: "Ein früherer Sicherungsstand bringt gelöschte oder überschriebene Dateien zurück, ohne die gesamte IT zurückzusetzen." },
-];
-
-const services = [
-  "Analyse: Welche Daten sind geschäftskritisch – und wie lange darf ein Ausfall dauern?",
-  "Einrichtung Ihrer lokalen Sicherung auf einem NAS (Netzwerkspeicher) oder Backup-Server.",
-  "Verschlüsselte Sicherung außer Haus in deutschen Rechenzentren: Ende-zu-Ende-verschlüsselt, der Schlüssel bleibt bei Ihnen. Die Umsetzung wird auf Ihre DSGVO-Anforderungen abgestimmt.",
-  "Bewährte Open-Source-Werkzeuge wie BorgBackup oder Proxmox Backup Server: freie Software ohne Lizenzfalle und unnötige Anbieterabhängigkeit.",
-  "Automatische Überwachung: Bei einer fehlgeschlagenen Sicherung werde ich sofort benachrichtigt.",
-  "Regelmäßige Wiederherstellungstests mit Protokoll – damit nicht nur die Sicherung, sondern auch das Zurückspielen funktioniert.",
-  "Verständliche Dokumentation und ein Notfallplan für Ihr Unternehmen.",
-  "Ein fester Ansprechpartner statt einer anonymen Hotline.",
-];
-
+const title = "Datensicherung & Backup – eingerichtet, überwacht, getestet | Neuhaus-IT";
+const description = "Automatische, verschlüsselte Datensicherung für Privathaushalte und Unternehmen. Mit Überwachung und Wiederherstellungstest. Neuhaus-IT aus Castrop-Rauxel – vor Ort im Ruhrgebiet und per Fernwartung.";
+const url = "https://neuhaus-it.de/datensicherung";
 const steps = [
-  { title: "Backup-Check", text: `${backupCheckTerms}. Ich prüfe mit Ihnen die aktuelle Sicherung.` },
-  { title: "Konzept & Angebot", text: "Sie erhalten ein passendes Konzept und ein transparentes Festpreisangebot." },
-  { title: "Einrichtung & Test", text: "Ich richte die Sicherung ein und prüfe die erste Wiederherstellung." },
-  { title: "Laufende Betreuung", text: "Nach dem vereinbarten Paket überwache und teste ich Ihre Sicherung regelmäßig." },
-];
-
-const reasons = [
-  { icon: MapPin, title: "Persönlich im Ruhrgebiet", text: "Ich bin Ihr fester Ansprechpartner in Castrop-Rauxel – vor Ort und direkt erreichbar." },
-  { icon: KeyRound, title: "Ihre Daten bleiben Ihre Daten", text: "Open Source, selbst betriebene Systeme und Rechenzentren in Deutschland stärken Ihre digitale Souveränität." },
-  { icon: UserRound, title: "Ehrliche Beratung", text: "Sie erhalten verständliche Empfehlungen und transparente Festpreise statt eines Pakets von der Stange." },
-  { icon: ShieldCheck, title: "Ich denke mit", text: "Im betreuten Betrieb wird jede Sicherung überwacht; regelmäßige Tests prüfen, ob Ihre Daten zurückkommen." },
+  { icon: Clock, title: "Automatisch sichern", text: "Die Sicherung läuft im Hintergrund, ohne dass Sie daran denken müssen. Ich richte die Zeiten passend zu Ihrem Alltag ein." },
+  { icon: Radio, title: "Überwachen", text: "Jede Sicherung meldet sich. Bleibt die Meldung aus, kümmere ich mich." },
+  { icon: FileCheck2, title: "Wiederherstellung testen", text: "Ich stelle regelmäßig Probedateien wieder her und dokumentiere das Ergebnis. So prüfen wir, ob Ihre Daten im Ernstfall wieder verfügbar sind." },
 ];
 
 const Datensicherung = () => (
-  <div className="min-h-screen bg-background pb-24 md:pb-0">
+  <div className="min-h-screen bg-background">
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href="https://neuhaus-it.de/datensicherung" />
+      <link rel="canonical" href={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content="https://neuhaus-it.de/datensicherung" />
+      <meta property="og:url" content={url} />
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@graph": [
-          { "@type": "LocalBusiness", "@id": "https://neuhaus-it.de/#business", name: "Neuhaus-IT (Inh. Till Neuhaus)", description: "IT-Service, der mitdenkt.", url: "https://neuhaus-it.de", telephone: backupCheck.telephone, foundingDate: "2017", address: { "@type": "PostalAddress", streetAddress: "Erinstraße 7", postalCode: "44575", addressLocality: "Castrop-Rauxel", addressRegion: "NRW", addressCountry: "DE" }, areaServed: "Ruhrgebiet" },
-          { "@type": "Service", name: "Datensicherung nach der 3-2-1-Regel", serviceType: "ITService", provider: { "@id": "https://neuhaus-it.de/#business" }, url: "https://neuhaus-it.de/datensicherung" },
-          { "@type": "FAQPage", mainEntity: backupFaq.map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) },
+          { "@type": "LocalBusiness", "@id": "https://neuhaus-it.de/#business", name: "Neuhaus-IT (Inh. Till Neuhaus)", url: "https://neuhaus-it.de", telephone: backupContact.telephone, address: { "@type": "PostalAddress", streetAddress: "Erinstraße 7", postalCode: "44575", addressLocality: "Castrop-Rauxel", addressCountry: "DE" }, areaServed: backupAreas },
+          { "@type": "Service", "@id": `${url}#service`, name: "Datensicherung und Backup", description, provider: { "@id": "https://neuhaus-it.de/#business" }, areaServed: backupAreas, url },
+          { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: backupFaq.map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) },
         ],
       })}</script>
     </Helmet>
     <BackToHomeButton />
+    <Header />
     <main>
-      <section className="px-4 pt-6 pb-16 md:pb-20" aria-labelledby="backup-title">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-12">
-            <div className="border border-dashed border-border rounded-md h-12 w-12 flex items-center justify-center text-foreground text-xs" role="img" aria-label="Platzhalter für das Neuhaus-IT-Logo">Logo</div>
-            <div><p className="font-semibold">Neuhaus-IT <span className="font-normal">(Inh. Till Neuhaus)</span></p><p className="text-base">IT-Service, der mitdenkt.</p></div>
+      <section className="px-4 py-12 md:py-16" aria-labelledby="backup-title">
+        <div className="max-w-4xl mx-auto text-center">
+          <ShieldCheck className="h-12 w-12 text-accent mx-auto mb-5" aria-hidden="true" />
+          <p className="text-base font-semibold mb-4">Neuhaus-IT · Inh. Till Neuhaus · Castrop-Rauxel</p>
+          <h1 id="backup-title" className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent drop-shadow-sm">Datensicherung, auf die Sie sich verlassen können</h1>
+          <p className="text-lg md:text-xl leading-relaxed mb-8">Ich richte Ihre Datensicherung ein, überwache sie und teste regelmäßig die Wiederherstellung – für Ihr Zuhause und Ihr Unternehmen.</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button size="lg" asChild className="h-auto min-h-12 py-3 whitespace-normal text-base"><a href="#privat"><House className="h-5 w-5 mr-2 shrink-0" />Für Privathaushalte</a></Button>
+            <Button size="lg" variant="outline" asChild className="h-auto min-h-12 py-3 whitespace-normal text-base"><a href="#unternehmen"><Building2 className="h-5 w-5 mr-2 shrink-0" />Für Unternehmen & Institutionen</a></Button>
           </div>
-          <div className="max-w-4xl mx-auto text-center">
-            <ShieldCheck className="h-14 w-14 text-accent mx-auto mb-5" aria-hidden="true" />
-            <p className="text-base font-semibold mb-4">Datensicherung für Unternehmen im Ruhrgebiet</p>
-            <h1 id="backup-title" className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent drop-shadow-sm">Ihre Daten. Dreifach gesichert.</h1>
-            <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">Datensicherung nach der 3-2-1-Regel – eingerichtet, überwacht und regelmäßig getestet von Ihrem IT-Partner aus Castrop-Rauxel.</p>
-            <BackupActions />
-            <p className="text-base mt-5">{backupCheckTerms}</p>
+          <a href={`tel:${backupContact.telephone}`} className="inline-flex items-center gap-2 text-lg font-semibold underline underline-offset-4 py-3 mt-4"><Phone className="h-5 w-5" aria-hidden="true" />{backupContact.displayTelephone}</a>
+        </div>
+      </section>
+
+      <section className="px-4 pb-12" aria-label="Datensicherung kurz erklärt">
+        <div className="max-w-4xl mx-auto border-l-4 border-accent bg-secondary p-6">
+          <p className="text-lg leading-relaxed">Eine gute Datensicherung läuft automatisch, liegt an mindestens zwei getrennten Orten, ist verschlüsselt und wird regelmäßig auf Wiederherstellbarkeit getestet. Neuhaus-IT aus Castrop-Rauxel richtet genau das ein und behält es im Blick.</p>
+        </div>
+      </section>
+
+      <section className="px-4 py-12" aria-labelledby="steps-title">
+        <div className="max-w-6xl mx-auto">
+          <h2 id="steps-title" className="text-3xl font-bold text-center mb-10">Einrichten. Überwachen. Testen.</h2>
+          <div className="grid md:grid-cols-3 gap-8">{steps.map(({ icon: Icon, title, text }) => <div key={title} className="border-t-2 border-accent pt-6"><Icon className="h-8 w-8 text-accent mb-4" aria-hidden="true" /><h3 className="text-xl font-semibold mb-3">{title}</h3><p className="text-base leading-relaxed">{text}</p></div>)}</div>
+        </div>
+      </section>
+
+      <section className="px-4 py-12 bg-secondary" aria-labelledby="rule-title">
+        <div className="max-w-6xl mx-auto">
+          <h2 id="rule-title" className="text-3xl font-bold text-center mb-4">Die 3-2-1-Regel – einfach erklärt</h2>
+          <p className="text-lg text-center mb-8">3 Kopien Ihrer Daten, auf 2 verschiedenen Speichermedien, 1 davon außer Haus.</p>
+          <div className="grid md:grid-cols-3 gap-6">{[
+            { number: "3", icon: Database, title: "Kopien Ihrer Daten", text: "Ihr Original und zwei unabhängige Sicherungen." },
+            { number: "2", icon: HardDrive, title: "Verschiedene Speichermedien", text: "Zum Beispiel Computer und externe Festplatte – nicht zwei Ordner auf derselben Festplatte." },
+            { number: "1", icon: Globe2, title: "Kopie außer Haus", text: "Zum Beispiel verschlüsselt in einem Rechenzentrum in Deutschland." },
+          ].map(({ number, icon: Icon, title, text }) => <article key={number} className="bg-card border border-border rounded-lg p-6"><div className="flex items-center justify-between mb-4"><span className="text-5xl font-bold text-primary">{number}</span><Icon className="h-8 w-8 text-accent" aria-hidden="true" /></div><h3 className="text-xl font-semibold mb-3">{title}</h3><p className="text-base leading-relaxed">{text}</p></article>)}</div>
+        </div>
+      </section>
+
+      <section className="px-4 py-12" aria-labelledby="experience-title">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start gap-8 border-l-4 border-primary pl-6">
+          <div className="w-32 h-40 shrink-0 bg-muted border border-dashed border-border rounded-md flex flex-col items-center justify-center gap-3 text-muted-foreground" role="img" aria-label="Platzhalter für ein zukünftiges Foto von Till Neuhaus"><UserRound className="h-12 w-12" aria-hidden="true" /><span className="text-sm">Foto folgt</span></div>
+          <div><h2 id="experience-title" className="text-3xl font-bold mb-5">Aus eigener Erfahrung</h2><blockquote className="text-lg leading-relaxed"><p>Auch bei mir lief ein Backup einmal wochenlang ins Leere – ohne Fehlermeldung. Seitdem meldet jede Sicherung ihren Status an ein Überwachungssystem. Genau das richte ich auch für Sie ein.</p><footer className="mt-4 text-base font-semibold">– Till Neuhaus</footer></blockquote></div>
+        </div>
+      </section>
+
+      <section className="px-4 py-12 bg-secondary" aria-labelledby="offers-title">
+        <div className="max-w-6xl mx-auto">
+          <h2 id="offers-title" className="text-3xl font-bold text-center mb-4">Datensicherung für Ihren Alltag</h2>
+          <p className="text-lg text-center mb-10">Für Privathaushalte und kleine Unternehmen, Praxen, Kanzleien, Vereine und Institutionen.</p>
+          <div className="grid lg:grid-cols-2 gap-6">
+            <article id="privat" className="scroll-mt-24 bg-card border border-border rounded-lg p-6 md:p-8 flex flex-col">
+              <House className="h-8 w-8 text-primary mb-4" aria-hidden="true" /><h3 className="text-2xl font-bold mb-6">Für Privathaushalte</h3>
+              <ul className="space-y-4 mb-8">{privateBackup.items.map(item => <li key={item} className="flex gap-3 text-base leading-relaxed"><Check className="h-5 w-5 mt-1 shrink-0 text-accent" aria-hidden="true" /><span>{item}</span></li>)}</ul>
+              <div className="mt-auto border-t border-border pt-6 mb-6"><p className="text-xl">Ab {privateBackup.price} € inkl. USt.</p><p className="text-base mt-2">Für die Einrichtung, bis max. {privateBackup.durationMinutes} Minuten. Vor Ort zzgl. Anfahrt.</p></div>
+              <Button asChild variant="outline" className="h-auto min-h-12 py-3 whitespace-normal text-base"><a href={privateBackup.url}>Datensicherung für Privathaushalte</a></Button>
+            </article>
+            <article id="unternehmen" className="scroll-mt-24 bg-card border border-border rounded-lg p-6 md:p-8 flex flex-col">
+              <Building2 className="h-8 w-8 text-accent mb-4" aria-hidden="true" /><h3 className="text-2xl font-bold mb-6">Für Unternehmen & Institutionen</h3>
+              <ul className="space-y-4 mb-8">{businessBackup.items.map(item => <li key={item} className="flex gap-3 text-base leading-relaxed"><Check className="h-5 w-5 mt-1 shrink-0 text-accent" aria-hidden="true" /><span>{item}</span></li>)}</ul>
+              <div className="mt-auto border-t border-border pt-6 mb-6 space-y-3 text-base"><p>Nach Aufwand: <strong>{businessBackup.hourlyRate} € netto/Std.</strong></p><p>Backup-Schnellcheck: <strong>{businessBackup.quickCheckPrice} € netto</strong> – wird bei Beauftragung angerechnet.</p><p>Betreute Datensicherung: <strong>ab {businessBackup.monthlyPricePerWorkplace} € netto pro Arbeitsplatz und Monat</strong></p><p>Alle Nettopreise zzgl. gesetzlicher Umsatzsteuer.</p></div>
+              <Button asChild className="h-auto min-h-12 py-3 whitespace-normal text-base"><a href={businessBackup.url}>Datensicherung für Unternehmen</a></Button>
+            </article>
           </div>
         </div>
       </section>
 
-      <section className="px-4 pb-16" aria-labelledby="scenarios-title">
-        <div className="max-w-6xl mx-auto">
-          <h2 id="scenarios-title" className="text-2xl md:text-3xl font-bold text-center mb-8">Wenn etwas schiefgeht, haben Sie eine Sicherung.</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {scenarios.map(({ icon: Icon, title, text }) => <article key={title} className="bg-card border border-border rounded-lg p-6"><Icon className="h-8 w-8 text-accent mb-4" aria-hidden="true" /><h3 className="text-xl font-semibold mb-3">{title}</h3><p className="text-base leading-relaxed">{text}</p></article>)}
-          </div>
-        </div>
+      <section className="px-4 py-12" aria-labelledby="privacy-title">
+        <div className="max-w-4xl mx-auto"><LockKeyhole className="h-8 w-8 text-accent mb-4" aria-hidden="true" /><h2 id="privacy-title" className="text-3xl font-bold mb-6">Ihre Daten bleiben Ihre Daten</h2><div className="grid md:grid-cols-2 gap-6 text-base leading-relaxed"><p>Ihre Daten werden vor dem Hochladen verschlüsselt. Für die Sicherung außer Haus nutze ich Speicherorte in Deutschland.</p><p>Ich setze bewährte Open-Source-Werkzeuge ein – freie Software ohne Lizenzbindung. Sie behalten die Schlüssel zu Ihren Daten.</p></div></div>
       </section>
 
-      <section className="bg-secondary px-4 py-16" aria-labelledby="rule-title">
-        <div className="max-w-6xl mx-auto">
-          <h2 id="rule-title" className="text-3xl font-bold text-center mb-4">Die 3-2-1-Regel. Einfach erklärt.</h2>
-          <p className="text-lg text-center mb-10">Nicht alles an einem Ort. Nicht alles auf einem Gerät.</p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { number: "3", icon: Database, title: "Kopien Ihrer Daten", text: "Das Original und zwei unabhängige Sicherungen. So bleibt eine weitere Kopie, wenn eine ausfällt." },
-              { number: "2", icon: Server, title: "Verschiedene Speichermedien", text: "Zum Beispiel Ihr Server oder NAS und ein externer Datenträger – nicht nur zwei Ordner auf derselben Festplatte." },
-              { number: "1", icon: Globe2, title: "Kopie außer Haus", text: "Verschlüsselt in einem Rechenzentrum in Deutschland. Getrennt von Ihrem Standort, falls dort etwas passiert." },
-            ].map(({ number, icon: Icon, title, text }) => <div key={number} className="border-t-2 border-accent pt-5"><div className="flex items-center justify-between mb-4"><span className="text-6xl font-bold">{number}</span><Icon className="h-10 w-10 text-foreground" aria-hidden="true" /></div><h3 className="text-xl font-semibold mb-3">{title}</h3><p className="text-base leading-relaxed">{text}</p></div>)}
-          </div>
-          <p className="text-base leading-relaxed border-t border-border pt-6 mt-10"><strong>Noch robuster: 3-2-1-1-0.</strong> Eine weitere Kopie bleibt offline oder unveränderbar (auch „immutable“ genannt). Null Fehler bei der Wiederherstellungsprüfung heißt: Das Zurückspielen wurde geprüft, nicht nur das Kopieren.</p>
-        </div>
+      <section className="px-4 py-12 border-t border-border" aria-labelledby="faq-title">
+        <div className="max-w-4xl mx-auto"><h2 id="faq-title" className="text-3xl font-bold mb-8">Häufige Fragen zur Datensicherung</h2><Accordion type="single" collapsible>{backupFaq.map((faq, index) => <AccordionItem key={faq.question} value={`faq-${index}`}><AccordionTrigger className="text-base md:text-lg text-left gap-4">{faq.question}</AccordionTrigger><AccordionContent className="text-base leading-relaxed">{faq.answer}</AccordionContent></AccordionItem>)}</Accordion></div>
       </section>
 
-      <section className="px-4 py-16" aria-labelledby="services-title"><div className="max-w-4xl mx-auto">
-        <h2 id="services-title" className="text-3xl font-bold mb-4">Eine Sicherung, die zu Ihrem Betrieb passt.</h2>
-        <p className="text-lg leading-relaxed mb-8">Für Arztpraxen, Kanzleien, Handwerksbetriebe und Dienstleister mit 1–50 Mitarbeitenden. Ich kümmere mich um die Technik – Sie behalten den Überblick.</p>
-        <ul className="grid md:grid-cols-2 gap-6">{services.map(service => <li key={service} className="flex gap-3 text-base leading-relaxed"><Check className="h-5 w-5 shrink-0 text-foreground mt-1" aria-hidden="true" /><span>{service}</span></li>)}</ul>
-        <p className="text-base mt-8">Den Umfang von Überwachung, Tests und Notfallplanung lege ich mit Ihnen im gewählten Paket fest.</p>
-      </div></section>
-
-      <section className="px-4 py-16 bg-secondary" aria-labelledby="steps-title"><div className="max-w-6xl mx-auto">
-        <h2 id="steps-title" className="text-3xl font-bold text-center mb-10">In vier Schritten zu einem geprüften Backup</h2>
-        <ol className="grid md:grid-cols-4 gap-8">{steps.map((step, index) => <li key={step.title} className="border-l-2 md:border-l-0 md:border-t-2 border-accent pl-5 md:pl-0 md:pt-5"><span className="text-2xl font-bold block mb-3">0{index + 1}</span><h3 className="text-xl font-semibold mb-3">{step.title}</h3><p className="text-base leading-relaxed">{step.text}</p></li>)}</ol>
-      </div></section>
-
-      <section className="px-4 py-16" aria-labelledby="packages-title"><div className="max-w-6xl mx-auto">
-        <h2 id="packages-title" className="text-3xl font-bold text-center mb-4">So viel Betreuung, wie Sie brauchen.</h2>
-        <p className="text-lg text-center mb-10">Einmal einrichten oder dauerhaft begleiten – Sie entscheiden.</p>
-        <div className="grid md:grid-cols-3 gap-6">{backupPackages.map(pkg => <article key={pkg.name} className={`rounded-lg border p-6 flex flex-col bg-card ${pkg.recommended ? "border-accent border-2" : "border-border"}`}>
-          <div className="min-h-8 mb-3">{pkg.recommended && <p className="text-sm font-bold flex items-center gap-2"><ShieldCheck className="h-4 w-4" aria-hidden="true" />Meine Empfehlung</p>}</div>
-          <h3 className="text-2xl font-bold mb-4">{pkg.name}</h3><p className="text-3xl font-bold mb-2">{pkg.price}</p><p className="text-base min-h-12 mb-6">{pkg.billing}</p>
-          <ul className="space-y-3 mb-8 flex-1">{pkg.items.map(item => <li key={item} className="flex gap-2 text-base"><Check className="h-5 w-5 shrink-0" aria-hidden="true" /><span>{item}</span></li>)}</ul>
-          <Button variant={pkg.recommended ? "default" : "outline"} asChild className="text-base min-h-11"><a href={backupCheck.bookingUrl}>Backup-Check buchen</a></Button>
-        </article>)}</div>
-        <p className="text-base text-center mt-6">Alle Paketpreise netto zzgl. MwSt. Individuelles Angebot nach dem Backup-Check.</p>
-      </div></section>
-
-      <section className="px-4 py-16 bg-secondary" aria-labelledby="why-title"><div className="max-w-6xl mx-auto">
-        <h2 id="why-title" className="text-3xl font-bold mb-4">Warum Neuhaus-IT?</h2><p className="text-lg mb-10">Till Neuhaus · IT-Freelancer seit 2017 · IT-Service, der mitdenkt.</p>
-        <div className="grid md:grid-cols-2 gap-8">{reasons.map(({ icon: Icon, title, text }) => <div key={title} className="flex gap-4"><Icon className="h-7 w-7 shrink-0" aria-hidden="true" /><div><h3 className="text-xl font-semibold mb-2">{title}</h3><p className="text-base leading-relaxed">{text}</p></div></div>)}</div>
-      </div></section>
-
-      <section className="px-4 py-12 text-center" aria-labelledby="reviews-title"><h2 id="reviews-title" className="text-2xl font-bold mb-3">Kundenstimmen</h2><p className="text-base">Kundenstimmen folgen</p></section>
-
-      <section className="px-4 py-16 border-t border-border" aria-labelledby="faq-title"><div className="max-w-4xl mx-auto">
-        <h2 id="faq-title" className="text-3xl font-bold mb-8">Ihre Fragen zur Datensicherung</h2>
-        <Accordion type="single" collapsible>{backupFaq.map((faq, index) => <AccordionItem key={faq.question} value={`faq-${index}`}><AccordionTrigger className="text-base md:text-lg text-left gap-4">{faq.question}</AccordionTrigger><AccordionContent className="text-base leading-relaxed">{faq.answer}</AccordionContent></AccordionItem>)}</Accordion>
-      </div></section>
-
-      <section className="px-4 py-16 bg-secondary text-center" aria-labelledby="final-title"><div className="max-w-4xl mx-auto">
-        <h2 id="final-title" className="text-3xl md:text-4xl font-bold mb-5">Wann haben Sie Ihr Backup zuletzt getestet?</h2>
-        <p className="text-lg leading-relaxed max-w-2xl mx-auto mb-8">Im Backup-Check prüfe ich Ihre aktuelle Datensicherung und zeige Ihnen, wo es Lücken gibt – {backupCheckTerms}.</p><BackupActions />
-        <address className="not-italic text-base leading-relaxed mt-10">Neuhaus-IT (Inh. Till Neuhaus)<br />Erinstraße 7 · 44575 Castrop-Rauxel<br /><a href={`tel:${backupCheck.telephone}`} className="underline underline-offset-4">02305 4459886</a> · <a href="mailto:service@neuhaus-it.de" className="underline underline-offset-4">service@neuhaus-it.de</a></address>
-        <p className="text-base font-semibold mt-4">IT-Service, der mitdenkt.</p>
-      </div></section>
+      <section className="px-4 py-12 bg-secondary text-center" aria-labelledby="contact-title">
+        <div className="max-w-4xl mx-auto"><h2 id="contact-title" className="text-3xl font-bold mb-5">Lassen Sie uns Ihre Daten absichern</h2><p className="text-lg mb-8">Ein kurzes Gespräch genügt, um zu klären, was Sie brauchen.</p><div className="flex flex-col sm:flex-row gap-3 justify-center"><Button size="lg" asChild className="text-base"><a href={`tel:${backupContact.telephone}`}><Phone className="h-5 w-5 mr-2" />Jetzt anrufen</a></Button><Button variant="outline" size="lg" asChild className="text-base"><Link to={backupContact.bookingUrl}><Calendar className="h-5 w-5 mr-2" />Termin buchen</Link></Button></div></div>
+      </section>
     </main>
     <Footer />
-    <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-background border-t border-border px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-      <Button asChild size="lg" className="w-full text-base"><a href={backupCheck.bookingUrl}><Calendar className="h-5 w-5 mr-2" />Backup-Check buchen</a></Button>
-    </div>
   </div>
 );
 
