@@ -10,7 +10,10 @@ export function prerenderHtml(template: string, rendered: { html: string; head: 
     const fixed = head.replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, "")
       .replace(/<meta\b[^>]*>/gi, tag => {
         const key = tag.match(/(?:name|property)=["']([^"']+)["']/i)?.[1];
-        return key && /^(description|robots|og:|twitter:)/i.test(key) ? "" : tag;
+        if (!key) return tag;
+        if (/^twitter:(title|description)$/i.test(key)) return "";
+        const ownedByHelmet = rendered.head.includes(`name="${key}"`) || rendered.head.includes(`property="${key}"`);
+        return ownedByHelmet || /^(description|robots|og:(title|description|url))$/i.test(key) ? "" : tag;
       })
       .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, "");
     return `<head>${fixed}${rendered.head}</head>`;

@@ -31,7 +31,7 @@ export function prerender(): Plugin {
             outDir: temporary,
             emptyOutDir: true,
             assetsInlineLimit: config.build.assetsInlineLimit,
-            rollupOptions: { output: { entryFileNames: "entry-server.mjs", assetFileNames: "assets/[name]-[hash][extname]" } },
+            rollupOptions: { output: { entryFileNames: "entry-server.mjs", assetFileNames: `${config.build.assetsDir}/[name]-[hash][extname]` } },
           },
         });
         const server = await import(/* @vite-ignore */ pathToFileURL(path.join(temporary, "entry-server.mjs")).href);
