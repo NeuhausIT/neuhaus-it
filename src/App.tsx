@@ -2,7 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import type { ComponentType } from "react";
+import { contentRoutes, redirects, type ContentRoute } from "./lib/routes";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Terminbuchungen from "./pages/Terminbuchungen";
@@ -22,35 +24,40 @@ import Datensicherung from "./pages/Datensicherung";
 
 const queryClient = new QueryClient();
 
+const pages: Record<ContentRoute, ComponentType> = {
+  "/": Index,
+  "/terminbuchungen": Terminbuchungen,
+  "/preise": Preise,
+  "/datensicherung": Datensicherung,
+  "/kontakt-und-impressum": KontaktImpressum,
+  "/managed-nodes": ManagedNodes,
+  "/fernwartung": Fernwartung,
+  "/leitbild": Leitbild,
+  "/geschaeftsmodell-und-differenzierung": GeschaeftsmodellUndDifferenzierung,
+  "/managed-it-services-msp-monitoring": ManagedItServicesMspMonitoring,
+  "/signal": Signal,
+  "/tresor": Tresor,
+  "/notepadplusplus": NotepadPlusPlus,
+  "/kunden/zahnarzt-am-markt": KundenZahnarztAmMarkt,
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/termine" element={<Navigate to="/terminbuchungen" replace />} />
-          <Route path="/termin" element={<Navigate to="/terminbuchungen" replace />} />
-          <Route path="/terminbuchungen" element={<Terminbuchungen />} />
-          <Route path="/preise" element={<Preise />} />
-          <Route path="/datensicherung" element={<Datensicherung />} />
-          <Route path="/kontakt-und-impressum" element={<KontaktImpressum />} />
-          <Route path="/managed-nodes" element={<ManagedNodes />} />
-          <Route path="/serveradministration" element={<ManagedNodes />} /> {/* Legacy redirect */}
-          <Route path="/fernwartung" element={<Fernwartung />} />
-          <Route path="/leitbild" element={<Leitbild />} />
-          <Route path="/geschaeftsmodell-und-differenzierung" element={<GeschaeftsmodellUndDifferenzierung />} />
-          <Route path="/managed-it-services-msp-monitoring" element={<ManagedItServicesMspMonitoring />} />
-          <Route path="/signal" element={<Signal />} />
-          <Route path="/tresor" element={<Tresor />} />
-          <Route path="/notepadplusplus" element={<NotepadPlusPlus />} />
-          <Route path="/kunden/zahnarzt-am-markt" element={<KundenZahnarztAmMarkt />} />
+          {contentRoutes.map(path => {
+            const Page = pages[path];
+            return <Route key={path} path={path} element={<Page />} />;
+          })}
+          {Object.entries(redirects).map(([path, target]) => (
+            <Route key={path} path={path} element={<Navigate to={target} replace />} />
+          ))}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );

@@ -10,6 +10,11 @@ const KundenZahnarztAmMarkt = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Zahnarzt am Markt – Kundenbereich | Neuhaus-IT</title>
+        <meta name="description" content="Kundenbereich für Zahnarzt am Markt: Laden Sie den NinjaOne Agent für Ihre IT-Betreuung durch Neuhaus-IT herunter." />
+        <link rel="canonical" href="https://neuhaus-it.de/kunden/zahnarzt-am-markt" />
+        <meta property="og:title" content="Zahnarzt am Markt – Kundenbereich | Neuhaus-IT" />
+        <meta property="og:description" content="Kundenbereich für Zahnarzt am Markt: Laden Sie den NinjaOne Agent für Ihre IT-Betreuung durch Neuhaus-IT herunter." />
+        <meta property="og:url" content="https://neuhaus-it.de/kunden/zahnarzt-am-markt" />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 

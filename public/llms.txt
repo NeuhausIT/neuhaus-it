@@ -1,0 +1,19 @@
+# Neuhaus-IT (Inh. Till Neuhaus)
+
+> Persönlicher IT-Dienstleister für kleine und mittlere Unternehmen sowie Privathaushalte in Castrop-Rauxel und Umgebung.
+
+Ich unterstütze Sie bei IT-Beratung, Support und dem Betrieb Ihrer Systeme. Mein Schwerpunkt liegt auf digitaler Souveränität, Open Source und Selfhosting.
+
+## Seiten
+
+- [Startseite](/): Neuhaus-IT und die Angebote für Unternehmen und Privathaushalte.
+- [Leitbild](/leitbild): Digitale Souveränität, freie Software und Nachhaltigkeit.
+- [Managed Nodes](/managed-nodes): Betreuung von Servern, virtuellen Maschinen, Containern und Endgeräten.
+- [Managed IT Services](/managed-it-services-msp-monitoring): Überwachung und Aktualisierung Ihrer Unternehmens-IT.
+- [Datensicherung](/datensicherung): Einrichtung, Überwachung und Wiederherstellungstests für Ihre Sicherungen.
+- [Fernwartung](/fernwartung): Unterstützung mit RustDesk über einen eigenen Server und Client-Downloads.
+- [Terminbuchungen](/terminbuchungen): Telefonische Erstberatung, Vor-Ort-Termine und Fernwartung.
+- [Preise](/preise): Preise für IT-Beratung, Support und Anfahrt.
+- [Kontakt und Impressum](/kontakt-und-impressum): Kontaktdaten, Anschriften und digitale Visitenkarte.
+- [Signal](/signal): Kontakt über Signal.
+- [Notepad++](/notepadplusplus): Informationen und Prüfbefehle zum Sicherheitsvorfall.
