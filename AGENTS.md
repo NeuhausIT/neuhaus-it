@@ -1,3 +1,5 @@
 # Architecture
 - Keep backup audience offers, service areas and FAQ content in `src/lib/datensicherung.ts`; the page, structured data and rule tests share one source to avoid contradictory offers.
-- Add public static pages through the existing React router and Helmet metadata, with a sitemap entry and shared footer link, to preserve the site's navigation and SEO conventions.
+- Add pages through the shared route registry and router-independent App with Helmet metadata; keep public indexable entries in the sitemap and shared footer so navigation and build-time prerendering stay aligned.
+- Prerender with the Vite closeBundle plugin and the same App under StaticRouter; hydrate it under BrowserRouter to preserve identical markup without a runtime server.
+- Preserve client-build asset filenames and Helmet-owned metadata in static output; fail on incomplete page metadata to avoid deploying empty crawler pages.
