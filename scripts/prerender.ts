@@ -37,6 +37,10 @@ export function prerender(): Plugin {
         const server = await import(/* @vite-ignore */ pathToFileURL(path.join(temporary, "entry-server.mjs")).href);
         // Render everything before overwriting the template; fail the build rather than emit empty pages.
         const pages = server.contentRoutes.map((route: string) => ({ route, document: prerenderHtml(template, server.render(route)) }));
+        const titles = pages.map(({ document }: { document: string }) => document.match(/<title[^>]*>(.*?)<\/title>/)?.[1]);
+        if (titles.some((title: string | undefined) => !title) || new Set(titles).size !== pages.length) {
+          throw new Error("Prerendered pages require unique, nonempty titles");
+        }
         for (const { route, document } of pages) {
           const directory = route === "/" ? output : path.join(output, route.slice(1));
           await mkdir(directory, { recursive: true });

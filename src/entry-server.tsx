@@ -2,6 +2,7 @@ import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import { HelmetProvider, type HelmetServerState } from "react-helmet-async";
 import App from "./App";
+import { canonicalUrl, noindexRoutes } from "./lib/routes";
 export { contentRoutes, redirects } from "./lib/routes";
 
 export function render(route: string) {
@@ -18,5 +19,15 @@ export function render(route: string) {
   if (!head.includes('name="description"') || !head.includes('rel="canonical"')) {
     throw new Error(`Incomplete metadata for ${route}`);
   }
+  if (!head.includes(`href="${canonicalUrl(route)}"`) || !head.includes(`content="${canonicalUrl(route)}"`)) {
+    throw new Error(`Incorrect canonical or og:url for ${route}`);
+  }
+  if (!head.includes('property="og:title"') || !head.includes('property="og:description"')) {
+    throw new Error(`Missing Open Graph metadata for ${route}`);
+  }
+  if (noindexRoutes.some(path => path === route) && !/name="robots"[^>]*content="noindex/.test(head)) {
+    throw new Error(`Missing noindex for ${route}`);
+  }
+  if (!/<h1[\s>]/.test(html)) throw new Error(`Missing page content for ${route}`);
   return { html, head };
 }

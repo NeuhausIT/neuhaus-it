@@ -4,6 +4,7 @@
 - [x] Preisregeln testen und Kontaktfluss auf Desktop und Smartphone prüfen.
 
 # Statisches Vorrendern
-- [ ] Gemeinsame Routen, Build-Vorrendern, Weiterleitungen und Hydration einbauen.
-- [ ] Metadaten, Sitemap und llms.txt ergänzen.
-- [ ] Regeln testen und Produktionsausgabe sowie Browseraktionen prüfen; nicht veröffentlichen.
+- [x] Gemeinsame Routen, Build-Vorrendern, Weiterleitungen und Hydration einbauen.
+- [x] Metadaten, Sitemap und llms.txt ergänzen.
+- [x] Regeln testen; 14 gerenderte Seiten und Hydration ohne Konsolenfehler sowie Termin-/Kontaktaktionen prüfen; nicht veröffentlichen.
+- [ ] Tatsächliche Produktionsdateien prüfen: automatischer Build meldet OK, stellt hier aber keinen dist-Ordner bereit; geschützte externe Draft-Vorschau liefert HTTP 401.
