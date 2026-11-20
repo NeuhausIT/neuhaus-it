@@ -20,7 +20,7 @@ const topics = [
 
 const steps = [
   { title: "Termin buchen", text: "online oder telefonisch" },
-  { title: "Gespräch, ca. 30 Minuten", text: "per Telefon, Video oder in unserem Büro in Castrop-Rauxel" },
+  { title: "Gespräch, ca. 30 Minuten", text: "per Telefon, Video oder in meinem Büro in Castrop-Rauxel" },
   { title: "Ergebnis", text: "eine kurze Einschätzung mit konkreten Empfehlungen für Ihr Unternehmen" },
 ];
 
@@ -47,7 +47,7 @@ const SouveraenitaetsCheck = () => (
     <main>
       <SubpageHero
         title="Kostenloser Souveränitäts-Check für Ihr Unternehmen"
-        description="Wie abhängig ist Ihr Unternehmen von US-Cloud-Diensten? In einem kostenlosen und unverbindlichen Gespräch schauen wir gemeinsam auf Ihre IT – danach wissen Sie, wo Sie stehen und was die nächsten sinnvollen Schritte sind."
+        description="Wie abhängig ist Ihr Unternehmen von US-Cloud-Diensten? In einem kostenlosen und unverbindlichen Gespräch werfen Sie und ich gemeinsam einen Blick auf Ihre IT – danach wissen Sie, wo Sie stehen und was die nächsten sinnvollen Schritte sind."
         icon={<ShieldCheck className="w-16 h-16 text-primary" />}
         showActionButton={false}
       >
@@ -60,7 +60,7 @@ const SouveraenitaetsCheck = () => (
       </SubpageHero>
 
       <section className="container mx-auto px-4 py-12 max-w-4xl">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Was wir uns gemeinsam ansehen</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Was ich mir mit Ihnen gemeinsam ansehe</h2>
         <ul className="grid gap-4 md:grid-cols-2">
           {topics.map(({ icon: Icon, title, text }) => (
             <li key={title}>
@@ -94,7 +94,7 @@ const SouveraenitaetsCheck = () => (
           <Cloud className="w-12 h-12 text-primary mx-auto mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Direkt ausprobieren: das Nextcloud-Testpaket</h2>
           <p className="text-muted-foreground mb-3">Testen Sie Nextcloud drei Monate lang mit bis zu fünf Personen: Dateien teilen, gemeinsame Kalender und Adressbücher, Nutzerverwaltung – gehostet in Deutschland.</p>
-          <p className="mb-6"><strong>Pauschal 149 € zzgl. USt.</strong> Wechseln Sie danach zu einer dauerhaft betreuten Nextcloud, rechnen wir den Betrag auf die Einrichtung an.</p>
+          <p className="mb-6"><strong>Pauschal 149 € zzgl. USt.</strong> Wechseln Sie danach zu einer dauerhaft betreuten Nextcloud, rechne ich den Betrag auf die Einrichtung an.</p>
           <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
             <Link to="/terminbuchungen">Beratungstermin vereinbaren</Link>
           </Button>
@@ -102,7 +102,7 @@ const SouveraenitaetsCheck = () => (
       </section>
 
       <section className="container mx-auto px-4 py-12 max-w-2xl text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">Fragen? Sprechen Sie uns an.</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">Fragen? Sprechen Sie mich an.</h2>
         <ul className="space-y-3 mb-8">
           <li className="flex items-center justify-center gap-2"><Phone className="w-5 h-5 text-primary" /><a href="tel:+4923054459886" className="text-primary underline">02305 4459886</a></li>
           <li className="flex items-center justify-center gap-2"><Mail className="w-5 h-5 text-primary" /><a href="mailto:hallo@neuhaus-it.de" className="text-primary underline">hallo@neuhaus-it.de</a></li>
