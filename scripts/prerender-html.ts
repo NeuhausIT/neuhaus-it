@@ -4,7 +4,7 @@ export function redirectHtml(target: string) {
   if (/^https?:\/\//.test(target)) {
     return `<!doctype html><html lang="de"><head><meta charset="UTF-8"><title>Weiterleitung | Neuhaus-IT</title><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0; url=${target}"><link rel="canonical" href="${target}"></head><body><p>Sie werden weitergeleitet …</p><a href="${target}" rel="noopener">Weiter zur Seite</a></body></html>`;
   }
-  return `<!doctype html><html lang="de"><head><meta charset="UTF-8"><title>Weiterleitung | Neuhaus-IT</title><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0; url=${target}"><link rel="canonical" href="${canonicalUrl(target)}"></head><body><a href="${target}">Weiter zur Seite</a></body></html>`;
+  return `<!doctype html><html lang="de"><head><meta charset="UTF-8"><title>Weiterleitung | Neuhaus-IT</title><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0; url=${target.replace(/&/g, "&amp;")}"><link rel="canonical" href="${canonicalUrl(target)}"></head><body><a href="${target.replace(/&/g, "&amp;")}">Weiter zur Seite</a></body></html>`;
 }
 
 export function prerenderHtml(template: string, rendered: { html: string; head: string }) {

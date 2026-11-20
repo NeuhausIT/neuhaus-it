@@ -23,6 +23,7 @@ import KundenZahnarztAmMarkt from "./pages/KundenZahnarztAmMarkt";
 import NotFound from "./pages/NotFound";
 import Datensicherung from "./pages/Datensicherung";
 import Upload from "./pages/Upload";
+import SouveraenitaetsCheck from "./pages/SouveraenitaetsCheck";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const pages: Record<ContentRoute, ComponentType> = {
   "/notepadplusplus": NotepadPlusPlus,
   "/kunden/zahnarzt-am-markt": KundenZahnarztAmMarkt,
   "/upload": Upload,
+  "/souveraenitaets-check": SouveraenitaetsCheck,
 };
 
 const App = () => (

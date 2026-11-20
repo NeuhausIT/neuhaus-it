@@ -5,9 +5,9 @@ import { readFileSync } from "node:fs";
 import { canonicalUrl, contentRoutes, redirects, externalRedirects, noindexRoutes, indexableRoutes } from "./routes";
 
 describe("Statische Routen und Suchmaschinenregeln", () => {
-  test("Alle 15 Inhaltsrouten sind eindeutig registriert", () => {
-    assert.deepEqual([...contentRoutes].sort(), ["/", "/terminbuchungen", "/preise", "/datensicherung", "/kontakt-und-impressum", "/managed-nodes", "/fernwartung", "/leitbild", "/geschaeftsmodell-und-differenzierung", "/managed-it-services-msp-monitoring", "/signal", "/tresor", "/notepadplusplus", "/kunden/zahnarzt-am-markt", "/upload"].sort());
-    assert.equal(new Set(contentRoutes).size, 15);
+  test("Alle 16 Inhaltsrouten sind eindeutig registriert", () => {
+    assert.deepEqual([...contentRoutes].sort(), ["/", "/terminbuchungen", "/preise", "/datensicherung", "/kontakt-und-impressum", "/managed-nodes", "/fernwartung", "/leitbild", "/geschaeftsmodell-und-differenzierung", "/managed-it-services-msp-monitoring", "/signal", "/tresor", "/notepadplusplus", "/kunden/zahnarzt-am-markt", "/upload", "/souveraenitaets-check"].sort());
+    assert.equal(new Set(contentRoutes).size, 16);
   });
   test("Beide Termin-Aliase leiten auf Terminbuchungen", () => {
     assert.equal(redirects["/termine"], "/terminbuchungen");
@@ -23,8 +23,12 @@ describe("Statische Routen und Suchmaschinenregeln", () => {
     assert.equal(canonicalUrl("/preise/"), "https://neuhaus-it.de/preise");
     assert.equal(canonicalUrl("/kunden/zahnarzt-am-markt"), "https://neuhaus-it.de/kunden/zahnarzt-am-markt");
   });
-  test("Genau die vier vorgegebenen Inhaltsseiten sind noindex", () => {
-    assert.deepEqual([...noindexRoutes].sort(), ["/geschaeftsmodell-und-differenzierung", "/tresor", "/kunden/zahnarzt-am-markt", "/upload"].sort());
+  test("Genau die fünf vorgegebenen Inhaltsseiten sind noindex", () => {
+    assert.deepEqual([...noindexRoutes].sort(), ["/geschaeftsmodell-und-differenzierung", "/tresor", "/kunden/zahnarzt-am-markt", "/upload", "/souveraenitaets-check"].sort());
+  });
+  test("Roll-up-Kurzlink /check leitet mit UTM-Parametern auf den Souveränitäts-Check", () => {
+    assert.equal(redirects["/check"], "/souveraenitaets-check?utm_source=rollup&utm_campaign=digital-sicher-nrw");
+    assert.equal(canonicalUrl(redirects["/check"]), "https://neuhaus-it.de/souveraenitaets-check");
   });
   test("Uploads leitet extern auf die vorgegebene Nextcloud-Freigabe", () => {
     assert.equal(externalRedirects["/uploads"], "https://cloud.neuhaus-it.de/s/4cqZBMrHDXwGKSj");
