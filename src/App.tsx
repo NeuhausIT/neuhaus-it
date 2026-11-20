@@ -4,7 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route, Navigate } from "react-router-dom";
 import type { ComponentType } from "react";
-import { contentRoutes, redirects, type ContentRoute } from "./lib/routes";
+import { contentRoutes, redirects, externalRedirects, type ContentRoute } from "./lib/routes";
+import ExternalRedirect from "@/components/ExternalRedirect";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Terminbuchungen from "./pages/Terminbuchungen";
@@ -21,6 +22,7 @@ import NotepadPlusPlus from "./pages/NotepadPlusPlus";
 import KundenZahnarztAmMarkt from "./pages/KundenZahnarztAmMarkt";
 import NotFound from "./pages/NotFound";
 import Datensicherung from "./pages/Datensicherung";
+import Upload from "./pages/Upload";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +41,7 @@ const pages: Record<ContentRoute, ComponentType> = {
   "/tresor": Tresor,
   "/notepadplusplus": NotepadPlusPlus,
   "/kunden/zahnarzt-am-markt": KundenZahnarztAmMarkt,
+  "/upload": Upload,
 };
 
 const App = () => (
@@ -54,6 +57,9 @@ const App = () => (
           })}
           {Object.entries(redirects).map(([path, target]) => (
             <Route key={path} path={path} element={<Navigate to={target} replace />} />
+          ))}
+          {Object.entries(externalRedirects).map(([path, url]) => (
+            <Route key={path} path={path} element={<ExternalRedirect url={url} />} />
           ))}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

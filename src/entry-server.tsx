@@ -3,7 +3,7 @@ import { StaticRouter } from "react-router-dom/server.js";
 import { HelmetProvider, type HelmetServerState } from "react-helmet-async";
 import App from "./App";
 import { canonicalUrl, noindexRoutes } from "./lib/routes";
-export { contentRoutes, redirects } from "./lib/routes";
+export { contentRoutes, redirects, externalRedirects } from "./lib/routes";
 
 export function render(route: string) {
   const context: { helmet?: HelmetServerState | null } = {};

@@ -1,3 +1,7 @@
+# Dateiübermittlung
+- [x] /upload mit bestehendem Layout, Nextcloud-Link und noindex ergänzen, ohne Hauptmenü-Link; Desktop und Smartphone geprüft.
+- [x] /uploads extern mit und ohne JavaScript weiterleiten; Regeln und Browserfluss mit abgefangenem externen Ziel geprüft. Statische Refresh-Ausgabe getestet; Produktionsdateien hier weiterhin nicht verfügbar.
+
 # Datensicherung
 - [x] Bestehende Seite für Privathaushalte und Unternehmen mit neuen Inhalten und Preisen überarbeiten.
 - [x] Hauptmenü unter Leistungen ergänzen; Metadaten, strukturierte Daten und Sitemap prüfen.

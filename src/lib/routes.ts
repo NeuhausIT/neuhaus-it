@@ -4,7 +4,7 @@ export const contentRoutes = [
   "/", "/terminbuchungen", "/preise", "/datensicherung",
   "/kontakt-und-impressum", "/managed-nodes", "/fernwartung", "/leitbild",
   "/geschaeftsmodell-und-differenzierung", "/managed-it-services-msp-monitoring",
-  "/signal", "/tresor", "/notepadplusplus", "/kunden/zahnarzt-am-markt",
+  "/signal", "/tresor", "/notepadplusplus", "/kunden/zahnarzt-am-markt", "/upload",
 ] as const;
 
 export type ContentRoute = typeof contentRoutes[number];
@@ -15,8 +15,12 @@ export const redirects = {
   "/serveradministration": "/managed-nodes",
 } as const;
 
+export const externalRedirects = {
+  "/uploads": "https://cloud.neuhaus-it.de/s/4cqZBMrHDXwGKSj",
+} as const;
+
 export const noindexRoutes: readonly ContentRoute[] = [
-  "/geschaeftsmodell-und-differenzierung", "/tresor", "/kunden/zahnarzt-am-markt",
+  "/geschaeftsmodell-und-differenzierung", "/tresor", "/kunden/zahnarzt-am-markt", "/upload",
 ];
 
 export const indexableRoutes = contentRoutes.filter(route => !noindexRoutes.includes(route));

@@ -46,12 +46,13 @@ export function prerender(): Plugin {
           await mkdir(directory, { recursive: true });
           await writeFile(path.join(directory, "index.html"), document);
         }
-        for (const [route, target] of Object.entries(server.redirects)) {
+        const allRedirects = { ...server.redirects, ...server.externalRedirects };
+        for (const [route, target] of Object.entries(allRedirects)) {
           const directory = path.join(output, route.slice(1));
           await mkdir(directory, { recursive: true });
           await writeFile(path.join(directory, "index.html"), redirectHtml(String(target)));
         }
-        config.logger.info(`Prerendered ${pages.length} pages and ${Object.keys(server.redirects).length} redirects.`);
+        config.logger.info(`Prerendered ${pages.length} pages and ${Object.keys(allRedirects).length} redirects.`);
       } finally {
         await rm(temporary, { recursive: true, force: true });
       }
